@@ -44,6 +44,15 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.neo4j.driver/neo4j-java-driver -->
+        <dependency>
+            <groupId>org.neo4j.driver</groupId>
+            <artifactId>neo4j-java-driver</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
