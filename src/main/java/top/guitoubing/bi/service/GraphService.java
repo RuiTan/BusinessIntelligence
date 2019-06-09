@@ -1,7 +1,9 @@
 package top.guitoubing.bi.service;
 
 import javafx.util.Pair;
-import org.neo4j.driver.v1.*;
+import org.neo4j.driver.v1.Record;
+import org.neo4j.driver.v1.Session;
+import org.neo4j.driver.v1.StatementResult;
 import org.neo4j.driver.v1.types.Node;
 import org.neo4j.driver.v1.types.Path;
 import org.neo4j.driver.v1.types.Relationship;
@@ -11,15 +13,11 @@ import top.guitoubing.bi.util.NodeUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-
-import static org.neo4j.driver.v1.Values.parameters;
 
 public class GraphService {
 
     private DriverInitialize driverInitialize = new DriverInitialize();
     private Session session = driverInitialize.getSession();
-
 
     /**
      * 通过一个实体查询其关联的所有关系和实体(限定跳数和结果数量)
