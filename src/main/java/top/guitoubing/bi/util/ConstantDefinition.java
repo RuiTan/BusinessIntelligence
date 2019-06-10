@@ -2,7 +2,7 @@ package top.guitoubing.bi.util;
 
 public class ConstantDefinition {
     // 连接字符串
-    private static String url = "bolt://58.41.206.35:7687";
+    private static String url = "bolt://58.41.200.10:7687";
     static final String username = "neo4j";
     static final String password = "tanrui";
 

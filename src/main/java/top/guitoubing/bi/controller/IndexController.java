@@ -29,6 +29,11 @@ public class IndexController {
         return new GraphService().searchByTypeAndSearchingText(type, step, limit, searchText);
     }
 
+    /**
+     * 收取由数据库服务器发送过来的最新IP，并设置为数据库连接URL部分
+     * @param ip ip地址
+     * @return ip地址
+     */
     @RequestMapping(value = "saveIp", method = RequestMethod.POST)
     @ResponseBody
     public String saveIp(@RequestParam("ip") String ip){

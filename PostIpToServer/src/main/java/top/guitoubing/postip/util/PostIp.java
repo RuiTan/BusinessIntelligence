@@ -5,11 +5,15 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class PostIp {
     private static final String url = "http://20019.ip138.com/ic.asp";
-    private static final String postServerIpPort = "218.78.28.138:9900/saveIp";
+    private static final String postServerIpPort = "http://218.78.28.138:9900/saveIp";
 
     /**
      * 由于路由器的不可控重启，导致路由器IP时常变动；通过爬取上述网站，可实时获取路由器IP，并返回使用
@@ -28,9 +32,23 @@ public class PostIp {
         {
             e.printStackTrace();
         }
+
+        // 写入日志文件
+        try {
+            FileWriter fileWriter = new FileWriter(new File("ip.log"));
+            fileWriter.append("[").append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())).append("]").append(":").append(ip);
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return ip;
     }
 
+    /**
+     * 向服务器发送该ip交由服务器上处理，设置为数据库服务器新IP
+     * @param ip ip地址
+     * @return ip地址
+     */
     public static String postIpToServer(String ip){
         Connection connection = Jsoup.connect(postServerIpPort);
         connection.data("ip", ip);
