@@ -35,8 +35,8 @@ public class PostIp {
 
         // 写入日志文件
         try {
-            FileWriter fileWriter = new FileWriter(new File("ip.log"));
-            fileWriter.append("[").append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())).append("]").append(":").append(ip);
+            FileWriter fileWriter = new FileWriter(new File("ip.log"), true);
+            fileWriter.append("[").append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())).append("]").append(":").append(ip).append('\n');
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
