@@ -2,6 +2,7 @@ package top.guitoubing.bi.controller;
 
 import org.springframework.web.bind.annotation.*;
 import top.guitoubing.bi.service.GraphService;
+import top.guitoubing.bi.util.ConstantDefinition;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,6 +27,13 @@ public class IndexController {
     @ResponseBody
     public HashMap<String, ArrayList<HashMap<String, Object>>> searchANode(@RequestParam("type") int type, @RequestParam("step") int step, @RequestParam("searchText") String searchText,@RequestParam("limit") int limit){
         return new GraphService().searchByTypeAndSearchingText(type, step, limit, searchText);
+    }
+
+    @RequestMapping(value = "saveIp", method = RequestMethod.POST)
+    @ResponseBody
+    public String saveIp(@RequestParam("ip") String ip){
+        ConstantDefinition.setUrl(ip);
+        return ip;
     }
 
 

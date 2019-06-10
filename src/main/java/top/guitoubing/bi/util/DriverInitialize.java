@@ -13,7 +13,7 @@ public class DriverInitialize {
 
     // 获取driver
     private Driver getDriver(){
-        driver = GraphDatabase.driver(getUrl(), AuthTokens.basic(ConstantDefinition.username, ConstantDefinition.password));
+        driver = GraphDatabase.driver(ConstantDefinition.getUrl(), AuthTokens.basic(ConstantDefinition.username, ConstantDefinition.password));
         return driver;
     }
 
@@ -28,10 +28,6 @@ public class DriverInitialize {
         if (session == null)
             session = getDriver().session();
         return session;
-    }
-
-    private String getUrl(){
-        return "bolt://"+GetWanIP.getNewIP()+":7687";
     }
 
 }
