@@ -6,6 +6,13 @@ public class ConstantDefinition {
     static final String username = "neo4j";
     static final String password = "tanrui";
 
+    static final String mongoUser = "testAdmin";
+    static final String mongoDatabase = "admin";
+    static final String mongoPassword = "123456";
+    static final String mongoIp = "47.101.148.55";
+    static final int mongoPort = 27017;
+    static final String mongoCollection = "record";
+
     public static final String NODES = "nodes";
     public static final String RELATIONS = "relations";
 

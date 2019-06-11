@@ -1,6 +1,9 @@
 package top.guitoubing.bi.util;
 
 import javafx.util.Pair;
+import org.neo4j.driver.v1.types.Node;
+import top.guitoubing.bi.entity.RelationEntity;
+import top.guitoubing.bi.service.GraphService;
 
 import java.util.HashMap;
 
@@ -67,6 +70,5 @@ public class NodeUtils {
     public static Pair<String, String> getTypeFromKey(int key){
         return getNodeTypes().get(key);
     }
-
 
 }
