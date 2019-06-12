@@ -18,5 +18,4 @@ public class BiApplication extends SpringBootServletInitializer {
         SpringApplication.run(BiApplication.class, args);
         System.setProperty("tomcat.util.http.parser.HttpParser.requestTargetAllow","|{}");
     }
-
 }

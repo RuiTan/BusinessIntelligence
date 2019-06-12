@@ -1,6 +1,5 @@
 package top.guitoubing.bi.util;
 
-import sun.misc.Cache;
 import top.guitoubing.bi.entity.CacheEntity;
 
 import java.sql.*;
@@ -18,16 +17,19 @@ public class MysqlDriverInitialize {
     }
 
     public static ArrayList<CacheEntity> selectByTypeAndName(int type, String name) throws SQLException, ClassNotFoundException {
-        String sql = "select * from NeoCache where _label like ? and _name like ?";
+        System.out.println("开始从Mysql中查[type:" + type + ",name:" + name + "]");
+        String sql = "select * from NeoCache where _label=? and _name like ?";
         PreparedStatement preparedStatement = getConnection().prepareStatement(sql);
-        preparedStatement.setString(1, "%"+NodeUtils.getTypeFromKey(type).getKey()+"%");
+        preparedStatement.setString(1, NodeUtils.getTypeFromKey(type).getKey());
         preparedStatement.setString(2, "%"+name+"%");
         ResultSet resultSet = preparedStatement.executeQuery();
+        System.out.println("从Mysql中query结束");
         ArrayList<CacheEntity> cacheEntities = new ArrayList<>();
         while (resultSet.next()){
             cacheEntities.add(new CacheEntity(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)));
         }
         preparedStatement.close();
+        System.out.println("结束从Mysql中查[type:" + type + ",name:" + name + "]");
         return cacheEntities;
     }
 }
