@@ -5,11 +5,14 @@ import org.neo4j.driver.v1.types.Node;
 import top.guitoubing.bi.entity.RelationEntity;
 import top.guitoubing.bi.service.GraphService;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class NodeUtils {
 
     private static HashMap<Integer, Pair<String, String>> nodeTypes = null;
+
+    private static ArrayList<String> propertyNodes;
 
     public static HashMap<Integer, Pair<String, String>> getNodeTypes(){
         if (nodeTypes == null){
@@ -17,6 +20,23 @@ public class NodeUtils {
             initNodeTypes();
         }
         return nodeTypes;
+    }
+
+    public static ArrayList<String> getPropertyNodes(){
+        if (propertyNodes == null){
+            propertyNodes = new ArrayList<>();
+            initNodeTypes();
+        }
+        return propertyNodes;
+    }
+
+    private static void initPropertyNode(){
+        propertyNodes.add("ns0__Officership");
+        propertyNodes.add("ns0__TenureInOrganization");
+        propertyNodes.add("ns0__OfficerRole");
+        propertyNodes.add("ns0__DirectorRole");
+        propertyNodes.add("ns0__Directorship");
+        propertyNodes.add("Resource");
     }
 
     // ibm机器节点label名称
@@ -56,15 +76,15 @@ public class NodeUtils {
         nodeTypes.put(9, new Pair<>("ns5__EconomicSector","skos__prefLabel"));
         nodeTypes.put(10, new Pair<>("ns5__Industry","skos__prefLabel"));
         nodeTypes.put(11, new Pair<>("ns0__AcademicQualification","ns8__fromInstitutionName"));
-        nodeTypes.put(12, new Pair<>("ns0__Officership","ns8__hasReportedTitle"));
-        nodeTypes.put(13, new Pair<>("ns0__Person","ns6__given-name"));
-        nodeTypes.put(14, new Pair<>("ns0__TenureInOrganization",""));
-        nodeTypes.put(15, new Pair<>("ns5__IndustryGroup","skos__prefLabel"));
-        nodeTypes.put(16, new Pair<>("ns0__Major","skos__prefLabel"));
-        nodeTypes.put(17, new Pair<>("ns0__AcademicDegree","skos__prefLabel"));
-        nodeTypes.put(18, new Pair<>("ns0__OfficerRole","skos__prefLabel"));
-        nodeTypes.put(19, new Pair<>("ns0__DirectorRole","skos__prefLabel"));
-        nodeTypes.put(20, new Pair<>("ns0__Directorship","ns8__hasReportedTitle"));
+//        nodeTypes.put(12, new Pair<>("ns0__Officership","ns8__hasReportedTitle"));
+        nodeTypes.put(12, new Pair<>("ns0__Person","ns6__given-name"));
+//        nodeTypes.put(14, new Pair<>("ns0__TenureInOrganization",""));
+        nodeTypes.put(13, new Pair<>("ns5__IndustryGroup","skos__prefLabel"));
+        nodeTypes.put(14, new Pair<>("ns0__Major","skos__prefLabel"));
+        nodeTypes.put(15, new Pair<>("ns0__AcademicDegree","skos__prefLabel"));
+//        nodeTypes.put(18, new Pair<>("ns0__OfficerRole","skos__prefLabel"));
+//        nodeTypes.put(19, new Pair<>("ns0__DirectorRole","skos__prefLabel"));
+//        nodeTypes.put(20, new Pair<>("ns0__Directorship","ns8__hasReportedTitle"));
     }
 
     public static Pair<String, String> getTypeFromKey(int key){

@@ -11,7 +11,18 @@ public class ConstantDefinition {
     static final String mongoPassword = "123456";
     static final String mongoIp = "47.101.148.55";
     static final int mongoPort = 27017;
-    static final String mongoCollection = "record";
+    static final String mongoSingleCollection = "single";
+    static final String mongoDoubleCollection = "double";
+    static final String mongoMinPathCollection = "minpath";
+    public static final int mongoSingleCollectionType = 1;
+    public static final int mongoDoubleCollectionType = 2;
+    public static final int mongoMinPathCollectionType = 3;
+    public static final int mongoMaxHistories = 50;
+
+    static final String mysqlUrl = "jdbc:mysql://47.101.148.55:3306/BI?useSSL=false&serverTimezone=UTC";
+    static final String mysqlUser = "root";
+    static final String mysqlPassword = "123IsYourNewPassword!";
+    static final String mysqlDriver = "com.mysql.cj.jdbc.Driver";
 
     public static final String NODES = "nodes";
     public static final String RELATIONS = "relations";

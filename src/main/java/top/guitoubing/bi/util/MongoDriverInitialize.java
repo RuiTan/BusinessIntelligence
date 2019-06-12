@@ -1,23 +1,16 @@
 package top.guitoubing.bi.util;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientOptions;
-import com.mongodb.MongoCredential;
-import com.mongodb.ServerAddress;
+import com.mongodb.*;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
-import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import org.bson.Document;
 import top.guitoubing.bi.entity.NodeEntity;
-import top.guitoubing.bi.service.GraphService;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.Map;
 
 public class MongoDriverInitialize {
     private static MongoClient mongoClient;
@@ -30,31 +23,53 @@ public class MongoDriverInitialize {
         return mongoClient;
     }
 
-    private static MongoCollection<Document> getMongoCollection(){
-        return getMongoClient().getDatabase(ConstantDefinition.mongoDatabase).getCollection(ConstantDefinition.mongoCollection);
+    private static MongoCollection<Document> getMongoCollection(int type){
+        switch (type){
+            case ConstantDefinition.mongoSingleCollectionType:
+                return getMongoClient().getDatabase(ConstantDefinition.mongoDatabase).getCollection(ConstantDefinition.mongoSingleCollection);
+            case ConstantDefinition.mongoDoubleCollectionType:
+                return getMongoClient().getDatabase(ConstantDefinition.mongoDatabase).getCollection(ConstantDefinition.mongoDoubleCollection);
+            default:
+                return getMongoClient().getDatabase(ConstantDefinition.mongoDatabase).getCollection(ConstantDefinition.mongoMinPathCollection);
+        }
     }
 
-    public static void addOne(String param, HashMap<String, ArrayList<NodeEntity>> hashMap){
-        MongoCollection<Document> collection = getMongoCollection();
+    public static void addOne(String param, HashMap<String, ArrayList<NodeEntity>> hashMap, int type){
+        MongoCollection<Document> collection = getMongoCollection(type);
         JSONObject jsonObject = new JSONObject();
         jsonObject.putAll(hashMap);
-        Document document = new Document("id", param).append("result", jsonObject.toJSONString());
+        Document document = new Document("id", param).append("time", TimeUtils.getCurrentTime()).append("result", jsonObject.toJSONString());
         collection.insertOne(document);
     }
 
-    public static String findOne(String param){
-        System.err.println("从MongoDB中查");
-        MongoCollection<Document> collection = getMongoCollection();
+    public static String findOne(String param, int type){
+        MongoCollection<Document> collection = getMongoCollection(type);
         MongoCursor<Document> cursor = collection.find(Filters.eq("id", param)).iterator();
         if (cursor.hasNext()){
+            System.err.println("从MongoDB中查[" + "type:" + type + ",param:" + param + "]");
             JSONObject jsonObject = JSONObject.parseObject(cursor.next().get("result").toString());
-            if (jsonObject != null)
+            if (jsonObject != null) {
                 return jsonObject.toJSONString();
+            }
         }
+        System.err.println("从Neo4j中查[" + "type:" + type + ",param:" + param + "]");
         return null;
     }
 
-    public static void main(String[] args){
-        addOne(ParamUtils.paramsToString(13941900, 63198, 13, 11), new GraphService().searchMinPath(13941900, 63198, 13, 11));
+    public static ArrayList<HashMap<String, Object>> getHistory(int type){
+        ArrayList<HashMap<String, Object> > result = new ArrayList<>();
+        MongoCollection<Document> collection = getMongoCollection(type);
+        FindIterable<Document> documents = collection.find().limit(ConstantDefinition.mongoMaxHistories).sort(new BasicDBObject("time", -1));
+        for (Document document : documents){
+            if (document.get("result") != null && !document.get("result").toString().equals("")){
+                HashMap<String, Object> hashMap = new HashMap<>();
+                hashMap.put("id", document.get("id"));
+                hashMap.put("time", document.get("time"));
+                hashMap.put("result", document.get("result"));
+                result.add(hashMap);
+            }
+        }
+        return result;
     }
+
 }

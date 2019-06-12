@@ -17,8 +17,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import static top.guitoubing.bi.util.NodeUtils.getNodeTypes;
-
 public class GraphService {
 
     private Neo4jDriverInitialize neo4jDriverInitialize = new Neo4jDriverInitialize();
@@ -115,6 +113,7 @@ public class GraphService {
         RelationEntity relationEntity = null;
         if (relationship != null){
             relationEntity = new RelationEntity();
+            relationEntity.put("id", relationship.id());
             relationEntity.put("source", relationship.startNodeId());
             relationEntity.put("target", relationship.endNodeId());
             relationEntity.put("label", relationship.type());
@@ -276,8 +275,7 @@ public class GraphService {
      */
     private boolean isPropertyNode(Node node, Node source, Node target, ArrayList<NodeEntity> relationEntities, Relationship relationship){
         String label = labelFilter(node.labels());
-        HashMap<Integer, Pair<String, String>> hashMap = getNodeTypes();
-        if (label.equals("Resource") || label.equals(hashMap.get(12).getKey()) || label.equals(hashMap.get(14).getKey()) || label.equals(hashMap.get(18).getKey()) || label.equals(hashMap.get(19).getKey()) || label.equals(hashMap.get(20).getKey())){
+        if (NodeUtils.getPropertyNodes().contains(label)){
             addOrModifyRelationEntity(node, source, target, relationEntities, relationship);
             return true;
         }
