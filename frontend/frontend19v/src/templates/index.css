@@ -1,0 +1,118 @@
+body
+{
+    font:10px sans-serif;
+    font-family: "Kaiti SC", "Microsoft Sans Serif","SansSerif","SimSun","Adobe Arabic";
+}
+
+div.upload_file_div
+{
+    width:360px;
+    max-height: 90px;
+    min-height:75px;
+    padding:8px;
+    background: #D1EEEE;
+    border: 1px solid #D1EEEE;
+    border-radius: 5px;
+    position:absolute;
+    left:20px;
+    /*margin-left:auto;*/
+    /*margin-right: auto;*/
+    top:20px;
+    font-size:12px;
+    /*font-family: "Kaiti SC", "Microsoft Sans Serif","SansSerif","SimSun","Adobe Arabic";*/
+}
+#select_div
+{
+
+}
+div#legend
+{
+    position:absolute;
+    top:0px;
+    right:-300px;
+}
+#submit_div
+{
+    text-align: center;
+}
+#submit_btn
+{
+    width:60px;
+    height:20px;
+    margin-top:15px;
+    background:#8E8E38;
+    border:1px solid #8E8E38;
+    border-radius:3px;
+    color:white;
+}
+#submit_btn:hover, #file:hover, #select:hover,svg circle:hover
+{
+    cursor:pointer;
+}
+#select
+{
+    width:80px;
+    height:20px;
+}
+
+div.text_tree_div
+{
+    position: absolute;
+    top:180px;
+    left:22px;
+    /*padding:16px;*/
+    border:1px solid rgba(230,230,250,0.9);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+div.text_div
+{
+    min-width:300px;
+    max-width:480px;
+    min-height:40px;
+    max-height:400px;
+    overflow:scroll;
+    position:relative;
+    /*float:left;*/
+    top:0px;
+    /*left:10px;*/
+    /*border:1px solid black;*/
+    overflow: scroll;
+    background: rgba(230,230,250,0.9);
+    /*border:1px solid #E6E6FA;*/
+    /*border-radius: 5px;*/
+    padding:16px;
+}
+/* 展示 target source */
+div.tree_div
+{
+    min-width:300px;
+    /*max-width:480px;*/
+    min-height:200px;
+    max-height:400px;
+    overflow: scroll;
+    position:relative;
+}
+
+/*p.p1, p.p2*/
+/*{*/
+    /*margin-left: 20px;*/
+/*}*/
+
+.text_link
+{
+    fill:none;
+    stroke:#000;
+}
+
+.text_node
+{
+    stroke:#fff;
+}
+
+
+
+

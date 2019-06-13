@@ -1,0 +1,202 @@
+{
+    "Timestamp": [
+        "1542635002",
+        "1542634992",
+        "1542634982",
+        "1542634972",
+        "1542634962",
+        "1542634952",
+        "1542634942"
+    ],
+    "Operations": {
+        "docker-compose_carts-db_1/container_fs_writes_bytes_total": [
+            "2681.018182",
+            "2681.115677",
+            "2681.115677",
+            "2234.181818",
+            "1787.345455",
+            "2085.236364",
+            "2383.127273"
+        ],
+        "docker-compose_carts_1/container_fs_usage_bytes": [
+            "45056",
+            "45056",
+            "45056",
+            "45056",
+            "45056",
+            "45056",
+            "45056"
+        ],
+        "docker-compose_carts-db_1/container_fs_usage_bytes": [
+            "45056",
+            "45056",
+            "45056",
+            "45056",
+            "45056",
+            "45056",
+            "45056"
+        ],
+        "docker-compose_carts_1/memory_usage": [
+            "397246464",
+            "397246464",
+            "397246464",
+            "397246464",
+            "397246464",
+            "397246464",
+            "397246464"
+        ],
+        "docker-compose_carts_1/network_transmit_bytes": [
+            "4704.363636",
+            "4704.552893",
+            "4704.53471",
+            "4704.436364",
+            "4704.454545",
+            "4706.854545",
+            "4714.090909"
+        ],
+        "docker-compose_catalogue-db_1/container_fs_reads_bytes_total": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "docker-compose_carts_1/container_fs_writes_bytes_total": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "docker-compose_carts-db_1/container_fs_io_current": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "docker-compose_carts-db_1/container_fs_reads_bytes_total": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "docker-compose_carts-db_1/network_transmit_bytes": [
+            "29.56363636",
+            "29.56471144",
+            "29.56471144",
+            "29.56363636",
+            "29.56363636",
+            "31.96363636",
+            "39.16363636"
+        ],
+        "docker-compose_carts-db_1/memory_cache_usage_bytes": [
+            "38436864",
+            "38436864",
+            "38436864",
+            "38436864",
+            "38436864",
+            "38436864",
+            "38436864"
+        ],
+        "docker-compose_carts-db_1/network_receive_bytes": [
+            "20.72727273",
+            "20.72802647",
+            "20.72802647",
+            "20.72727273",
+            "20.72727273",
+            "23.12727273",
+            "30.32727273"
+        ],
+        "docker-compose_carts_1/cpu_usage_percent": [
+            "0.005541622",
+            "0.005445366",
+            "0.005521249",
+            "0.005329227",
+            "0.005316633",
+            "0.005409747",
+            "0.00530243"
+        ],
+        "docker-compose_carts_1/container_fs_reads_bytes_total": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "docker-compose_carts_1/network_receive_bytes": [
+            "146.5636364",
+            "146.5689661",
+            "146.5689661",
+            "146.5636364",
+            "146.5636364",
+            "148.9636364",
+            "156.1636364"
+        ],
+        "docker-compose_carts-db_1/cpu_usage_percent": [
+            "0.012420347",
+            "0.012786038",
+            "0.012777942",
+            "0.01251794",
+            "0.011818808",
+            "0.012732921",
+            "0.01259381"
+        ],
+        "docker-compose_carts_1/memory_cache_usage_bytes": [
+            "901120",
+            "901120",
+            "901120",
+            "901120",
+            "901120",
+            "901120",
+            "901120"
+        ],
+        "docker-compose_carts-db_1/memory_usage": [
+            "122138624",
+            "122138624",
+            "122138624",
+            "122138624",
+            "122138624",
+            "122138624",
+            "122138624"
+        ],
+        "docker-compose_catalogue-db_1/container_fs_io_current": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "docker-compose_carts_1/container_fs_io_current": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "docker-compose_catalogue-db_1/container_fs_usage_bytes": [
+            "65536",
+            "65536",
+            "65536",
+            "65536",
+            "65536",
+            "65536",
+            "65536"
+        ]
+    }
+}

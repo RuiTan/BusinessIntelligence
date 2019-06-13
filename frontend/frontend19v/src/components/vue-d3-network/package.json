@@ -1,0 +1,79 @@
+{
+  "_args": [
+    [
+      "vue-d3-network@0.1.28",
+      "/Users/leonliang/Developer/Operation_KnowledgeGraph/frontend19v"
+    ]
+  ],
+  "_from": "vue-d3-network@0.1.28",
+  "_id": "vue-d3-network@0.1.28",
+  "_inBundle": false,
+  "_integrity": "sha1-nPok88fpSkIY2kJfGyv2OHuqeAI=",
+  "_location": "/vue-d3-network",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "vue-d3-network@0.1.28",
+    "name": "vue-d3-network",
+    "escapedName": "vue-d3-network",
+    "rawSpec": "0.1.28",
+    "saveSpec": null,
+    "fetchSpec": "0.1.28"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/vue-d3-network/download/vue-d3-network-0.1.28.tgz",
+  "_spec": "0.1.28",
+  "_where": "/Users/leonliang/Developer/Operation_KnowledgeGraph/frontend19v",
+  "author": {
+    "name": "emi"
+  },
+  "bugs": {
+    "url": "https://github.com/emiliorizzo/vue-d3-network/issues"
+  },
+  "dependencies": {
+    "d3-force": "^1.0.6"
+  },
+  "description": "Vue component to graph networks using d3-force",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-standard": "^3.0.0-rc.5",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "raw-loader": "^0.5.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "homepage": "https://github.com/emiliorizzo/vue-d3-network#readme",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "d3",
+    "network",
+    "d3-force",
+    "graph",
+    "component"
+  ],
+  "license": "MIT",
+  "main": "dist/vue-d3-network.umd.js",
+  "name": "vue-d3-network",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emiliorizzo/vue-d3-network.git"
+  },
+  "scripts": {
+    "build": "npm run build-component && npm run clean-dist",
+    "build-component": "vue-cli-service build --target lib --name vue-d3-network src/vue-d3-network.vue",
+    "clean-dist": "rm dist/demo.html",
+    "dev": "vue-cli-service serve",
+    "example": "vue-cli-service build --dest example",
+    "lint": "vue-cli-service lint"
+  },
+  "version": "0.1.28"
+}
