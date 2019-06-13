@@ -1,0 +1,345 @@
+{
+    "nodes": [
+        {
+            "properties": {
+                "ns1__hasName": "UND-03 A.S. STK",
+                "ns1__hasPermId": "21475375565",
+                "id": 14062069,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "UNDA.BV^K04",
+                "uri": "https://permid.org/1-21475375565",
+                "ns4__hasExchangeCode": "BRA"
+            }
+        },
+        {
+            "properties": {
+                "skos__prefLabel": "Slovak Koruna",
+                "ns1__hasPermId": "500245",
+                "ns6__isISOHistorical": true,
+                "ns6__decimalPlaces": 2.0,
+                "id": 14079789,
+                "label": "ns6__Currency",
+                "ns6__iso4217Numeric": "703",
+                "ns6__iso4217": "SKK",
+                "uri": "https://permid.org/1-500245"
+            }
+        },
+        {
+            "properties": {
+                "skos__prefLabel": "Halier",
+                "ns1__hasPermId": "500422",
+                "ns6__isISOHistorical": false,
+                "ns6__subunitFactor": 100.0,
+                "ns6__decimalPlaces": 0.0,
+                "id": 16159086,
+                "label": "ns6__CurrencySubunit",
+                "ns6__subUnitLC": "SKh",
+                "uri": "https://permid.org/1-500422"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475370663",
+                "ns1__hasName": "PILOIMPREGNA STK",
+                "id": 14084909,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "PILM.BV^G02",
+                "uri": "https://permid.org/1-21475370663",
+                "ns4__hasExchangeCode": "BRA"
+            }
+        },
+        {
+            "properties": {
+                "id": 14086024,
+                "label": "Resource",
+                "uri": "https://permid.org/1-8589983732"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "PRIEVIDZSKA MLIE STK",
+                "ns1__hasPermId": "21475275766",
+                "id": 14088224,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "PMLK.BV^F05",
+                "uri": "https://permid.org/1-21475275766",
+                "ns4__hasExchangeCode": "BRA"
+            }
+        },
+        {
+            "properties": {
+                "id": 14086740,
+                "label": "Resource",
+                "uri": "https://permid.org/1-8589982623"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "NITR STROJARNE STK A",
+                "ns1__hasPermId": "21475312572",
+                "id": 14087583,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "NRSJa.BV^G02",
+                "uri": "https://permid.org/1-21475312572",
+                "ns4__hasExchangeCode": "BRA"
+            }
+        },
+        {
+            "properties": {
+                "id": 14086305,
+                "label": "Resource",
+                "uri": "https://permid.org/1-8589983692"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "ZAPADOSLOV TEHEL STK",
+                "ns1__hasPermId": "21475217989",
+                "id": 14081412,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "ZAPT.BV^G02",
+                "uri": "https://permid.org/1-21475217989",
+                "ns4__hasExchangeCode": "BRA"
+            }
+        },
+        {
+            "properties": {
+                "id": 14082886,
+                "label": "Resource",
+                "uri": "https://permid.org/1-8589992761"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GEOEKOTECHNIKA STK",
+                "ns1__hasPermId": "21475164939",
+                "id": 14083011,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GEEB.BV^J03",
+                "uri": "https://permid.org/1-21475164939",
+                "ns4__hasExchangeCode": "BRA"
+            }
+        },
+        {
+            "properties": {
+                "id": 14079545,
+                "label": "Resource",
+                "uri": "https://permid.org/1-8589962365"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475186616",
+                "ns1__hasName": "TERMSTAV STK",
+                "id": 14077726,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "TRMS.BV^L03",
+                "uri": "https://permid.org/1-21475186616",
+                "ns4__hasExchangeCode": "BRA"
+            }
+        },
+        {
+            "properties": {
+                "id": 14079868,
+                "label": "Resource",
+                "uri": "https://permid.org/1-8589955389"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475221646",
+                "ns1__hasName": "MEZ STK",
+                "id": 14078691,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MEZB.BV^G02",
+                "uri": "https://permid.org/1-21475221646",
+                "ns4__hasExchangeCode": "BRA"
+            }
+        },
+        {
+            "properties": {
+                "id": 14078672,
+                "label": "Resource",
+                "uri": "https://permid.org/1-8589945713"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475203223",
+                "ns1__hasName": "POZANA STK",
+                "id": 14080683,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "POZA.BV^I04",
+                "uri": "https://permid.org/1-21475203223",
+                "ns4__hasExchangeCode": "BRA"
+            }
+        },
+        {
+            "properties": {
+                "id": 14078019,
+                "label": "Resource",
+                "uri": "https://permid.org/1-8589964735"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "POLNONAKUP KARP STK",
+                "ns1__hasPermId": "21475175356",
+                "id": 14081954,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "PNKY.BV^G02",
+                "uri": "https://permid.org/1-21475175356",
+                "ns4__hasExchangeCode": "BRA"
+            }
+        },
+        {
+            "properties": {
+                "id": 14082198,
+                "label": "Resource",
+                "uri": "https://permid.org/1-8589999238"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "properties": {
+                "source": 14062069,
+                "label": "ns4__isQuotedIn",
+                "target": 14079789
+            }
+        },
+        {
+            "properties": {
+                "source": 16159086,
+                "label": "ns6__isCurrencySubunitOf",
+                "target": 14079789
+            }
+        },
+        {
+            "properties": {
+                "source": 14084909,
+                "label": "ns4__isQuotedIn",
+                "target": 14079789
+            }
+        },
+        {
+            "properties": {
+                "source": 14084909,
+                "label": "ns4__isQuoteOf",
+                "target": 14086024
+            }
+        },
+        {
+            "properties": {
+                "source": 14088224,
+                "label": "ns4__isQuotedIn",
+                "target": 14079789
+            }
+        },
+        {
+            "properties": {
+                "source": 14088224,
+                "label": "ns4__isQuoteOf",
+                "target": 14086740
+            }
+        },
+        {
+            "properties": {
+                "source": 14087583,
+                "label": "ns4__isQuotedIn",
+                "target": 14079789
+            }
+        },
+        {
+            "properties": {
+                "source": 14087583,
+                "label": "ns4__isQuoteOf",
+                "target": 14086305
+            }
+        },
+        {
+            "properties": {
+                "source": 14081412,
+                "label": "ns4__isQuotedIn",
+                "target": 14079789
+            }
+        },
+        {
+            "properties": {
+                "source": 14081412,
+                "label": "ns4__isQuoteOf",
+                "target": 14082886
+            }
+        },
+        {
+            "properties": {
+                "source": 14083011,
+                "label": "ns4__isQuotedIn",
+                "target": 14079789
+            }
+        },
+        {
+            "properties": {
+                "source": 14083011,
+                "label": "ns4__isQuoteOf",
+                "target": 14079545
+            }
+        },
+        {
+            "properties": {
+                "source": 14077726,
+                "label": "ns4__isQuotedIn",
+                "target": 14079789
+            }
+        },
+        {
+            "properties": {
+                "source": 14077726,
+                "label": "ns4__isQuoteOf",
+                "target": 14079868
+            }
+        },
+        {
+            "properties": {
+                "source": 14078691,
+                "label": "ns4__isQuotedIn",
+                "target": 14079789
+            }
+        },
+        {
+            "properties": {
+                "source": 14078691,
+                "label": "ns4__isQuoteOf",
+                "target": 14078672
+            }
+        },
+        {
+            "properties": {
+                "source": 14080683,
+                "label": "ns4__isQuotedIn",
+                "target": 14079789
+            }
+        },
+        {
+            "properties": {
+                "source": 14080683,
+                "label": "ns4__isQuoteOf",
+                "target": 14078019
+            }
+        },
+        {
+            "properties": {
+                "source": 14081954,
+                "label": "ns4__isQuotedIn",
+                "target": 14079789
+            }
+        },
+        {
+            "properties": {
+                "source": 14081954,
+                "label": "ns4__isQuoteOf",
+                "target": 14082198
+            }
+        }
+    ]
+}
