@@ -15,9 +15,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 @RestController
+@CrossOrigin(maxAge = 3600, origins = "*")
 public class IndexController {
 
     @RequestMapping(value = "index")
+    @CrossOrigin(maxAge = 3600, origins = "*")
     public String index(){
         return "index";
     }
@@ -32,6 +34,7 @@ public class IndexController {
      */
     @RequestMapping("selectByTypeAndName")
     @ResponseBody
+    @CrossOrigin(maxAge = 3600, origins = "*")
     public ArrayList<CacheEntity> selectByTypeAndName(@RequestParam("type") int type, @RequestParam("name") String name) throws SQLException, ClassNotFoundException {
         return MysqlDriverInitialize.selectByTypeAndName(type, name);
     }
@@ -46,6 +49,7 @@ public class IndexController {
      */
     @RequestMapping(value = "searchANode", method = RequestMethod.POST)
     @ResponseBody
+    @CrossOrigin(maxAge = 3600, origins = "*")
     public String searchANode(
             @RequestParam("type") int type, @RequestParam("step") int step, @RequestParam("id") int id, @RequestParam("limit") int limit){
         String param = ParamUtils.paramsToString(type, step, id, limit);
@@ -72,6 +76,7 @@ public class IndexController {
      */
     @RequestMapping(value = "searchByTwoNodes", method = RequestMethod.POST)
     @ResponseBody
+    @CrossOrigin(maxAge = 3600, origins = "*")
     public String searchByTwoNodes(
             @RequestParam("sourceType") int sourceType, @RequestParam("targetType") int targetType, @RequestParam("step") int step,
             @RequestParam("limit") int limit, @RequestParam("sourceId") int sourceId, @RequestParam("targetId") int targetId){
@@ -97,6 +102,7 @@ public class IndexController {
      */
     @RequestMapping(value = "searchMinPath", method = RequestMethod.POST)
     @ResponseBody
+    @CrossOrigin(maxAge = 3600, origins = "*")
     public String searchMinPath(@RequestParam("source") int source, @RequestParam("target") int target,
                                                                 @RequestParam("sourceType") int sourceType, @RequestParam("targetType") int targetType){
         String param = ParamUtils.paramsToString(source, target, sourceType, targetType);
@@ -113,6 +119,7 @@ public class IndexController {
 
     @RequestMapping(value = "getHistory", method = RequestMethod.POST)
     @ResponseBody
+    @CrossOrigin(maxAge = 3600, origins = "*")
     public ArrayList<HashMap<String, Object>> getHistory(@RequestParam("type") int type){
         return MongoDriverInitialize.getHistory(type);
     }
@@ -124,6 +131,7 @@ public class IndexController {
      */
     @RequestMapping(value = "saveIp", method = RequestMethod.POST)
     @ResponseBody
+    @CrossOrigin(maxAge = 3600, origins = "*")
     public String saveIp(@RequestParam("ip") String ip){
         ConstantDefinition.setUrl(ip);
         return ip;
@@ -135,6 +143,7 @@ public class IndexController {
      */
     @RequestMapping(value = "getIp", method = RequestMethod.GET)
     @ResponseBody
+    @CrossOrigin(maxAge = 3600, origins = "*")
     public String getIp(){
         return ConstantDefinition.getUrl();
     }
@@ -146,6 +155,7 @@ public class IndexController {
      */
     @RequestMapping(value = "query", method = RequestMethod.POST)
     @ResponseBody
+    @CrossOrigin(maxAge = 3600, origins = "*")
     public HashMap<String, ArrayList<NodeEntity>> query(@RequestParam("query") String query){
         return new GraphService().query(query);
     }

@@ -18,10 +18,10 @@ public class MysqlDriverInitialize {
 
     public static ArrayList<CacheEntity> selectByTypeAndName(int type, String name) throws SQLException, ClassNotFoundException {
         System.out.println("开始从Mysql中查[type:" + type + ",name:" + name + "]");
-        String sql = "select * from NeoCache where _label=? and _name like ?";
+        String sql = "select * from NeoCache where _label=? and _name like ? limit 50";
         PreparedStatement preparedStatement = getConnection().prepareStatement(sql);
         preparedStatement.setString(1, NodeUtils.getTypeFromKey(type).getKey());
-        preparedStatement.setString(2, "%"+name+"%");
+        preparedStatement.setString(2, name+"%");
         ResultSet resultSet = preparedStatement.executeQuery();
         System.out.println("从Mysql中query结束");
         ArrayList<CacheEntity> cacheEntities = new ArrayList<>();
