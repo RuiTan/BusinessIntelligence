@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PostIp {
-    private static final String url = "http://20019.ip138.com/ic.asp";
+    private static final String url = "http://www.ip138.com/ips138.asp";
     private static final String postServerIpPort = "http://218.78.28.138:9900/saveIp";
 
     /**
@@ -24,8 +24,8 @@ public class PostIp {
         try
         {
             Document document = Jsoup.connect(url).get();
-            Elements elements = document.getElementsByTag("center");
-            String ipText = elements.get(0).text();
+            Elements elements = document.getElementsByTag("table");
+            String ipText = elements.get(2).text();
             ip = ipText.split("\\[")[1].split("]")[0];
         }
         catch (IOException e)

@@ -1,0 +1,275 @@
+{
+    "nodes": [
+        {
+            "properties": {
+                "ns1__hasName": "ELDORADO GOLD CORPORATION CDI",
+                "ns1__hasPermId": "55856150905",
+                "id": 14059038,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "EAU.AX^H12",
+                "uri": "https://permid.org/1-55856150905",
+                "ns4__hasExchangeTicker": "EAU",
+                "ns4__hasExchangeCode": "ASX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "Eldorado Gold Corporation CDI",
+                "ns1__hasPermId": "8591373063",
+                "id": 14071307,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-8591373063"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "ELDORADO GOLD CORPORATION CDI",
+                "ns1__hasPermId": "55856466447",
+                "id": 14069259,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "EAU.SG^I12",
+                "uri": "https://permid.org/1-55856466447",
+                "ns4__hasExchangeTicker": "ELO1",
+                "ns4__hasExchangeCode": "STU"
+            }
+        },
+        {
+            "properties": {
+                "skos__prefLabel": "Euro",
+                "ns1__hasPermId": "500111",
+                "ns6__isISOHistorical": false,
+                "ns6__decimalPlaces": 2,
+                "id": 14066740,
+                "label": "ns6__Currency",
+                "ns6__iso4217Numeric": "978",
+                "ns6__iso4217": "EUR",
+                "uri": "https://permid.org/1-500111"
+            }
+        },
+        {
+            "properties": {
+                "id": 16158797,
+                "label": "Resource",
+                "uri": "http://sws.geonames.org/3057568"
+            }
+        },
+        {
+            "properties": {
+                "id": 16158825,
+                "label": "Resource",
+                "uri": "http://sws.geonames.org/3168068"
+            }
+        },
+        {
+            "properties": {
+                "id": 16158901,
+                "label": "Resource",
+                "uri": "http://sws.geonames.org/3164670"
+            }
+        },
+        {
+            "properties": {
+                "id": 16158929,
+                "label": "Resource",
+                "uri": "http://sws.geonames.org/458258"
+            }
+        },
+        {
+            "properties": {
+                "id": 16158960,
+                "label": "Resource",
+                "uri": "http://sws.geonames.org/3041565"
+            }
+        },
+        {
+            "properties": {
+                "id": 16158798,
+                "label": "Resource",
+                "uri": "http://sws.geonames.org/1024031"
+            }
+        },
+        {
+            "properties": {
+                "id": 16158852,
+                "label": "Resource",
+                "uri": "http://sws.geonames.org/660013"
+            }
+        },
+        {
+            "properties": {
+                "id": 16158936,
+                "label": "Resource",
+                "uri": "http://sws.geonames.org/146669"
+            }
+        },
+        {
+            "properties": {
+                "id": 16144354,
+                "label": "Resource",
+                "uri": "http://sws.geonames.org/2993457"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "properties": {
+                "id": 39158969,
+                "source": 14059038,
+                "label": "ns4__isQuoteOf",
+                "target": 14071307
+            }
+        },
+        {
+            "properties": {
+                "id": 39158669,
+                "source": 14069259,
+                "label": "ns4__isQuoteOf",
+                "target": 14071307
+            }
+        },
+        {
+            "properties": {
+                "id": 39153948,
+                "source": 14069259,
+                "label": "ns4__isQuotedIn",
+                "target": 14066740
+            }
+        },
+        {
+            "properties": {
+                "id": 43386670,
+                "source": 14066740,
+                "label": "ns6__isPrimaryCurrencyOf",
+                "target": 16158797
+            }
+        },
+        {
+            "properties": {
+                "id": 43386543,
+                "source": 14066740,
+                "label": "ns6__isCurrencyOf",
+                "target": 16158797
+            }
+        },
+        {
+            "properties": {
+                "id": 43386621,
+                "source": 14066740,
+                "label": "ns6__isPrimaryCurrencyOf",
+                "target": 16158825
+            }
+        },
+        {
+            "properties": {
+                "id": 43386375,
+                "source": 14066740,
+                "label": "ns6__isCurrencyOf",
+                "target": 16158825
+            }
+        },
+        {
+            "properties": {
+                "id": 43386487,
+                "source": 14066740,
+                "label": "ns6__isPrimaryCurrencyOf",
+                "target": 16158901
+            }
+        },
+        {
+            "properties": {
+                "id": 43386319,
+                "source": 14066740,
+                "label": "ns6__isCurrencyOf",
+                "target": 16158901
+            }
+        },
+        {
+            "properties": {
+                "id": 43386114,
+                "source": 14066740,
+                "label": "ns6__isPrimaryCurrencyOf",
+                "target": 16158929
+            }
+        },
+        {
+            "properties": {
+                "id": 43386204,
+                "source": 14066740,
+                "label": "ns6__isCurrencyOf",
+                "target": 16158929
+            }
+        },
+        {
+            "properties": {
+                "id": 43386668,
+                "source": 14066740,
+                "label": "ns6__isPrimaryCurrencyOf",
+                "target": 16158960
+            }
+        },
+        {
+            "properties": {
+                "id": 43386147,
+                "source": 14066740,
+                "label": "ns6__isCurrencyOf",
+                "target": 16158960
+            }
+        },
+        {
+            "properties": {
+                "id": 43386447,
+                "source": 14066740,
+                "label": "ns6__isPrimaryCurrencyOf",
+                "target": 16158798
+            }
+        },
+        {
+            "properties": {
+                "id": 43386337,
+                "source": 14066740,
+                "label": "ns6__isCurrencyOf",
+                "target": 16158798
+            }
+        },
+        {
+            "properties": {
+                "id": 43320973,
+                "source": 14066740,
+                "label": "ns6__isPrimaryCurrencyOf",
+                "target": 16158852
+            }
+        },
+        {
+            "properties": {
+                "id": 43386630,
+                "source": 14066740,
+                "label": "ns6__isCurrencyOf",
+                "target": 16158852
+            }
+        },
+        {
+            "properties": {
+                "id": 43386256,
+                "source": 14066740,
+                "label": "ns6__isPrimaryCurrencyOf",
+                "target": 16158936
+            }
+        },
+        {
+            "properties": {
+                "id": 43386292,
+                "source": 14066740,
+                "label": "ns6__isCurrencyOf",
+                "target": 16158936
+            }
+        },
+        {
+            "properties": {
+                "id": 43386446,
+                "source": 14066740,
+                "label": "ns6__isPrimaryCurrencyOf",
+                "target": 16144354
+            }
+        }
+    ]
+}

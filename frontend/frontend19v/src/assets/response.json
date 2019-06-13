@@ -1,0 +1,3715 @@
+{
+    "nodes": [
+        {
+            "properties": {
+                "skos__prefLabel": "Canadian Dollar",
+                "ns1__hasPermId": "500140",
+                "ns6__isISOHistorical": false,
+                "ns6__decimalPlaces": 2.0,
+                "id": 14066496,
+                "label": "ns6__Currency",
+                "ns6__iso4217Numeric": "124",
+                "ns6__iso4217": "CAD",
+                "uri": "https://permid.org/1-500140"
+            }
+        },
+        {
+            "properties": {
+                "id": 16159295,
+                "label": "Resource",
+                "uri": "http://sws.geonames.org/6251999"
+            }
+        },
+        {
+            "properties": {
+                "skos__prefLabel": "Canadian Cent",
+                "ns1__hasPermId": "500315",
+                "ns6__isISOHistorical": false,
+                "ns6__subunitFactor": 100.0,
+                "ns6__decimalPlaces": 0.0,
+                "id": 16159132,
+                "label": "ns6__CurrencySubunit",
+                "ns6__subUnitLC": "CAc",
+                "uri": "https://permid.org/1-500315",
+                "ns6__subUnitX": "CAX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475152951",
+                "ns1__hasName": "CABRE EXPL RT",
+                "id": 14077038,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CBE_r.TO^F92",
+                "uri": "https://permid.org/1-21475152951",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "Cabre Expl Rights",
+                "ns1__hasPermId": "8590713452",
+                "id": 14076513,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-8590713452"
+            }
+        },
+        {
+            "properties": {
+                "id": 16012873,
+                "label": "Resource",
+                "uri": "http://permid.org/ontology/financial/instrumentStatusInActive"
+            }
+        },
+        {
+            "properties": {
+                "rdfs__comment": "An option for existing shareholders that allows them to buy shares of an issue of common stock shortly before it is offered to the public, at a specified and usually discounted price, and usually in proportion to the number of shares already owned.",
+                "ns1__hasPermId": "300413",
+                "rdfs__label": "Rights",
+                "id": 16023998,
+                "label": "ns4__AssetClass",
+                "uri": "https://permid.org/1-300413"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "1400, 700- 9Th Ave Sw\n\n\nCALGARY\nALBERTA\nT2P 3V4\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "14032318858",
+                "ns1__hasPermId": "5000428816",
+                "ns2__organization-name": "Cabre Exploration Ltd",
+                "ns7__hasInactiveDate": "2000-12-31T00:00:00Z",
+                "id": 16035924,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "3100, 324 - 8th Avenue SW\n\n\nCALGARY\nALBERTA\nT2P 2Z2\nCanada\n",
+                "ns7__hasHeadquartersFaxNumber": "14032634865",
+                "uri": "https://permid.org/1-5000428816"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "HOMELAND ENERGY GROUP RTS",
+                "ns1__hasPermId": "21475020766",
+                "id": 14074189,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "HEG_r.ALP^G10",
+                "uri": "https://permid.org/1-21475020766",
+                "ns4__hasExchangeTicker": "HEG.RT",
+                "ns4__hasExchangeCode": "ALP"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475020760",
+                "ns1__hasName": "Homeland Energy Group Rights Exp 30 June 2010",
+                "id": 14074203,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475020760"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "HOMELAND ENERGY GROUP RTS",
+                "ns1__hasPermId": "21475020764",
+                "id": 14074200,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "HEG_r.TO^G10",
+                "uri": "https://permid.org/1-21475020764",
+                "ns4__hasExchangeTicker": "HEG.RT",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "HOMELAND ENERGY GROUP RTS",
+                "ns1__hasPermId": "21475020765",
+                "id": 14074191,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "HEG_r.GO^G10",
+                "uri": "https://permid.org/1-21475020765",
+                "ns4__hasExchangeTicker": "HEG.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "HOMELAND ENERGY GROUP RTS",
+                "ns1__hasPermId": "21475020767",
+                "id": 14074188,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "HEG_r.CXC^G10",
+                "uri": "https://permid.org/1-21475020767",
+                "ns4__hasExchangeTicker": "HEG.RT",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "2200, 885 West Georgia Street\n\n\nVANCOUVER\nBRITISH COLUMBIA\nV6C 2G2\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "14162095982",
+                "ns7__hasLEI": "5493006WZIC1VF621K60",
+                "ns1__hasPermId": "5068312040",
+                "ns2__organization-name": "Dionymed Brands Inc",
+                "id": 16042081,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "2200-885 West Georgia Street\n\n\nVANCOUVER\nBRITISH COLUMBIA\nV6C 3E8\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "2018-11-27T00:00:00Z",
+                "uri": "https://permid.org/1-5068312040"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "WELICHEM BIOTECH RTS WI",
+                "ns1__hasPermId": "21475061808",
+                "id": 14073652,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "WBI_r.V^H10",
+                "uri": "https://permid.org/1-21475061808",
+                "ns4__hasExchangeTicker": "WBI.RT",
+                "ns4__hasExchangeCode": "CVE"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475061807",
+                "ns1__hasName": "Welichem Biotech Rights When Issued Exp 20 Aug 2010",
+                "id": 14073651,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475061807"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "WELICHEM BIOTECH RTS WI",
+                "ns1__hasPermId": "21475071614",
+                "id": 14075916,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "WBI_r.CCP^H10",
+                "uri": "https://permid.org/1-21475071614",
+                "ns4__hasExchangeTicker": "WBI.RT",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "WELICHEM BIOTECH RTS WI",
+                "ns1__hasPermId": "21475061809",
+                "id": 14073653,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "WBI_r.GO^H10",
+                "uri": "https://permid.org/1-21475061809",
+                "ns4__hasExchangeTicker": "WBI.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "WELICHEM BIOTECH RTS WI",
+                "ns1__hasPermId": "21475061811",
+                "id": 14073635,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "WBI_r.ALV^H10",
+                "uri": "https://permid.org/1-21475061811",
+                "ns4__hasExchangeTicker": "WBI.RT",
+                "ns4__hasExchangeCode": "ALV"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "316-4475 Wayburne Dr\n\n\nBURNABY\nBRITISH COLUMBIA\nV5G 3L1\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "16044321703",
+                "ns1__hasPermId": "4296159286",
+                "ns2__organization-name": "Welichem Biotech Inc",
+                "id": 110198,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "2900-550 Burrard St\n\n\nVANCOUVER\nBRITISH COLUMBIA\nV6C 0A3\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "2004-11-01T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "16044321704",
+                "uri": "https://permid.org/1-4296159286"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "SAN ANTON RESOURCE RTS WI",
+                "ns1__hasPermId": "21475038770",
+                "id": 14073201,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "SNN_r.ALP^H10",
+                "uri": "https://permid.org/1-21475038770",
+                "ns4__hasExchangeTicker": "SNN.RT",
+                "ns4__hasExchangeCode": "ALP"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475038742",
+                "ns1__hasName": "San Anton Resource Rights When Issued Exp 29 July 2010",
+                "id": 14073218,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475038742"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "SAN ANTON RESOURCE RTS WI",
+                "ns1__hasPermId": "21475038771",
+                "id": 14073207,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "SNN_r.CXC^H10",
+                "uri": "https://permid.org/1-21475038771",
+                "ns4__hasExchangeTicker": "SNN.RT",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "SAN ANTON RESOURCE RTS WI",
+                "ns1__hasPermId": "21475038769",
+                "id": 14073174,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "SNN_r.GO^H10",
+                "uri": "https://permid.org/1-21475038769",
+                "ns4__hasExchangeTicker": "SNN.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "SAN ANTON RESOURCE RTS WI",
+                "ns1__hasPermId": "21475073288",
+                "id": 14074143,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "SNN_r.CCP^H10",
+                "uri": "https://permid.org/1-21475073288",
+                "ns4__hasExchangeTicker": "SNN.RT",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "SAN ANTON RESOURCE RTS WI",
+                "ns1__hasPermId": "21475038768",
+                "id": 14073175,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "SNN_r.TO^H10",
+                "uri": "https://permid.org/1-21475038768",
+                "ns4__hasExchangeTicker": "SNN.RT",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "120 Adelaide Street West, Suite 2400\nTORONTO\nONTARIO\nM5H 1T1\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "14169870856",
+                "ns1__hasPermId": "4295860658",
+                "ns2__organization-name": "San Anton Resource Corp",
+                "id": 416452,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "100 King Street West, Suite 3400\n1 First Canadian Place\nTORONTO\nONTARIO\nM5X 1A4\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "2010-09-21T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "14163634567",
+                "uri": "https://permid.org/1-4295860658"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475028825",
+                "ns1__hasName": "FIBREK RTS WI",
+                "id": 14076038,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "FBK_r.ALP^G10",
+                "uri": "https://permid.org/1-21475028825",
+                "ns4__hasExchangeTicker": "FBK.RT",
+                "ns4__hasExchangeCode": "ALP"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475028802",
+                "ns1__hasName": "Fibrek Rights Exp 15 July 2010 When Issued",
+                "id": 14076142,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475028802"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475028826",
+                "ns1__hasName": "FIBREK RTS WI",
+                "id": 14076034,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "FBK_r.CXC^G10",
+                "uri": "https://permid.org/1-21475028826",
+                "ns4__hasExchangeTicker": "FBK.RT",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475028824",
+                "ns1__hasName": "FIBREK RTS WI",
+                "id": 14076036,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "FBK_r.GO^G10",
+                "uri": "https://permid.org/1-21475028824",
+                "ns4__hasExchangeTicker": "FBK.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475028823",
+                "ns1__hasName": "FIBREK RTS WI",
+                "id": 14076025,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "FBK_r.TO^G10",
+                "uri": "https://permid.org/1-21475028823",
+                "ns4__hasExchangeTicker": "FBK.RT",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "111 Duke Street\nSuite 5000\n\nMONTREAL\nQUEBEC\nH3C 2M1\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "15143942345",
+                "ns1__hasPermId": "4295862790",
+                "ns7__hasRegisteredFaxNumber": "15148710551",
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "BUREAU 700\n625 BOUL.RENE-LEVESQUE OUEST\n\nMONTREAL\nQUEBEC\nH3B 1R2\nCanada\n",
+                "uri": "https://permid.org/1-4295862790",
+                "ns7__hasInactiveDate": "2012-07-31T00:00:00Z",
+                "ns2__organization-name": "Fibrek Inc",
+                "id": 99805,
+                "ns7__hasLatestOrganizationFoundedDate": "2010-03-24T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "15143942257",
+                "ns7__hasRegisteredPhoneNumber": "15148710550"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "SKYE PHARMATECH RT",
+                "ns1__hasPermId": "21475155264",
+                "id": 14076295,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "SKYE_r.CD^F99",
+                "uri": "https://permid.org/1-21475155264",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "Synx Pharma Inc Rights",
+                "ns1__hasPermId": "21475155263",
+                "id": 14076293,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475155263"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "1 Marmac Drive\n\n\nTORONTO\nONTARIO\nM9W 1E7\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "14167983445",
+                "ns1__hasPermId": "4295860901",
+                "ns2__organization-name": "Synx Pharma Inc",
+                "ns7__hasInactiveDate": "2004-04-26T00:00:00Z",
+                "id": 616423,
+                "label": "ns7__Organization",
+                "ns7__hasHeadquartersFaxNumber": "14167983447",
+                "uri": "https://permid.org/1-4295860901"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "REGAL ENERGY RESOURCES RTS",
+                "ns1__hasPermId": "21474978348",
+                "id": 14074145,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "REG_r.GO^L06",
+                "uri": "https://permid.org/1-21474978348",
+                "ns4__hasExchangeTicker": "REG.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "Regal Energy Resources Rights",
+                "ns1__hasPermId": "8590643758",
+                "id": 14073152,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-8590643758"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "REGAL ENERGY RESOURCES RTS",
+                "ns1__hasPermId": "21475070996",
+                "id": 14074840,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "REG_r.CCP^L06",
+                "uri": "https://permid.org/1-21475070996",
+                "ns4__hasExchangeTicker": "REG.RT",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "REGAL ENERGY RESOURCES RTS",
+                "ns1__hasPermId": "55848480183",
+                "id": 14407683,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "REG_r.ALV^L06",
+                "uri": "https://permid.org/1-55848480183",
+                "ns4__hasExchangeTicker": "REG.RT",
+                "ns4__hasExchangeCode": "ALV"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "REGAL ENERGY RESOURCES RTS ",
+                "ns1__hasPermId": "55838849118",
+                "id": 14458279,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "REG_r.V^L06",
+                "uri": "https://permid.org/1-55838849118",
+                "ns4__hasExchangeTicker": "REG.RT",
+                "ns4__hasExchangeCode": "CVE"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "1700-700 4 Ave SW\n\n\nCALGARY\nALBERTA\nT2P 3J4\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "14032634310",
+                "ns7__hasLEI": "549300RF36J0YO4U2E72",
+                "ns1__hasPermId": "4296126821",
+                "ns2__organization-name": "Novus Energy Inc",
+                "id": 79250,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "3500-855 2 St SW\n\n\nCALGARY\nALBERTA\nT2P 4J8\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "2014-01-20T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "14032634368",
+                "uri": "https://permid.org/1-4296126821"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "VIRGIN METALS RTS WI EXP 02 DEC 2010",
+                "ns1__hasPermId": "21475136874",
+                "id": 14077014,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "VGM_r.GO^L10",
+                "uri": "https://permid.org/1-21475136874",
+                "ns4__hasExchangeTicker": "VGM.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "8591464981",
+                "ns1__hasName": "Virgin Metals Rights When Isuued Exp 02 Dec 2010",
+                "id": 14076706,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-8591464981"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "VIRGIN METALS RTS WI EXP 02 DEC 2010",
+                "ns1__hasPermId": "21475136875",
+                "id": 14077016,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "VGM_r.CCP^L10",
+                "uri": "https://permid.org/1-21475136875",
+                "ns4__hasExchangeTicker": "VGM.RT",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "VIRGIN METALS RTS WI EXP 02 DEC 2010",
+                "ns1__hasPermId": "21475136873",
+                "id": 14077011,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "VGM_r.V^L10",
+                "uri": "https://permid.org/1-21475136873",
+                "ns4__hasExchangeTicker": "VGM.RT",
+                "ns4__hasExchangeCode": "CVE"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "VIRGIN METALS RTS WI EXP 02 DEC 2010",
+                "ns1__hasPermId": "21475136876",
+                "id": 14077017,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "VGM_r.ALV^L10",
+                "uri": "https://permid.org/1-21475136876",
+                "ns4__hasExchangeTicker": "VGM.RT",
+                "ns4__hasExchangeCode": "ALV"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "55 York St Suite 402\n\n\nTORONTO\nONTARIO\nM5J 1R7\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "14163060990",
+                "ns1__hasPermId": "4298014937",
+                "ns7__hasIPODate": "2006-07-04T04:00:00Z",
+                "ns2__organization-name": "Minera Alamos Inc",
+                "id": 431213,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "\n\n\n\nONTARIO\n\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "2006-06-21T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "18884373521",
+                "uri": "https://permid.org/1-4298014937"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GROUPE BIKINI VILLAGE RTS WI",
+                "ns1__hasPermId": "21475056002",
+                "id": 14076155,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GBV_r.GO^H10",
+                "uri": "https://permid.org/1-21475056002",
+                "ns4__hasExchangeTicker": "GBV.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475055980",
+                "ns1__hasName": "Groupe Bikini Village Rights When Issued Exp 13 Aug 2010",
+                "id": 14073547,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475055980"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GROUPE BIKINI VILLAGE RTS WI",
+                "ns1__hasPermId": "21475056001",
+                "id": 14076154,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GBV_r.TO^H10",
+                "uri": "https://permid.org/1-21475056001",
+                "ns4__hasExchangeTicker": "GBV.RT",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GROUPE BIKINI VILLAGE RTS WI",
+                "ns1__hasPermId": "21475073294",
+                "id": 14074126,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GBV_r.CCP^H10",
+                "uri": "https://permid.org/1-21475073294",
+                "ns4__hasExchangeTicker": "GBV.RT",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GROUPE BIKINI VILLAGE RTS WI",
+                "ns1__hasPermId": "21475056003",
+                "id": 14076157,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GBV_r.ALP^H10",
+                "uri": "https://permid.org/1-21475056003",
+                "ns4__hasExchangeTicker": "GBV.RT",
+                "ns4__hasExchangeCode": "ALP"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GROUPE BIKINI VILLAGE RTS WI",
+                "ns1__hasPermId": "21475056004",
+                "id": 14076159,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GBV_r.CXC^H10",
+                "uri": "https://permid.org/1-21475056004",
+                "ns4__hasExchangeTicker": "GBV.RT",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "2101-A rue Nobel\nSTE-JULIE\nQUEBEC\nJ3E 1Z8\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "14504491313",
+                "ns1__hasPermId": "4295861291",
+                "ns7__hasRegisteredFaxNumber": "14504491317",
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "2101-A Nobel\nSAINTE-JULIE\nQUEBEC\nJ3E 1Z8\nCanada\n",
+                "uri": "https://permid.org/1-4295861291",
+                "ns7__hasLEI": "5493002JHDHK6VD2NU06",
+                "ns2__organization-name": "Groupe Bikini Village inc",
+                "id": 109830,
+                "ns7__hasLatestOrganizationFoundedDate": "1978-07-24T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "14504491317",
+                "ns7__hasRegisteredPhoneNumber": "14504491313"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "ALTACANADA ENERGY RTS WI",
+                "ns1__hasPermId": "21475006096",
+                "id": 14076478,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "ANG_r.GO^F10",
+                "uri": "https://permid.org/1-21475006096",
+                "ns4__hasExchangeTicker": "ANG.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475006080",
+                "ns1__hasName": "Altacanada Energy Rights When Issued Exp 21 Jun 2010",
+                "id": 14076466,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475006080"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "ALTACANADA ENERGY RTS WI",
+                "ns1__hasPermId": "21475006095",
+                "id": 14076482,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "ANG_r.V^F10",
+                "uri": "https://permid.org/1-21475006095",
+                "ns4__hasExchangeTicker": "ANG.RT",
+                "ns4__hasExchangeCode": "CVE"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "ALTACANADA ENERGY RTS WI",
+                "ns1__hasPermId": "21475006097",
+                "id": 14076472,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "ANG_r.ALV^F10",
+                "uri": "https://permid.org/1-21475006097",
+                "ns4__hasExchangeTicker": "ANG.RT",
+                "ns4__hasExchangeCode": "ALV"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "2300-144 4 Ave SW\n\n\nCALGARY\nALBERTA\nT2P 3N4\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "14032659091",
+                "ns1__hasPermId": "4296415852",
+                "ns7__hasIPODate": "1998-06-23T04:00:00Z",
+                "ns2__organization-name": "Montana Exploration Corp",
+                "id": 208851,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "144 4 Ave SW Suite 2300\n\n\nCALGARY\nALBERTA\nT2P 3N4\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "1997-11-12T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "15872870267",
+                "uri": "https://permid.org/1-4296415852"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "ORCA EXPLORATION GROUP RTS WI",
+                "ns1__hasPermId": "21475091903",
+                "id": 14074226,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "ORC_r.V^J10",
+                "uri": "https://permid.org/1-21475091903",
+                "ns4__hasExchangeTicker": "ORC.RT",
+                "ns4__hasExchangeCode": "CVE"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475091881",
+                "ns1__hasName": "Orca Exploration Group Rights When Issued Exp 05 Oct 2010",
+                "id": 14074675,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475091881"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "ORCA EXPLORATION GROUP RTS WI",
+                "ns1__hasPermId": "21475091920",
+                "id": 14074242,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "ORC_r.ALV^J10",
+                "uri": "https://permid.org/1-21475091920",
+                "ns4__hasExchangeTicker": "ORC.RT",
+                "ns4__hasExchangeCode": "ALV"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "ORCA EXPLORATION GROUP RTS WI",
+                "ns1__hasPermId": "21475091902",
+                "id": 14074225,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "ORC_r.GO^J10",
+                "uri": "https://permid.org/1-21475091902",
+                "ns4__hasExchangeTicker": "ORC.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "ORCA EXPLORATION GROUP RTS WI",
+                "ns1__hasPermId": "21475091901",
+                "id": 14074223,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "ORC_r.CCP^J10",
+                "uri": "https://permid.org/1-21475091901",
+                "ns4__hasExchangeTicker": "ORC.RT",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "c/o PanAfrican Energy Tanzania\nOyster Plaza Building , 5th Floor\nHaile Selassie Road, Box 80139\nDAR ES SALAAM\nTanzania\n",
+                "ns7__hasHeadquartersPhoneNumber": "255222138737",
+                "ns1__hasPermId": "4295984003",
+                "ns2__organization-name": "Orca Exploration Group Inc",
+                "id": 262220,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "PO Box 146, Road Town\nTORTOLA\nVG110\nBritish Virgin Islands\n",
+                "ns7__hasLatestOrganizationFoundedDate": "2004-04-28T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "255222138938",
+                "uri": "https://permid.org/1-4295984003"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "CHARTER REIT RTS WI",
+                "ns1__hasPermId": "21475033300",
+                "id": 14076001,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CRH_r.V^G10",
+                "uri": "https://permid.org/1-21475033300",
+                "ns4__hasExchangeTicker": "CRH.RT",
+                "ns4__hasExchangeCode": "CVE"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475033280",
+                "ns1__hasName": "Charter Real Estate Investment Rights When Issued Exp 23 July 2010",
+                "id": 14074425,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475033280"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "CHARTER REIT RTS WI",
+                "ns1__hasPermId": "21475033301",
+                "id": 14076000,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CRH_r.GO^G10",
+                "uri": "https://permid.org/1-21475033301",
+                "ns4__hasExchangeTicker": "CRH.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "CHARTER REIT RTS WI",
+                "ns1__hasPermId": "21475071596",
+                "id": 14074594,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CRH_r.CCP^G10",
+                "uri": "https://permid.org/1-21475071596",
+                "ns4__hasExchangeTicker": "CRH.RT",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "CHARTER REIT RTS WI",
+                "ns1__hasPermId": "21475033302",
+                "id": 14428204,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CRH_r.ALV^G10",
+                "uri": "https://permid.org/1-21475033302",
+                "ns4__hasExchangeTicker": "CRH.RT",
+                "ns4__hasExchangeCode": "ALV"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "36 Toronto St Suite 1160\n\n\nTORONTO\nONTARIO\nM5C 2C5\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "17057256020",
+                "ns1__hasPermId": "4297201256",
+                "ns7__hasIPODate": "2005-09-02T04:00:00Z",
+                "ns7__hasRegisteredFaxNumber": "17057258026",
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "249 Saunders Rd Unit 3\n\n\nBARRIE\nONTARIO\nL4N 9A3\nCanada\n",
+                "uri": "https://permid.org/1-4297201256",
+                "ns2__organization-name": "Partners Real Estate Investment Trust",
+                "id": 263523,
+                "ns7__hasLatestOrganizationFoundedDate": "2007-03-27T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "17057258026",
+                "ns7__hasRegisteredPhoneNumber": "17057256020"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "IMAGING DYNAM RTS WI EXP 21 SEP 2010",
+                "ns1__hasPermId": "21475088283",
+                "id": 14074786,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "IDL_r.TO^I10",
+                "uri": "https://permid.org/1-21475088283",
+                "ns4__hasExchangeTicker": "IDL.RT",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475088280",
+                "ns1__hasName": "Imaging Dynamics Rights When Issued Exp 21 Sep 2010",
+                "id": 14074791,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475088280"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "IMAGING DYNAM RTS WI EXP 21 SEP 2010",
+                "ns1__hasPermId": "21475088286",
+                "id": 14074780,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "IDL_r.CXC^I10",
+                "uri": "https://permid.org/1-21475088286",
+                "ns4__hasExchangeTicker": "IDL.RT",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "IMAGING DYNAM RTS WI EXP 21 SEP 2010",
+                "ns1__hasPermId": "21475088284",
+                "id": 14074785,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "IDL_r.GO^I10",
+                "uri": "https://permid.org/1-21475088284",
+                "ns4__hasExchangeTicker": "IDL.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "IMAGING DYNAM RTS WI EXP 21 SEP 2010",
+                "ns1__hasPermId": "21475088285",
+                "id": 14074782,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "IDL_r.ALP^I10",
+                "uri": "https://permid.org/1-21475088285",
+                "ns4__hasExchangeTicker": "IDL.RT",
+                "ns4__hasExchangeCode": "ALP"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "IMAGING DYNAM RTS WI EXP 21 SEP 2010",
+                "ns1__hasPermId": "21475088287",
+                "id": 14074777,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "IDL_r.CCP^I10",
+                "uri": "https://permid.org/1-21475088287",
+                "ns4__hasExchangeTicker": "IDL.RT",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "130-3510 29 St NE\n\n\nCALGARY\nALBERTA\nT1Y 7E5\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "14032519939",
+                "ns1__hasPermId": "4295862849",
+                "ns7__hasIPODate": "1995-11-09T05:00:00Z",
+                "ns2__organization-name": "Imaging Dynamics Co Ltd",
+                "id": 429556,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "130-3510 29 St NE\n\n\nCALGARY\nALBERTA\nT1Y 7E5\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "1995-05-25T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "14032511771",
+                "uri": "https://permid.org/1-4295862849"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "CHESSWOOD INCOME RTS WI",
+                "ns1__hasPermId": "21475006098",
+                "id": 14076471,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CHW_r.TO^G10",
+                "uri": "https://permid.org/1-21475006098",
+                "ns4__hasExchangeTicker": "CHW.RT",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475006082",
+                "ns1__hasName": "Chesswood Income Rights When Issued Exp 30 June 2010",
+                "id": 14076464,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475006082"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "CHESSWOOD INCOME RTS WI",
+                "ns1__hasPermId": "21475006099",
+                "id": 14076473,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CHW_r.GO^G10",
+                "uri": "https://permid.org/1-21475006099",
+                "ns4__hasExchangeTicker": "CHW.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "CHESSWOOD INCOME RTS WI",
+                "ns1__hasPermId": "21475006100",
+                "id": 14073595,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CHW_r.ALP^G10",
+                "uri": "https://permid.org/1-21475006100",
+                "ns4__hasExchangeTicker": "CHW.RT",
+                "ns4__hasExchangeCode": "ALP"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "CHESSWOOD INCOME RTS WI",
+                "ns1__hasPermId": "21475006101",
+                "id": 14073593,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CHW_r.CXC^G10",
+                "uri": "https://permid.org/1-21475006101",
+                "ns4__hasExchangeTicker": "CHW.RT",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "156 Duncan Mill Rd Suite 15\n\n\nNORTH YORK\nONTARIO\nM3B 3N2\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "14163863099",
+                "ns1__hasPermId": "4295862321",
+                "ns7__hasIPODate": "2006-05-05T04:00:00Z",
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "156 Duncan Mill Rd Suite 15\n\n\nNORTH YORK\nONTARIO\nM3B 3N2\nCanada\n",
+                "uri": "https://permid.org/1-4295862321",
+                "ns7__hasLEI": "549300NP4M5JGBUX4910",
+                "ns2__organization-name": "Chesswood Group Ltd",
+                "id": 279565,
+                "ns7__hasLatestOrganizationFoundedDate": "2010-03-19T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "14163863085",
+                "ns7__hasRegisteredPhoneNumber": "14163863099"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "LORUS THERAPEUTICS RTS WI",
+                "ns1__hasPermId": "21475119615",
+                "id": 14073826,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "LOR_r.ALP^K10",
+                "uri": "https://permid.org/1-21475119615",
+                "ns4__hasExchangeTicker": "LOR.RT",
+                "ns4__hasExchangeCode": "ALP"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475119580",
+                "ns1__hasName": "Lorus Therapeutics Rights When Issued Exp 9 Nov 2010",
+                "id": 14076870,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475119580"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "LORUS THERAPEUTICS RTS WI",
+                "ns1__hasPermId": "21475119616",
+                "id": 14073823,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "LOR_r.CXC^K10",
+                "uri": "https://permid.org/1-21475119616",
+                "ns4__hasExchangeTicker": "LOR.RT",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "LORUS THERAPEUTICS RTS WI",
+                "ns1__hasPermId": "21475119581",
+                "id": 14076872,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "LOR_r.GO^K10",
+                "uri": "https://permid.org/1-21475119581",
+                "ns4__hasExchangeTicker": "LOR.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "LORUS THERAPEUTICS RTS WI",
+                "ns1__hasPermId": "21475119617",
+                "id": 14073824,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "LOR_r.CCP^K10",
+                "uri": "https://permid.org/1-21475119617",
+                "ns4__hasExchangeTicker": "LOR.RT",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "LORUS THERAPEUTICS RTS WI",
+                "ns1__hasPermId": "21475119614",
+                "id": 14073825,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "LOR_r.TO^K10",
+                "uri": "https://permid.org/1-21475119614",
+                "ns4__hasExchangeTicker": "LOR.RT",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "251 Consumers Rd Suite 1105\n\n\nNORTH YORK\nONTARIO\nM2J 4R3\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "16474799828",
+                "ns7__hasLEI": "5299003EUHV3CD08L949",
+                "ns1__hasPermId": "4295861982",
+                "ns2__organization-name": "Aptose Biosciences Inc",
+                "id": 478956,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "251 Consumers Rd Suite 1105\n\n\nNORTH YORK\nONTARIO\nM2J 4R3\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "2006-11-01T00:00:00Z",
+                "uri": "https://permid.org/1-4295861982"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475028268",
+                "ns1__hasName": "CHURCHILL RTS",
+                "id": 14076302,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CUQr.ALP^G10",
+                "uri": "https://permid.org/1-21475028268",
+                "ns4__hasExchangeTicker": "CUQ.R",
+                "ns4__hasExchangeCode": "ALP"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "Churchill Rights Exp 20 Aug 2010",
+                "ns1__hasPermId": "21475028265",
+                "id": 14076300,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475028265"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475028269",
+                "ns1__hasName": "CHURCHILL RTS",
+                "id": 14076304,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CUQr.CXC^G10",
+                "uri": "https://permid.org/1-21475028269",
+                "ns4__hasExchangeTicker": "CUQ.R",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475028267",
+                "ns1__hasName": "CHURCHILL RTS",
+                "id": 14076306,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CUQr.GO^G10",
+                "uri": "https://permid.org/1-21475028267",
+                "ns4__hasExchangeTicker": "CUQ.R",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475028266",
+                "ns1__hasName": "CHURCHILL RTS",
+                "id": 14076305,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "CUQr.TO^G10",
+                "uri": "https://permid.org/1-21475028266",
+                "ns4__hasExchangeTicker": "CUQ.R",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "600, 4820 Richard Road SW\n\n\nCALGARY\nALBERTA\nT3E 6L1\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "14036857122",
+                "ns1__hasPermId": "4295860345",
+                "ns7__hasIPODate": "1999-12-08T05:00:00Z",
+                "ns2__organization-name": "Stuart Olson Inc",
+                "id": 89990,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "400 3 Ave SW Suite 3700\n\n\nCALGARY\nALBERTA\nT2P 4H2\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "1981-08-31T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "14036857770",
+                "uri": "https://permid.org/1-4295860345"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475155170",
+                "ns1__hasName": "ORCA PETROLEUM RT",
+                "id": 14076932,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "OPI_r.V^K02",
+                "uri": "https://permid.org/1-21475155170",
+                "ns4__hasExchangeCode": "CVE"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "Orca Petroleum Rights",
+                "ns1__hasPermId": "8590244509",
+                "id": 14076151,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-8590244509"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "400 Burrard St Suite 1400\n\n\nVANCOUVER\nBRITISH COLUMBIA\nV6C 3G2\nCanada\n",
+                "ns7__hasLEI": "529900GCHKAJYEL0FW61",
+                "ns1__hasPermId": "4295863030",
+                "ns7__hasIPODate": "2007-08-24T04:00:00Z",
+                "ns2__organization-name": "Nautilus Minerals Inc",
+                "id": 1021574,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "Floor 10\n595 Howe St\n\nVANCOUVER\nBRITISH COLUMBIA\nV6C 2T5\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "2006-04-27T00:00:00Z",
+                "uri": "https://permid.org/1-4295863030"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GAZIT AMERICA RTS WI",
+                "ns1__hasPermId": "21475084146",
+                "id": 14075408,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GAA_r.GO^I10",
+                "uri": "https://permid.org/1-21475084146",
+                "ns4__hasExchangeTicker": "GAA.RT",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475084144",
+                "ns1__hasName": "Gazit America Rights When Issued Exp 14 Sep 2010",
+                "id": 14075406,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-21475084144"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GAZIT AMERICA RTS WI",
+                "ns1__hasPermId": "21475084156",
+                "id": 14075424,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GAA_r.CCP^I10",
+                "uri": "https://permid.org/1-21475084156",
+                "ns4__hasExchangeTicker": "GAA.RT",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GAZIT AMERICA RTS WI",
+                "ns1__hasPermId": "21475084154",
+                "id": 14075421,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GAA_r.ALP^I10",
+                "uri": "https://permid.org/1-21475084154",
+                "ns4__hasExchangeTicker": "GAA.RT",
+                "ns4__hasExchangeCode": "ALP"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GAZIT AMERICA RTS WI",
+                "ns1__hasPermId": "21475084145",
+                "id": 14075409,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GAA_r.TO^I10",
+                "uri": "https://permid.org/1-21475084145",
+                "ns4__hasExchangeTicker": "GAA.RT",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GAZIT AMERICA RTS WI",
+                "ns1__hasPermId": "21475084155",
+                "id": 14075420,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GAA_r.CXC^I10",
+                "uri": "https://permid.org/1-21475084155",
+                "ns4__hasExchangeTicker": "GAA.RT",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "109 Atlantic Ave Suite 303\n\n\nTORONTO\nONTARIO\nM6K 1X4\nCanada\n",
+                "ns1__hasPermId": "4298530033",
+                "ns2__organization-name": "Gazit America Inc",
+                "id": 145932,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "Suite 303\n109 Atlantic Avenue\n\nTORONTO\nONTARIO\nM6K 1X4\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "2009-06-19T00:00:00Z",
+                "uri": "https://permid.org/1-4298530033"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "NEW FLYER INDUSTRIES IDS",
+                "ns1__hasPermId": "21475861786",
+                "id": 14066918,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "NFI_u.TMX^H12",
+                "uri": "https://permid.org/1-21475861786",
+                "ns4__hasExchangeTicker": "NFI.UN",
+                "ns4__hasExchangeCode": "TMX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "8589993343",
+                "ns1__hasName": "New Flyer Industries Income Deposit Securities",
+                "id": 14065713,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-8589993343"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "NEW FLYER INDUSTRIES UNT",
+                "ns1__hasPermId": "21475501803",
+                "id": 14065232,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "NFI_u.CXC^J08",
+                "uri": "https://permid.org/1-21475501803",
+                "ns4__hasExchangeTicker": "NFI.UN",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "NEW FLYER INDUSTRIES IDS",
+                "ns1__hasPermId": "55838779764",
+                "id": 14066393,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "NFI_u.GO^H12",
+                "uri": "https://permid.org/1-55838779764",
+                "ns4__hasExchangeTicker": "NFI.UN",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "NEW FLYER INDUSTRIES IDS",
+                "ns1__hasPermId": "55846944317",
+                "id": 14068184,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "NFI_u.ALP^H12",
+                "uri": "https://permid.org/1-55846944317",
+                "ns4__hasExchangeTicker": "NFI.UN",
+                "ns4__hasExchangeCode": "ALP"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "NEW FLYER INDUSTRIES IDS",
+                "ns1__hasPermId": "55835399857",
+                "id": 14066837,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "NFYIF.PK^H12",
+                "uri": "https://permid.org/1-55835399857",
+                "ns4__hasExchangeTicker": "NFYIF",
+                "ns4__hasExchangeCode": "PKC"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "NEW FLYER INDUSTRIES IDS",
+                "ns1__hasPermId": "55838840585",
+                "id": 14065211,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "NFI_u.CXC^H12",
+                "uri": "https://permid.org/1-55838840585",
+                "ns4__hasExchangeTicker": "NFI.UN",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "NEW FLYER INDUSTRIES IDS",
+                "ns1__hasPermId": "21488484569",
+                "id": 14067754,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "NFI_u.OMG^H12",
+                "uri": "https://permid.org/1-21488484569",
+                "ns4__hasExchangeTicker": "NFI.UN",
+                "ns4__hasExchangeCode": "OMG"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "NEW FLYER INDUSTRIES IDS",
+                "ns1__hasPermId": "55838840583",
+                "id": 14065207,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "NFI_u.TO^H12",
+                "uri": "https://permid.org/1-55838840583",
+                "ns4__hasExchangeTicker": "NFI.UN",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "NEW FLYER INDUSTRIES IDS",
+                "ns1__hasPermId": "21475072730",
+                "id": 14066573,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "NFI_u.CCP^H12",
+                "uri": "https://permid.org/1-21475072730",
+                "ns4__hasExchangeTicker": "NFI.UN",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "711 Kernaghan Ave\nPO Box 270 Stn Toronto Dom\n\nWINNIPEG\nMANITOBA\nR2C 3T4\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "12042241251",
+                "ns7__hasLEI": "549300VX6QRAVXOXZW59",
+                "ns1__hasPermId": "4295861010",
+                "ns7__hasIPODate": "2005-08-12T04:00:00Z",
+                "ns2__organization-name": "NFI Group Inc",
+                "id": 80605,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "79 Wellington Street West Suite 3000\nPO Box 270 Stn Toronto Dom\n\nTORONTO\nONTARIO\nM5K 1N2\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "2005-06-16T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "12042246652",
+                "uri": "https://permid.org/1-4295861010"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "303307",
+                "rdfs__comment": "Also known as an enhanced income security (EIS), an income deposit security (IDS) is an exchange-traded security composed of both an issuer's common shares and its subordinated notes.",
+                "rdfs__label": "Income Deposit Securities",
+                "id": 16013138,
+                "label": "ns4__AssetClass",
+                "uri": "https://permid.org/1-303307"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "NEOE",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21560701051",
+                "id": 14065971,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRT_u.NEO",
+                "uri": "https://permid.org/1-21560701051",
+                "ns4__hasExchangeTicker": "GRT.UN",
+                "ns4__hasExchangeCode": "NEO"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "8590921499",
+                "ns1__hasName": "Granite Real Estate Investment Stapled Units",
+                "id": 14068365,
+                "label": "ns4__Instrument",
+                "uri": "https://permid.org/1-8590921499"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XCIS",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55838270847",
+                "id": 14065530,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.C",
+                "uri": "https://permid.org/1-55838270847",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "CIN"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "NEOD",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21668697443",
+                "id": 14065350,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRT_u.NED",
+                "uri": "https://permid.org/1-21668697443",
+                "ns4__hasExchangeTicker": "GRT.UN",
+                "ns4__hasExchangeCode": "NED"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "BATS",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55845628127",
+                "id": 14065565,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.Z",
+                "uri": "https://permid.org/1-55845628127",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "BAT"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "MI DEVELOPMENTS CL A ORD",
+                "ns1__hasPermId": "21475550516",
+                "id": 14065831,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIMa.CXC^J08",
+                "uri": "https://permid.org/1-21475550516",
+                "ns4__hasExchangeTicker": "MIM.A",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "EDGA",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21475053670",
+                "id": 14065849,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.DY",
+                "uri": "https://permid.org/1-21475053670",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "DEA"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "PURE",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55838762928",
+                "id": 14066370,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRT_u.GO",
+                "uri": "https://permid.org/1-55838762928",
+                "ns4__hasExchangeTicker": "GRT.UN",
+                "ns4__hasExchangeCode": "PTX"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "BATY",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21475123838",
+                "id": 14065320,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.ZY",
+                "uri": "https://permid.org/1-21475123838",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "BTY"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "LYNX",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21622320728",
+                "id": 14066479,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRT_u.LNX",
+                "uri": "https://permid.org/1-21622320728",
+                "ns4__hasExchangeTicker": "GRT.UN",
+                "ns4__hasExchangeCode": "LNX"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "IEXG",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21593731639",
+                "id": 14067887,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.EI",
+                "uri": "https://permid.org/1-21593731639",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "IEX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "25727423301",
+                "id": 14067871,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.BT1",
+                "uri": "https://permid.org/1-25727423301",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "BT1"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XNYS",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55838324130",
+                "id": 14066507,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.N",
+                "uri": "https://permid.org/1-55838324130",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "NYS"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21529569520",
+                "id": 14068497,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.ITC",
+                "uri": "https://permid.org/1-21529569520",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "NTV"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XXXX",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21475072521",
+                "id": 14065592,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRT_u.CCP",
+                "uri": "https://permid.org/1-21475072521",
+                "ns4__hasExchangeTicker": "GRT.UN",
+                "ns4__hasExchangeCode": "CAQ"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XCX2",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21522902456",
+                "id": 14067766,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRT_u.CXX",
+                "uri": "https://permid.org/1-21522902456",
+                "ns4__hasExchangeTicker": "GRT.UN",
+                "ns4__hasExchangeCode": "CXX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "MI DEVELOPMENTS A ORD",
+                "ns1__hasPermId": "21475550507",
+                "id": 14065842,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIM.PH^B09",
+                "uri": "https://permid.org/1-21475550507",
+                "ns4__hasExchangeTicker": "MIM",
+                "ns4__hasExchangeCode": "XPH"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475550509",
+                "ns1__hasName": "MI DEVELOPMNT WI",
+                "id": 14065843,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIM_w.P^H03",
+                "uri": "https://permid.org/1-21475550509",
+                "ns4__hasExchangeCode": "PSE"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XPSX",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21475118529",
+                "id": 14066502,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.PH",
+                "uri": "https://permid.org/1-21475118529",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "XPH"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "MI DEVELOPMENTS A ORD",
+                "ns1__hasPermId": "55836189900",
+                "id": 14066406,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIM.II^G10",
+                "uri": "https://permid.org/1-55836189900",
+                "ns4__hasExchangeTicker": "MIM",
+                "ns4__hasExchangeCode": "ISS"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475550512",
+                "ns1__hasName": "MI DEVELOPMNT WI",
+                "id": 14065848,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIM_w.B^H03",
+                "uri": "https://permid.org/1-21475550512",
+                "ns4__hasExchangeCode": "BOS"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21540146641",
+                "id": 14066883,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.BAT",
+                "uri": "https://permid.org/1-21540146641",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "BZX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475550513",
+                "ns1__hasName": "MI DEVELOPMNT WI",
+                "id": 14065847,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIM_w.TH^H03",
+                "uri": "https://permid.org/1-21475550513",
+                "ns4__hasExchangeCode": "THM"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475550514",
+                "ns1__hasName": "MI DEVELOPMNT WI",
+                "id": 14065828,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIM_w.MW^H03",
+                "uri": "https://permid.org/1-21475550514",
+                "ns4__hasExchangeCode": "MID"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XCHI",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55838274464",
+                "id": 14067864,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.MW",
+                "uri": "https://permid.org/1-55838274464",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "MID"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "MI DEVELOPMNT WHEN ISSUED",
+                "ns1__hasPermId": "21475550510",
+                "id": 14065846,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIM_w.N^H03",
+                "uri": "https://permid.org/1-21475550510",
+                "ns4__hasExchangeCode": "NYS"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XXXX",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55839228163",
+                "id": 14065080,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u",
+                "uri": "https://permid.org/1-55839228163",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "NYQ"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XATS",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55846944279",
+                "id": 14067785,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRT_u.ALP",
+                "uri": "https://permid.org/1-55846944279",
+                "ns4__hasExchangeTicker": "GRT.UN",
+                "ns4__hasExchangeCode": "ALP"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21540149892",
+                "id": 14067519,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.BYX",
+                "uri": "https://permid.org/1-21540149892",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "BYX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21522189174",
+                "id": 14068279,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.NB",
+                "uri": "https://permid.org/1-21522189174",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "NBN"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "CHIC",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55838835262",
+                "id": 14064927,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRT_u.CXC",
+                "uri": "https://permid.org/1-55838835262",
+                "ns4__hasExchangeTicker": "GRT.UN",
+                "ns4__hasExchangeCode": "CXC"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "EDGX",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21475054889",
+                "id": 14066195,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.DG",
+                "uri": "https://permid.org/1-21475054889",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "DEX"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475550511",
+                "ns1__hasName": "MI DEVELOPMNT WI",
+                "id": 14065845,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIM_w^H03",
+                "uri": "https://permid.org/1-21475550511",
+                "ns4__hasExchangeCode": "NYQ"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "25727390356",
+                "id": 14065955,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.ARC",
+                "uri": "https://permid.org/1-25727390356",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "ARC"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XBOS",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55846094421",
+                "id": 14065673,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.B",
+                "uri": "https://permid.org/1-55846094421",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "BOS"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XASE",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "25727431761",
+                "id": 14068090,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.A",
+                "uri": "https://permid.org/1-25727431761",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "ASE"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XNIM",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55835374888",
+                "id": 14066490,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.TH",
+                "uri": "https://permid.org/1-55835374888",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "THM"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "ARCX",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55837161829",
+                "id": 14065707,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.P",
+                "uri": "https://permid.org/1-55837161829",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "PSE"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55842395561",
+                "id": 14066412,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.W^E14",
+                "uri": "https://permid.org/1-55842395561",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "WCB"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "21475550508",
+                "ns1__hasName": "MI DEVELOPMNT",
+                "id": 14065841,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIM.B^L04",
+                "uri": "https://permid.org/1-21475550508",
+                "ns4__hasExchangeCode": "BOS"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "TMXS",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21475861711",
+                "id": 14066935,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRT_u.TMX^I15",
+                "uri": "https://permid.org/1-21475861711",
+                "ns4__hasExchangeTicker": "GRT.UN",
+                "ns4__hasExchangeCode": "TMX"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XADF",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55835376572",
+                "id": 14065838,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRP_u.DF",
+                "uri": "https://permid.org/1-55835376572",
+                "ns4__hasExchangeTicker": "GRP.U",
+                "ns4__hasExchangeCode": "ADC"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "NEOE",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "21560698987",
+                "id": 14068127,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRT_u.NLB",
+                "uri": "https://permid.org/1-21560698987",
+                "ns4__hasExchangeTicker": "GRT.UN",
+                "ns4__hasExchangeCode": "NLB"
+            }
+        },
+        {
+            "properties": {
+                "ns4__hasMic": "XTSE",
+                "ns1__hasName": "GRANITE REAL ESTATE INV STAPLED UNT",
+                "ns1__hasPermId": "55838835264",
+                "id": 14064929,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "GRT_u.TO",
+                "uri": "https://permid.org/1-55838835264",
+                "ns4__hasExchangeTicker": "GRT.UN",
+                "ns4__hasExchangeCode": "TOR"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "MI DEVELOPMENTS A ORD",
+                "ns1__hasPermId": "21475550515",
+                "id": 14065827,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIM.B^J07",
+                "uri": "https://permid.org/1-21475550515",
+                "ns4__hasExchangeTicker": "MIM",
+                "ns4__hasExchangeCode": "BOS"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasName": "MI DEVELOPMENT A ORD",
+                "ns1__hasPermId": "55836332403",
+                "id": 14070125,
+                "label": "ns4__Quote",
+                "ns4__hasRic": "MIMa.BE^A12",
+                "uri": "https://permid.org/1-55836332403",
+                "ns4__hasExchangeTicker": "MD1",
+                "ns4__hasExchangeCode": "BER"
+            }
+        },
+        {
+            "properties": {
+                "ns8__HeadquartersAddress": "77 King Street West Suite 4010\nPO Box 159 Stn Toronto Dom\n\nTORONTO\nONTARIO\nM5K 1H1\nCanada\n",
+                "ns7__hasHeadquartersPhoneNumber": "16479257540",
+                "ns1__hasPermId": "5038038370",
+                "ns2__organization-name": "Granite Real Estate Investment Trust",
+                "id": 281761,
+                "label": "ns7__Organization",
+                "ns8__RegisteredAddress": "\n\n\n\nONTARIO\n\nCanada\n",
+                "ns7__hasLatestOrganizationFoundedDate": "2013-01-03T00:00:00Z",
+                "ns7__hasHeadquartersFaxNumber": "14168618121",
+                "uri": "https://permid.org/1-5038038370"
+            }
+        },
+        {
+            "properties": {
+                "ns1__hasPermId": "302370",
+                "rdfs__comment": "A security which is comprised of two parts that cannot be separated from one another. The two parts of a stapled security are a unit of a trust and a share of a company. The resulting security is influenced by both parts, and must be treated as one unit at all times, such as when buying or selling the security.",
+                "rdfs__label": "Stapled Securities",
+                "id": 16012408,
+                "label": "ns4__AssetClass",
+                "uri": "https://permid.org/1-302370"
+            }
+        },
+        {
+            "properties": {
+                "id": 16013145,
+                "label": "Resource",
+                "uri": "http://permid.org/ontology/financial/instrumentStatusActive"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "properties": {
+                "source": 14066496,
+                "label": "ns6__isPrimaryCurrencyOf",
+                "target": 16159295
+            }
+        },
+        {
+            "properties": {
+                "source": 14066496,
+                "label": "ns6__isCurrencyOf",
+                "target": 16159295
+            }
+        },
+        {
+            "properties": {
+                "source": 16159132,
+                "label": "ns6__isCurrencySubunitOf",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14077038,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14077038,
+                "label": "ns4__isQuoteOf",
+                "target": 14076513
+            }
+        },
+        {
+            "properties": {
+                "source": 14076513,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14076513,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14076513,
+                "label": "ns4__isIssuedBy",
+                "target": 16035924
+            }
+        },
+        {
+            "properties": {
+                "source": 14076513,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14077038
+            }
+        },
+        {
+            "properties": {
+                "source": 14074189,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14074189,
+                "label": "ns4__isQuoteOf",
+                "target": 14074203
+            }
+        },
+        {
+            "properties": {
+                "source": 14074200,
+                "label": "ns4__isQuoteOf",
+                "target": 14074203
+            }
+        },
+        {
+            "properties": {
+                "source": 14074191,
+                "label": "ns4__isQuoteOf",
+                "target": 14074203
+            }
+        },
+        {
+            "properties": {
+                "source": 14074188,
+                "label": "ns4__isQuoteOf",
+                "target": 14074203
+            }
+        },
+        {
+            "properties": {
+                "source": 14074203,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14074200
+            }
+        },
+        {
+            "properties": {
+                "source": 14074203,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14074203,
+                "label": "ns4__isIssuedBy",
+                "target": 16042081
+            }
+        },
+        {
+            "properties": {
+                "source": 14074203,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14073652,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14073652,
+                "label": "ns4__isQuoteOf",
+                "target": 14073651
+            }
+        },
+        {
+            "properties": {
+                "source": 14075916,
+                "label": "ns4__isQuoteOf",
+                "target": 14073651
+            }
+        },
+        {
+            "properties": {
+                "source": 14073653,
+                "label": "ns4__isQuoteOf",
+                "target": 14073651
+            }
+        },
+        {
+            "properties": {
+                "source": 14073635,
+                "label": "ns4__isQuoteOf",
+                "target": 14073651
+            }
+        },
+        {
+            "properties": {
+                "source": 14073651,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14073651,
+                "label": "ns4__isIssuedBy",
+                "target": 110198
+            }
+        },
+        {
+            "properties": {
+                "source": 14073651,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14073652
+            }
+        },
+        {
+            "properties": {
+                "source": 14073651,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14073201,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14073201,
+                "label": "ns4__isQuoteOf",
+                "target": 14073218
+            }
+        },
+        {
+            "properties": {
+                "source": 14073207,
+                "label": "ns4__isQuoteOf",
+                "target": 14073218
+            }
+        },
+        {
+            "properties": {
+                "source": 14073174,
+                "label": "ns4__isQuoteOf",
+                "target": 14073218
+            }
+        },
+        {
+            "properties": {
+                "source": 14074143,
+                "label": "ns4__isQuoteOf",
+                "target": 14073218
+            }
+        },
+        {
+            "properties": {
+                "source": 14073175,
+                "label": "ns4__isQuoteOf",
+                "target": 14073218
+            }
+        },
+        {
+            "properties": {
+                "source": 14073218,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14073218,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14073175
+            }
+        },
+        {
+            "properties": {
+                "source": 14073218,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14073218,
+                "label": "ns4__isIssuedBy",
+                "target": 416452
+            }
+        },
+        {
+            "properties": {
+                "source": 14073174,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14074191,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076038,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076038,
+                "label": "ns4__isQuoteOf",
+                "target": 14076142
+            }
+        },
+        {
+            "properties": {
+                "source": 14076034,
+                "label": "ns4__isQuoteOf",
+                "target": 14076142
+            }
+        },
+        {
+            "properties": {
+                "source": 14076036,
+                "label": "ns4__isQuoteOf",
+                "target": 14076142
+            }
+        },
+        {
+            "properties": {
+                "source": 14076025,
+                "label": "ns4__isQuoteOf",
+                "target": 14076142
+            }
+        },
+        {
+            "properties": {
+                "source": 14076142,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14076142,
+                "label": "ns4__isIssuedBy",
+                "target": 99805
+            }
+        },
+        {
+            "properties": {
+                "source": 14076142,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14076142,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14076025
+            }
+        },
+        {
+            "properties": {
+                "source": 14076295,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076295,
+                "label": "ns4__isQuoteOf",
+                "target": 14076293
+            }
+        },
+        {
+            "properties": {
+                "source": 14076293,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14076293,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14076293,
+                "label": "ns4__isIssuedBy",
+                "target": 616423
+            }
+        },
+        {
+            "properties": {
+                "source": 14076293,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14076295
+            }
+        },
+        {
+            "properties": {
+                "source": 14074145,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14074145,
+                "label": "ns4__isQuoteOf",
+                "target": 14073152
+            }
+        },
+        {
+            "properties": {
+                "source": 14074840,
+                "label": "ns4__isQuoteOf",
+                "target": 14073152
+            }
+        },
+        {
+            "properties": {
+                "source": 14407683,
+                "label": "ns4__isQuoteOf",
+                "target": 14073152
+            }
+        },
+        {
+            "properties": {
+                "source": 14458279,
+                "label": "ns4__isQuoteOf",
+                "target": 14073152
+            }
+        },
+        {
+            "properties": {
+                "source": 14073152,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14073152,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14458279
+            }
+        },
+        {
+            "properties": {
+                "source": 14073152,
+                "label": "ns4__isIssuedBy",
+                "target": 79250
+            }
+        },
+        {
+            "properties": {
+                "source": 14073152,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14077014,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14077014,
+                "label": "ns4__isQuoteOf",
+                "target": 14076706
+            }
+        },
+        {
+            "properties": {
+                "source": 14077016,
+                "label": "ns4__isQuoteOf",
+                "target": 14076706
+            }
+        },
+        {
+            "properties": {
+                "source": 14077011,
+                "label": "ns4__isQuoteOf",
+                "target": 14076706
+            }
+        },
+        {
+            "properties": {
+                "source": 14077017,
+                "label": "ns4__isQuoteOf",
+                "target": 14076706
+            }
+        },
+        {
+            "properties": {
+                "source": 14076706,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14077011
+            }
+        },
+        {
+            "properties": {
+                "source": 14076706,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14076706,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14076706,
+                "label": "ns4__isIssuedBy",
+                "target": 431213
+            }
+        },
+        {
+            "properties": {
+                "source": 14076155,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076155,
+                "label": "ns4__isQuoteOf",
+                "target": 14073547
+            }
+        },
+        {
+            "properties": {
+                "source": 14076154,
+                "label": "ns4__isQuoteOf",
+                "target": 14073547
+            }
+        },
+        {
+            "properties": {
+                "source": 14074126,
+                "label": "ns4__isQuoteOf",
+                "target": 14073547
+            }
+        },
+        {
+            "properties": {
+                "source": 14076157,
+                "label": "ns4__isQuoteOf",
+                "target": 14073547
+            }
+        },
+        {
+            "properties": {
+                "source": 14076159,
+                "label": "ns4__isQuoteOf",
+                "target": 14073547
+            }
+        },
+        {
+            "properties": {
+                "source": 14073547,
+                "label": "ns4__isIssuedBy",
+                "target": 109830
+            }
+        },
+        {
+            "properties": {
+                "source": 14073547,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14073547,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14073547,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14076154
+            }
+        },
+        {
+            "properties": {
+                "source": 14073207,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076478,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076478,
+                "label": "ns4__isQuoteOf",
+                "target": 14076466
+            }
+        },
+        {
+            "properties": {
+                "source": 14076482,
+                "label": "ns4__isQuoteOf",
+                "target": 14076466
+            }
+        },
+        {
+            "properties": {
+                "source": 14076472,
+                "label": "ns4__isQuoteOf",
+                "target": 14076466
+            }
+        },
+        {
+            "properties": {
+                "source": 14076466,
+                "label": "ns4__isIssuedBy",
+                "target": 208851
+            }
+        },
+        {
+            "properties": {
+                "source": 14076466,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14076466,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14076466,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14076482
+            }
+        },
+        {
+            "properties": {
+                "source": 14074226,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14074226,
+                "label": "ns4__isQuoteOf",
+                "target": 14074675
+            }
+        },
+        {
+            "properties": {
+                "source": 14074242,
+                "label": "ns4__isQuoteOf",
+                "target": 14074675
+            }
+        },
+        {
+            "properties": {
+                "source": 14074225,
+                "label": "ns4__isQuoteOf",
+                "target": 14074675
+            }
+        },
+        {
+            "properties": {
+                "source": 14074223,
+                "label": "ns4__isQuoteOf",
+                "target": 14074675
+            }
+        },
+        {
+            "properties": {
+                "source": 14074675,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14074675,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14074225
+            }
+        },
+        {
+            "properties": {
+                "source": 14074675,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14074675,
+                "label": "ns4__isIssuedBy",
+                "target": 262220
+            }
+        },
+        {
+            "properties": {
+                "source": 14076001,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076001,
+                "label": "ns4__isQuoteOf",
+                "target": 14074425
+            }
+        },
+        {
+            "properties": {
+                "source": 14076000,
+                "label": "ns4__isQuoteOf",
+                "target": 14074425
+            }
+        },
+        {
+            "properties": {
+                "source": 14074594,
+                "label": "ns4__isQuoteOf",
+                "target": 14074425
+            }
+        },
+        {
+            "properties": {
+                "source": 14428204,
+                "label": "ns4__isQuoteOf",
+                "target": 14074425
+            }
+        },
+        {
+            "properties": {
+                "source": 14074425,
+                "label": "ns4__isIssuedBy",
+                "target": 263523
+            }
+        },
+        {
+            "properties": {
+                "source": 14074425,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14074425,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14076001
+            }
+        },
+        {
+            "properties": {
+                "source": 14074425,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14074786,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14074786,
+                "label": "ns4__isQuoteOf",
+                "target": 14074791
+            }
+        },
+        {
+            "properties": {
+                "source": 14074780,
+                "label": "ns4__isQuoteOf",
+                "target": 14074791
+            }
+        },
+        {
+            "properties": {
+                "source": 14074785,
+                "label": "ns4__isQuoteOf",
+                "target": 14074791
+            }
+        },
+        {
+            "properties": {
+                "source": 14074782,
+                "label": "ns4__isQuoteOf",
+                "target": 14074791
+            }
+        },
+        {
+            "properties": {
+                "source": 14074777,
+                "label": "ns4__isQuoteOf",
+                "target": 14074791
+            }
+        },
+        {
+            "properties": {
+                "source": 14074791,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14074791,
+                "label": "ns4__isIssuedBy",
+                "target": 429556
+            }
+        },
+        {
+            "properties": {
+                "source": 14074791,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14074791,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14074786
+            }
+        },
+        {
+            "properties": {
+                "source": 14076471,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076471,
+                "label": "ns4__isQuoteOf",
+                "target": 14076464
+            }
+        },
+        {
+            "properties": {
+                "source": 14076473,
+                "label": "ns4__isQuoteOf",
+                "target": 14076464
+            }
+        },
+        {
+            "properties": {
+                "source": 14073595,
+                "label": "ns4__isQuoteOf",
+                "target": 14076464
+            }
+        },
+        {
+            "properties": {
+                "source": 14073593,
+                "label": "ns4__isQuoteOf",
+                "target": 14076464
+            }
+        },
+        {
+            "properties": {
+                "source": 14076464,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14076471
+            }
+        },
+        {
+            "properties": {
+                "source": 14076464,
+                "label": "ns4__isIssuedBy",
+                "target": 279565
+            }
+        },
+        {
+            "properties": {
+                "source": 14076464,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14076464,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14076025,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076157,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14073826,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14073826,
+                "label": "ns4__isQuoteOf",
+                "target": 14076870
+            }
+        },
+        {
+            "properties": {
+                "source": 14073823,
+                "label": "ns4__isQuoteOf",
+                "target": 14076870
+            }
+        },
+        {
+            "properties": {
+                "source": 14076872,
+                "label": "ns4__isQuoteOf",
+                "target": 14076870
+            }
+        },
+        {
+            "properties": {
+                "source": 14073824,
+                "label": "ns4__isQuoteOf",
+                "target": 14076870
+            }
+        },
+        {
+            "properties": {
+                "source": 14073825,
+                "label": "ns4__isQuoteOf",
+                "target": 14076870
+            }
+        },
+        {
+            "properties": {
+                "source": 14076870,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14076870,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14076870,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14073825
+            }
+        },
+        {
+            "properties": {
+                "source": 14076870,
+                "label": "ns4__isIssuedBy",
+                "target": 478956
+            }
+        },
+        {
+            "properties": {
+                "source": 14074840,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076302,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076302,
+                "label": "ns4__isQuoteOf",
+                "target": 14076300
+            }
+        },
+        {
+            "properties": {
+                "source": 14076304,
+                "label": "ns4__isQuoteOf",
+                "target": 14076300
+            }
+        },
+        {
+            "properties": {
+                "source": 14076306,
+                "label": "ns4__isQuoteOf",
+                "target": 14076300
+            }
+        },
+        {
+            "properties": {
+                "source": 14076305,
+                "label": "ns4__isQuoteOf",
+                "target": 14076300
+            }
+        },
+        {
+            "properties": {
+                "source": 14076300,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14076300,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14076305
+            }
+        },
+        {
+            "properties": {
+                "source": 14076300,
+                "label": "ns4__isIssuedBy",
+                "target": 89990
+            }
+        },
+        {
+            "properties": {
+                "source": 14076300,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14073824,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076154,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076932,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076932,
+                "label": "ns4__isQuoteOf",
+                "target": 14076151
+            }
+        },
+        {
+            "properties": {
+                "source": 14076151,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14076151,
+                "label": "ns4__isIssuedBy",
+                "target": 1021574
+            }
+        },
+        {
+            "properties": {
+                "source": 14076151,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14076151,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14076932
+            }
+        },
+        {
+            "properties": {
+                "source": 14076304,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14076036,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14075408,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14075408,
+                "label": "ns4__isQuoteOf",
+                "target": 14075406
+            }
+        },
+        {
+            "properties": {
+                "source": 14075424,
+                "label": "ns4__isQuoteOf",
+                "target": 14075406
+            }
+        },
+        {
+            "properties": {
+                "source": 14075421,
+                "label": "ns4__isQuoteOf",
+                "target": 14075406
+            }
+        },
+        {
+            "properties": {
+                "source": 14075409,
+                "label": "ns4__isQuoteOf",
+                "target": 14075406
+            }
+        },
+        {
+            "properties": {
+                "source": 14075420,
+                "label": "ns4__isQuoteOf",
+                "target": 14075406
+            }
+        },
+        {
+            "properties": {
+                "source": 14075406,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14075409
+            }
+        },
+        {
+            "properties": {
+                "source": 14075406,
+                "label": "ns4__isIssuedBy",
+                "target": 145932
+            }
+        },
+        {
+            "properties": {
+                "source": 14075406,
+                "label": "ns4__hasAssetClass",
+                "target": 16023998
+            }
+        },
+        {
+            "properties": {
+                "source": 14075406,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14076482,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14074200,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14066918,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14066918,
+                "label": "ns4__isQuoteOf",
+                "target": 14065713
+            }
+        },
+        {
+            "properties": {
+                "source": 14065232,
+                "label": "ns4__isQuoteOf",
+                "target": 14065713
+            }
+        },
+        {
+            "properties": {
+                "source": 14066393,
+                "label": "ns4__isQuoteOf",
+                "target": 14065713
+            }
+        },
+        {
+            "properties": {
+                "source": 14068184,
+                "label": "ns4__isQuoteOf",
+                "target": 14065713
+            }
+        },
+        {
+            "properties": {
+                "source": 14066837,
+                "label": "ns4__isQuoteOf",
+                "target": 14065713
+            }
+        },
+        {
+            "properties": {
+                "source": 14065211,
+                "label": "ns4__isQuoteOf",
+                "target": 14065713
+            }
+        },
+        {
+            "properties": {
+                "source": 14067754,
+                "label": "ns4__isQuoteOf",
+                "target": 14065713
+            }
+        },
+        {
+            "properties": {
+                "source": 14065207,
+                "label": "ns4__isQuoteOf",
+                "target": 14065713
+            }
+        },
+        {
+            "properties": {
+                "source": 14066573,
+                "label": "ns4__isQuoteOf",
+                "target": 14065713
+            }
+        },
+        {
+            "properties": {
+                "source": 14065713,
+                "label": "ns4__isIssuedBy",
+                "target": 80605
+            }
+        },
+        {
+            "properties": {
+                "source": 14065713,
+                "label": "ns4__hasAssetClass",
+                "target": 16013138
+            }
+        },
+        {
+            "properties": {
+                "source": 14065713,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16012873
+            }
+        },
+        {
+            "properties": {
+                "source": 14065713,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14065207
+            }
+        },
+        {
+            "properties": {
+                "source": 14065971,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14065971,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065530,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065350,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065565,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065831,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065849,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14066370,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065320,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14066479,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14067887,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14067871,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14066507,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14068497,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065592,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14067766,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065842,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065843,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14066502,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14066406,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065848,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14066883,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065847,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065828,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14067864,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065846,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065080,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14067785,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14067519,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14068279,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14064927,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14066195,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065845,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065955,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065673,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14068090,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14066490,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065707,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14066412,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065841,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14066935,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065838,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14068127,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14064929,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065827,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14070125,
+                "label": "ns4__isQuoteOf",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14068365,
+                "label": "ns4__isIssuedBy",
+                "target": 281761
+            }
+        },
+        {
+            "properties": {
+                "source": 14068365,
+                "label": "ns4__hasPrimaryQuote",
+                "target": 14064929
+            }
+        },
+        {
+            "properties": {
+                "source": 14068365,
+                "label": "ns4__hasAssetClass",
+                "target": 16012408
+            }
+        },
+        {
+            "properties": {
+                "source": 14068365,
+                "label": "ns4__hasInstrumentStatus",
+                "target": 16013145
+            }
+        },
+        {
+            "properties": {
+                "source": 281761,
+                "label": "ns4__hasPrimaryInstrument",
+                "target": 14068365
+            }
+        },
+        {
+            "properties": {
+                "source": 14065232,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14065211,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14065831,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        },
+        {
+            "properties": {
+                "source": 14068184,
+                "label": "ns4__isQuotedIn",
+                "target": 14066496
+            }
+        }
+    ]
+}

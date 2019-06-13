@@ -1,0 +1,1234 @@
+{
+  "nodes": [
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:from",
+      "type": 2,
+      "index": 0,
+      "x": 45.87161352763657,
+      "y": 783.3340783757355,
+      "vy": 0.010418245366505801,
+      "vx": -0.010210676191285685
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanPropertyMatcher:toString",
+      "type": 1,
+      "index": 1,
+      "x": 207.6209277564142,
+      "y": 1221.139789693752,
+      "vy": 0.014926746933189801,
+      "vx": -0.0037062110816667103
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.ComparableObjectComparator:asNullIfNotComparable",
+      "type": 0,
+      "index": 2,
+      "x": 534.6058849245024,
+      "y": -193.2577971316306,
+      "vy": -0.006268567322229099,
+      "vx": 0.0013505144973308806
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.DefaultSortOrderableComparator:asc",
+      "type": 1,
+      "index": 3,
+      "x": 900.1880590998658,
+      "y": 564.6713736112781,
+      "vy": 0.004920364236583808,
+      "vx": 0.004613878660613012
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.DefaultNullValuePropertyValueGetter:<init>",
+      "type": 1,
+      "index": 4,
+      "x": 222.04464656251022,
+      "y": -135.40866668361,
+      "vy": -0.00656453418627902,
+      "vx": -0.003423160326402532
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.ClassSelector:removePropertySelector",
+      "type": 0,
+      "index": 5,
+      "x": 551.3249176344476,
+      "y": 243.7919824953904,
+      "vy": -0.003533587696814341,
+      "vx": -0.009617802443261837
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.PropertySelector:getProperty",
+      "type": 2,
+      "index": 6,
+      "x": 308.83017774850987,
+      "y": 258.98902472861226,
+      "vy": -0.004680029834315304,
+      "vx": -0.006513347729663646
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:removeNullSubSelectors",
+      "type": 2,
+      "index": 7,
+      "x": 198.31824454335703,
+      "y": -448.9152815690455,
+      "vy": -0.008898634700535035,
+      "vx": -0.004477367064339914
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.ComparableObjectComparator:<init>",
+      "type": 1,
+      "index": 8,
+      "x": 1113.5254669258554,
+      "y": 216.50882008845738,
+      "vy": -0.0019995606115784333,
+      "vx": 0.004073703283904062
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:allOf",
+      "type": 0,
+      "index": 9,
+      "x": 1.7977304471245121,
+      "y": 522.3346431295046,
+      "vy": 0.002664582233298545,
+      "vx": -0.0071008070152531145
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.BeanSelector:select",
+      "type": 0,
+      "index": 10,
+      "x": 937.4954313138845,
+      "y": -403.6552529342523,
+      "vy": -0.008114420407645304,
+      "vx": 0.003641842375133905
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.NestedKeyValueMapSelector:addNestedKeyValue",
+      "type": 0,
+      "index": 11,
+      "x": 924.1420211223319,
+      "y": 1039.8781187455636,
+      "vy": 0.01130823984589152,
+      "vx": 0.004648534472835798
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.DefaultSortOrderableComparator:ascCompare",
+      "type": 1,
+      "index": 12,
+      "x": 339.5051754191978,
+      "y": 636.4289646261192,
+      "vy": 0.009343578345576576,
+      "vx": -0.0009369151735418118
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.StringSelector:<init>",
+      "type": 2,
+      "index": 13,
+      "x": 1214.4246705198561,
+      "y": -170.5312091952897,
+      "vy": -0.0071481566471730245,
+      "vx": 0.0055921994101540695
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:executeFrom",
+      "type": 2,
+      "index": 14,
+      "x": -127.23617504714183,
+      "y": 819.9501366357568,
+      "vy": 0.009528074675097043,
+      "vx": -0.009978102282711397
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:orderBy",
+      "type": 1,
+      "index": 15,
+      "x": 399.84224366475854,
+      "y": -666.3585890557604,
+      "vy": -0.009839182354520568,
+      "vx": -0.0004434309703906231
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.ClassSelector:add",
+      "type": 2,
+      "index": 16,
+      "x": 1166.0129957681356,
+      "y": 621.5173141791372,
+      "vy": 0.006632152778583216,
+      "vx": 0.00607126536310116
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:execute",
+      "type": 0,
+      "index": 17,
+      "x": -225.64786393602293,
+      "y": 670.8545220501472,
+      "vy": 0.010238219047109054,
+      "vx": -0.01004341086705149
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.StringSelector:doSelect",
+      "type": 2,
+      "index": 18,
+      "x": 1450.1399252722786,
+      "y": -5.44343110225881,
+      "vy": 0.0011447368884256127,
+      "vx": 0.009274391809651396
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanPropertyMatcher:<init>",
+      "type": 2,
+      "index": 19,
+      "x": 495.4648631584886,
+      "y": 1249.8759218338948,
+      "vy": 0.012767432379348602,
+      "vx": 0.002171328303476751
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:addSubSelector",
+      "type": 1,
+      "index": 20,
+      "x": -157.69522592617687,
+      "y": 78.74219088306091,
+      "vy": -0.001290579225634293,
+      "vx": -0.004784661573065746
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.PropertyComparator:<init>",
+      "type": 2,
+      "index": 21,
+      "x": 1617.0048123917634,
+      "y": 324.8828273700744,
+      "vy": 0.0011631333292782043,
+      "vx": 0.014333767904324392
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.ClassSelector:addPropertySelector",
+      "type": 0,
+      "index": 22,
+      "x": 58.39479601028813,
+      "y": 185.75144660023187,
+      "vy": -0.0037665357957744777,
+      "vx": -0.004676257107627002
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.PropertyComparator:toString",
+      "type": 2,
+      "index": 23,
+      "x": 690.6157201787423,
+      "y": -825.8677572795888,
+      "vy": -0.010922949278634854,
+      "vx": 0.002360911789511331
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.MatcherPredicate:toString",
+      "type": 0,
+      "index": 24,
+      "x": 1466.8537021415161,
+      "y": 722.949142679091,
+      "vy": 0.0075657242698960875,
+      "vx": 0.008650193443430392
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.StringSelector:createPropertySelector",
+      "type": 0,
+      "index": 25,
+      "x": -509.62923915451165,
+      "y": -181.9431487142563,
+      "vy": -0.007198298037773393,
+      "vx": -0.012315033111075216
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:value",
+      "type": 1,
+      "index": 26,
+      "x": 1629.200791358203,
+      "y": -372.597362913476,
+      "vy": -0.00753775941870048,
+      "vx": 0.011260172269563223
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.PropertyComparator:compare",
+      "type": 0,
+      "index": 27,
+      "x": -132.89754844447228,
+      "y": 1221.4842375277467,
+      "vy": 0.012887622302180596,
+      "vx": -0.008865213194183688
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.DefaultNullValuePropertyValueGetter:getProperty",
+      "type": 0,
+      "index": 28,
+      "x": 162.2226486837782,
+      "y": -899.8412001478316,
+      "vy": -0.011748028950381479,
+      "vx": -0.004073033687925779
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.DefaultSortOrderableComparator:desc",
+      "type": 1,
+      "index": 29,
+      "x": 1671.5085046568392,
+      "y": 776.8300797061593,
+      "vy": 0.007787284062830617,
+      "vx": 0.012780834819595598
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:<init>",
+      "type": 0,
+      "index": 30,
+      "x": -660.0092859552857,
+      "y": 658.5512915019541,
+      "vy": 0.0068085685058309735,
+      "vx": -0.013723136606246565
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.PropertySelector:<init>",
+      "type": 0,
+      "index": 31,
+      "x": 1165.1467331069175,
+      "y": -830.7201536227101,
+      "vy": -0.010986794820961626,
+      "vx": 0.005286676277499969
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.DefaultSortOrderableComparator:compare",
+      "type": 0,
+      "index": 32,
+      "x": 438.4539970402681,
+      "y": 797.8591921789917,
+      "vy": 0.007339076996761724,
+      "vx": -0.001704727307202933
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.ClassSelector:except",
+      "type": 1,
+      "index": 33,
+      "x": -340.8741743544941,
+      "y": -656.5610970477645,
+      "vy": -0.00986682249872042,
+      "vx": -0.009269610951200085
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.DelegatedSortOrderableComparator:ascCompare",
+      "type": 0,
+      "index": 34,
+      "x": 1880.369196339722,
+      "y": 110.76898825837065,
+      "vy": -0.0026733133457187514,
+      "vx": 0.014715233542849301
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.StringSelector:initCompositeSelector",
+      "type": 0,
+      "index": 35,
+      "x": -315.2100652203839,
+      "y": 197.56366385652393,
+      "vy": -0.003664435960464723,
+      "vx": -0.006386277827842515
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:orderByProperty",
+      "type": 0,
+      "index": 36,
+      "x": 649.4916853871403,
+      "y": -1146.0128339695013,
+      "vy": -0.014241414578791606,
+      "vx": 0.0013253731440779825
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:<init>",
+      "type": 2,
+      "index": 37,
+      "x": 1399.2314117651208,
+      "y": 1306.3105233870115,
+      "vy": 0.012436995104182865,
+      "vx": 0.00786700597868625
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.MatcherPredicate:evaluate",
+      "type": 0,
+      "index": 38,
+      "x": -743.0272009751264,
+      "y": 22.267395382907672,
+      "vy": -0.0024943706219036615,
+      "vx": -0.012148446205115937
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.main:<init>",
+      "type": 1,
+      "index": 39,
+      "x": 1659.6466452477935,
+      "y": -672.3552023405811,
+      "vy": -0.009882599950475742,
+      "vx": 0.010904411054431686
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanPropertyMatcher:matches",
+      "type": 2,
+      "index": 40,
+      "x": 492.0250084266607,
+      "y": 1525.3559103227603,
+      "vy": 0.01790800304723952,
+      "vx": 0.0006628330763415192
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.NestedKeyValueMapSelector:<init>",
+      "type": 1,
+      "index": 41,
+      "x": -145.8733835333593,
+      "y": -1054.6969285307773,
+      "vy": -0.013250561019516383,
+      "vx": -0.007602837831560676
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQueryCustomizedMatchers:<init>",
+      "type": 1,
+      "index": 42,
+      "x": 1966.820187723486,
+      "y": 642.8810407239233,
+      "vy": 0.004647165476656351,
+      "vx": 0.01567773097304054
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector:doSelect",
+      "type": 0,
+      "index": 43,
+      "x": -1067.9402877536452,
+      "y": 329.49973434140793,
+      "vy": -0.0019519078659936031,
+      "vx": -0.019623141766612368
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.DefaultSelector:doSelect",
+      "type": 0,
+      "index": 44,
+      "x": 579.905042016759,
+      "y": 418.1102293155485,
+      "vy": 0.003901904944186116,
+      "vx": 0.0024538028839846296
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.PropertySelector:doSelect",
+      "type": 0,
+      "index": 45,
+      "x": 1060.112450144657,
+      "y": 1572.0123707369646,
+      "vy": 0.01442278585957792,
+      "vx": 0.0042204804454304586
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.ClassSelector:<init>",
+      "type": 0,
+      "index": 46,
+      "x": -242.82543848939778,
+      "y": -108.31895280833565,
+      "vy": 0.000057392023686307116,
+      "vx": -0.005353847023262185
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:select",
+      "type": 2,
+      "index": 47,
+      "x": 1421.9334203954083,
+      "y": 197.12831472455176,
+      "vy": -0.0017632089427356118,
+      "vx": 0.008730954818715662
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:select",
+      "type": 2,
+      "index": 48,
+      "x": -231.09985969636725,
+      "y": 1539.7823084748957,
+      "vy": 0.015851292303349394,
+      "vx": -0.007378669429388329
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:property",
+      "type": 1,
+      "index": 49,
+      "x": 268.20827091789124,
+      "y": -1277.8780533162249,
+      "vy": -0.015569146728091282,
+      "vx": -0.0028386938638633925
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:asc",
+      "type": 2,
+      "index": 50,
+      "x": 1773.5229528352913,
+      "y": 1127.5601925280864,
+      "vy": 0.010678817663745723,
+      "vx": 0.012280741709827734
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.SortOrderableComparator:asc",
+      "type": 1,
+      "index": 51,
+      "x": -1062.622967810877,
+      "y": 209.62722097918538,
+      "vy": -0.0019752325735196636,
+      "vx": -0.015091113274550119
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.SortOrderableComparator:desc",
+      "type": 0,
+      "index": 52,
+      "x": 1443.1420817490357,
+      "y": -1030.0345559433429,
+      "vy": -0.012747197206405249,
+      "vx": 0.008637352377300659
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.ClassSelector:doSelect",
+      "type": 2,
+      "index": 53,
+      "x": 1380.3068013300324,
+      "y": 410.773150998648,
+      "vy": -0.005924820290030748,
+      "vx": 0.010063095493597513
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.DefaultSelector:<init>",
+      "type": 0,
+      "index": 54,
+      "x": -526.8891776103392,
+      "y": -918.7677221090678,
+      "vy": -0.012578327047053904,
+      "vx": -0.011278389982024382
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.DelegatedSortOrderableComparator:<init>",
+      "type": 2,
+      "index": 55,
+      "x": 2170.8866462388673,
+      "y": 153.77938604223849,
+      "vy": -0.001177927134689068,
+      "vx": 0.01749078092827273
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.MatcherPredicate:<init>",
+      "type": 1,
+      "index": 56,
+      "x": -744.9363288974357,
+      "y": 1240.2309950574936,
+      "vy": 0.011318528363984618,
+      "vx": -0.013179357988479164
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector:toString",
+      "type": 0,
+      "index": 57,
+      "x": 933.2223086010763,
+      "y": -1401.4437305942474,
+      "vy": -0.01610936861976661,
+      "vx": 0.00374386660145478
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.PropertySelector:as",
+      "type": 0,
+      "index": 58,
+      "x": 1377.503769765548,
+      "y": 1712.6938174260765,
+      "vy": 0.016061627844241158,
+      "vx": 0.007703373091458171
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.NestedKeyValueMapSelector:doSelect",
+      "type": 0,
+      "index": 59,
+      "x": -1172.5447033945318,
+      "y": -80.86198092902177,
+      "vy": -0.0012906049511304495,
+      "vx": -0.019022712137076698
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:where",
+      "type": 1,
+      "index": 60,
+      "x": 2060.8897921076345,
+      "y": -586.7704048110063,
+      "vy": -0.008394417313142622,
+      "vx": 0.014930868797524342
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.DefaultSelector:select",
+      "type": 1,
+      "index": 61,
+      "x": 582.4975720032243,
+      "y": 568.6879591734581,
+      "vy": 0.003709006304619173,
+      "vx": 0.0027774247256734516
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.main:main",
+      "type": 1,
+      "index": 62,
+      "x": -103.18308999269955,
+      "y": -1409.1453880755712,
+      "vy": -0.01661408743618672,
+      "vx": -0.006883813309334574
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.Selector:select",
+      "type": 1,
+      "index": 63,
+      "x": 2136.5191113328133,
+      "y": 989.1916848600887,
+      "vy": 0.00844811789742384,
+      "vx": 0.016325533977154857
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.BeanSelector:toString",
+      "type": 2,
+      "index": 64,
+      "x": -1038.161726171428,
+      "y": 910.616088612528,
+      "vy": 0.007743504560529722,
+      "vx": -0.015810137333590574
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.DefaultSortOrderableComparator:<init>",
+      "type": 2,
+      "index": 65,
+      "x": 1303.7158600756143,
+      "y": -1339.4160238062766,
+      "vy": -0.01564602277138432,
+      "vx": 0.007120886181683836
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:<clinit>",
+      "type": 2,
+      "index": 66,
+      "x": 896.6974236633587,
+      "y": 1897.252316400274,
+      "vy": 0.017452741558510215,
+      "vx": 0.002131254647562542
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector:<init>",
+      "type": 2,
+      "index": 67,
+      "x": -957.5074851450362,
+      "y": -724.40707484118,
+      "vy": -0.01018991884538626,
+      "vx": -0.013899169771736044
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:nested",
+      "type": 0,
+      "index": 68,
+      "x": 2251.1232448097576,
+      "y": -199.6354007452428,
+      "vy": -0.005273968251445865,
+      "vx": 0.01688971799228724
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.ComparableObjectComparator:compare",
+      "type": 2,
+      "index": 69,
+      "x": -480.115705307594,
+      "y": 1637.4658761292376,
+      "vy": 0.0152509249132209,
+      "vx": -0.010730094378352484
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:selectBean",
+      "type": 2,
+      "index": 70,
+      "x": 490.7962068750054,
+      "y": -1538.4478924743266,
+      "vy": -0.017556815785797073,
+      "vx": -0.00019372498801705605
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanQuery:desc",
+      "type": 2,
+      "index": 71,
+      "x": 1807.8720722681703,
+      "y": 1462.5742540032822,
+      "vy": 0.013700982180674968,
+      "vx": 0.01204518002074397
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector:select",
+      "type": 1,
+      "index": 72,
+      "x": -1114.237547999734,
+      "y": 87.19260379919676,
+      "vy": -0.0013693348868274102,
+      "vx": -0.017970704780087325
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.BeanSelector:<init>",
+      "type": 1,
+      "index": 73,
+      "x": 1812.8926723407515,
+      "y": -1014.4355646908199,
+      "vy": -0.012497728308890215,
+      "vx": 0.012456639292846237
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.BeanPropertyMatcher:describeTo",
+      "type": 2,
+      "index": 74,
+      "x": 213.73932202013495,
+      "y": 1397.1187858273895,
+      "vy": 0.014259394634723766,
+      "vx": -0.004326900705954998
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:doSelect",
+      "type": 0,
+      "index": 75,
+      "x": -1020.5589603073653,
+      "y": -86.23102524125632,
+      "vy": -0.000059736757748248166,
+      "vx": -0.017076692124644573
+    },
+    {
+      "name": "cn.jimmyshi.beanquery.comparators.DelegatedSortOrderableComparator:toString",
+      "type": 1,
+      "index": 76,
+      "x": 2317.088343626582,
+      "y": 497.19263302213756,
+      "vy": 0.0028283426956973107,
+      "vx": 0.01815273454133471
+    }
+  ],
+  "classMethodMap": {
+    "cn.jimmyshi.beanquery.selectors.StringSelector": [
+      "<init>",
+      "<init>",
+      "initCompositeSelector",
+      "createPropertySelector",
+      "doSelect"
+    ],
+    "cn.jimmyshi.beanquery.comparators.DefaultSortOrderableComparator": [
+      "<init>",
+      "compare",
+      "ascCompare",
+      "desc",
+      "asc"
+    ],
+    "cn.jimmyshi.beanquery.main": [
+      "<init>",
+      "main"
+    ],
+    "cn.jimmyshi.beanquery.selectors.BeanSelector": [
+      "<init>",
+      "select",
+      "toString"
+    ],
+    "cn.jimmyshi.beanquery.comparators.PropertyComparator": [
+      "<init>",
+      "<init>",
+      "compare",
+      "toString"
+    ],
+    "cn.jimmyshi.beanquery.comparators.ComparableObjectComparator": [
+      "<init>",
+      "compare",
+      "asNullIfNotComparable"
+    ],
+    "cn.jimmyshi.beanquery.Selector": [
+      "select",
+      "select"
+    ],
+    "cn.jimmyshi.beanquery.BeanQuery": [
+      "<init>",
+      "nested",
+      "from",
+      "from",
+      "where",
+      "where",
+      "orderBy",
+      "orderBy",
+      "orderBy",
+      "orderBy",
+      "desc",
+      "asc",
+      "orderByProperty",
+      "executeFrom",
+      "executeFrom",
+      "execute",
+      "select",
+      "select",
+      "select",
+      "selectBean",
+      "select",
+      "select",
+      "allOf",
+      "property",
+      "value"
+    ],
+    "cn.jimmyshi.beanquery.BeanQueryCustomizedMatchers": [
+      "<init>"
+    ],
+    "cn.jimmyshi.beanquery.selectors.PropertySelector": [
+      "getProperty",
+      "<init>",
+      "<init>",
+      "as",
+      "doSelect"
+    ],
+    "cn.jimmyshi.beanquery.BeanPropertyMatcher": [
+      "<init>",
+      "matches",
+      "toString",
+      "describeTo"
+    ],
+    "cn.jimmyshi.beanquery.MatcherPredicate": [
+      "<init>",
+      "evaluate",
+      "toString"
+    ],
+    "cn.jimmyshi.beanquery.DefaultNullValuePropertyValueGetter": [
+      "<init>",
+      "getProperty"
+    ],
+    "cn.jimmyshi.beanquery.selectors.ClassSelector": [
+      "<init>",
+      "except",
+      "removePropertySelector",
+      "add",
+      "addPropertySelector",
+      "doSelect"
+    ],
+    "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector": [
+      "<init>",
+      "select",
+      "doSelect",
+      "toString",
+      "select"
+    ],
+    "cn.jimmyshi.beanquery.comparators.SortOrderableComparator": [
+      "desc",
+      "asc"
+    ],
+    "cn.jimmyshi.beanquery.selectors.CompositeSelector": [
+      "<init>",
+      "<init>",
+      "<init>",
+      "removeNullSubSelectors",
+      "addSubSelector",
+      "doSelect",
+      "<clinit>"
+    ],
+    "cn.jimmyshi.beanquery.selectors.NestedKeyValueMapSelector": [
+      "<init>",
+      "doSelect",
+      "addNestedKeyValue"
+    ],
+    "cn.jimmyshi.beanquery.comparators.DelegatedSortOrderableComparator": [
+      "<init>",
+      "ascCompare",
+      "toString"
+    ],
+    "cn.jimmyshi.beanquery.selectors.DefaultSelector": [
+      "<init>",
+      "select",
+      "doSelect"
+    ]
+  },
+  "classes": [
+    "cn.jimmyshi.beanquery.selectors.StringSelector",
+    "cn.jimmyshi.beanquery.comparators.DefaultSortOrderableComparator",
+    "cn.jimmyshi.beanquery.main",
+    "cn.jimmyshi.beanquery.selectors.BeanSelector",
+    "cn.jimmyshi.beanquery.comparators.PropertyComparator",
+    "cn.jimmyshi.beanquery.comparators.ComparableObjectComparator",
+    "cn.jimmyshi.beanquery.Selector",
+    "cn.jimmyshi.beanquery.BeanQuery",
+    "cn.jimmyshi.beanquery.BeanQueryCustomizedMatchers",
+    "cn.jimmyshi.beanquery.selectors.PropertySelector",
+    "cn.jimmyshi.beanquery.BeanPropertyMatcher",
+    "cn.jimmyshi.beanquery.MatcherPredicate",
+    "cn.jimmyshi.beanquery.DefaultNullValuePropertyValueGetter",
+    "cn.jimmyshi.beanquery.selectors.ClassSelector",
+    "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector",
+    "cn.jimmyshi.beanquery.comparators.SortOrderableComparator",
+    "cn.jimmyshi.beanquery.selectors.CompositeSelector",
+    "cn.jimmyshi.beanquery.selectors.NestedKeyValueMapSelector",
+    "cn.jimmyshi.beanquery.comparators.DelegatedSortOrderableComparator",
+    "cn.jimmyshi.beanquery.selectors.DefaultSelector"
+  ],
+  "links": [
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.ClassSelector:removePropertySelector",
+        "type": 0,
+        "index": 5,
+        "x": 551.3249176344476,
+        "y": 243.7919824953904,
+        "vy": -0.003533587696814341,
+        "vx": -0.009617802443261837
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.PropertySelector:getProperty",
+        "type": 2,
+        "index": 6,
+        "x": 308.83017774850987,
+        "y": 258.98902472861226,
+        "vy": -0.004680029834315304,
+        "vx": -0.006513347729663646
+      },
+      "index": 0
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.BeanQuery:executeFrom",
+        "type": 2,
+        "index": 14,
+        "x": -127.23617504714183,
+        "y": 819.9501366357568,
+        "vy": 0.009528074675097043,
+        "vx": -0.009978102282711397
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.BeanQuery:from",
+        "type": 2,
+        "index": 0,
+        "x": 45.87161352763657,
+        "y": 783.3340783757355,
+        "vy": 0.010418245366505801,
+        "vx": -0.010210676191285685
+      },
+      "index": 1
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.BeanQuery:executeFrom",
+        "type": 2,
+        "index": 14,
+        "x": -127.23617504714183,
+        "y": 819.9501366357568,
+        "vy": 0.009528074675097043,
+        "vx": -0.009978102282711397
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.BeanQuery:executeFrom",
+        "type": 2,
+        "index": 14,
+        "x": -127.23617504714183,
+        "y": 819.9501366357568,
+        "vy": 0.009528074675097043,
+        "vx": -0.009978102282711397
+      },
+      "index": 2
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.BeanQuery:executeFrom",
+        "type": 2,
+        "index": 14,
+        "x": -127.23617504714183,
+        "y": 819.9501366357568,
+        "vy": 0.009528074675097043,
+        "vx": -0.009978102282711397
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.BeanQuery:execute",
+        "type": 0,
+        "index": 17,
+        "x": -225.64786393602293,
+        "y": 670.8545220501472,
+        "vy": 0.010238219047109054,
+        "vx": -0.01004341086705149
+      },
+      "index": 3
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.StringSelector:doSelect",
+        "type": 2,
+        "index": 18,
+        "x": 1450.1399252722786,
+        "y": -5.44343110225881,
+        "vy": 0.0011447368884256127,
+        "vx": 0.009274391809651396
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:select",
+        "type": 2,
+        "index": 47,
+        "x": 1421.9334203954083,
+        "y": 197.12831472455176,
+        "vy": -0.0017632089427356118,
+        "vx": 0.008730954818715662
+      },
+      "index": 4
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.ClassSelector:addPropertySelector",
+        "type": 0,
+        "index": 22,
+        "x": 58.39479601028813,
+        "y": 185.75144660023187,
+        "vy": -0.0037665357957744777,
+        "vx": -0.004676257107627002
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.PropertySelector:getProperty",
+        "type": 2,
+        "index": 6,
+        "x": 308.83017774850987,
+        "y": 258.98902472861226,
+        "vy": -0.004680029834315304,
+        "vx": -0.006513347729663646
+      },
+      "index": 5
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.ClassSelector:addPropertySelector",
+        "type": 0,
+        "index": 22,
+        "x": 58.39479601028813,
+        "y": 185.75144660023187,
+        "vy": -0.0037665357957744777,
+        "vx": -0.004676257107627002
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:addSubSelector",
+        "type": 1,
+        "index": 20,
+        "x": -157.69522592617687,
+        "y": 78.74219088306091,
+        "vy": -0.001290579225634293,
+        "vx": -0.004784661573065746
+      },
+      "index": 6
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.comparators.DefaultSortOrderableComparator:compare",
+        "type": 0,
+        "index": 32,
+        "x": 438.4539970402681,
+        "y": 797.8591921789917,
+        "vy": 0.007339076996761724,
+        "vx": -0.001704727307202933
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.comparators.DefaultSortOrderableComparator:ascCompare",
+        "type": 1,
+        "index": 12,
+        "x": 339.5051754191978,
+        "y": 636.4289646261192,
+        "vy": 0.009343578345576576,
+        "vx": -0.0009369151735418118
+      },
+      "index": 7
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.StringSelector:initCompositeSelector",
+        "type": 0,
+        "index": 35,
+        "x": -315.2100652203839,
+        "y": 197.56366385652393,
+        "vy": -0.003664435960464723,
+        "vx": -0.006386277827842515
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:addSubSelector",
+        "type": 1,
+        "index": 20,
+        "x": -157.69522592617687,
+        "y": 78.74219088306091,
+        "vy": -0.001290579225634293,
+        "vx": -0.004784661573065746
+      },
+      "index": 8
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.DefaultSelector:doSelect",
+        "type": 0,
+        "index": 44,
+        "x": 579.905042016759,
+        "y": 418.1102293155485,
+        "vy": 0.003901904944186116,
+        "vx": 0.0024538028839846296
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.DefaultSelector:select",
+        "type": 1,
+        "index": 61,
+        "x": 582.4975720032243,
+        "y": 568.6879591734581,
+        "vy": 0.003709006304619173,
+        "vx": 0.0027774247256734516
+      },
+      "index": 9
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.ClassSelector:<init>",
+        "type": 0,
+        "index": 46,
+        "x": -242.82543848939778,
+        "y": -108.31895280833565,
+        "vy": 0.000057392023686307116,
+        "vx": -0.005353847023262185
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:addSubSelector",
+        "type": 1,
+        "index": 20,
+        "x": -157.69522592617687,
+        "y": 78.74219088306091,
+        "vy": -0.001290579225634293,
+        "vx": -0.004784661573065746
+      },
+      "index": 10
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.ClassSelector:doSelect",
+        "type": 2,
+        "index": 53,
+        "x": 1380.3068013300324,
+        "y": 410.773150998648,
+        "vy": -0.005924820290030748,
+        "vx": 0.010063095493597513
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:select",
+        "type": 2,
+        "index": 47,
+        "x": 1421.9334203954083,
+        "y": 197.12831472455176,
+        "vy": -0.0017632089427356118,
+        "vx": 0.008730954818715662
+      },
+      "index": 11
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.NestedKeyValueMapSelector:doSelect",
+        "type": 0,
+        "index": 59,
+        "x": -1172.5447033945318,
+        "y": -80.86198092902177,
+        "vy": -0.0012906049511304495,
+        "vx": -0.019022712137076698
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector:select",
+        "type": 1,
+        "index": 72,
+        "x": -1114.237547999734,
+        "y": 87.19260379919676,
+        "vy": -0.0013693348868274102,
+        "vx": -0.017970704780087325
+      },
+      "index": 12
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.DefaultSelector:select",
+        "type": 1,
+        "index": 61,
+        "x": 582.4975720032243,
+        "y": 568.6879591734581,
+        "vy": 0.003709006304619173,
+        "vx": 0.0027774247256734516
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.DefaultSelector:doSelect",
+        "type": 0,
+        "index": 44,
+        "x": 579.905042016759,
+        "y": 418.1102293155485,
+        "vy": 0.003901904944186116,
+        "vx": 0.0024538028839846296
+      },
+      "index": 13
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector:select",
+        "type": 1,
+        "index": 72,
+        "x": -1114.237547999734,
+        "y": 87.19260379919676,
+        "vy": -0.0013693348868274102,
+        "vx": -0.017970704780087325
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector:doSelect",
+        "type": 0,
+        "index": 43,
+        "x": -1067.9402877536452,
+        "y": 329.49973434140793,
+        "vy": -0.0019519078659936031,
+        "vx": -0.019623141766612368
+      },
+      "index": 14
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector:select",
+        "type": 1,
+        "index": 72,
+        "x": -1114.237547999734,
+        "y": 87.19260379919676,
+        "vy": -0.0013693348868274102,
+        "vx": -0.017970704780087325
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector:select",
+        "type": 1,
+        "index": 72,
+        "x": -1114.237547999734,
+        "y": 87.19260379919676,
+        "vy": -0.0013693348868274102,
+        "vx": -0.017970704780087325
+      },
+      "index": 15
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.BeanPropertyMatcher:describeTo",
+        "type": 2,
+        "index": 74,
+        "x": 213.73932202013495,
+        "y": 1397.1187858273895,
+        "vy": 0.014259394634723766,
+        "vx": -0.004326900705954998
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.BeanPropertyMatcher:toString",
+        "type": 1,
+        "index": 1,
+        "x": 207.6209277564142,
+        "y": 1221.139789693752,
+        "vy": 0.014926746933189801,
+        "vx": -0.0037062110816667103
+      },
+      "index": 16
+    },
+    {
+      "source": {
+        "name": "cn.jimmyshi.beanquery.selectors.CompositeSelector:doSelect",
+        "type": 0,
+        "index": 75,
+        "x": -1020.5589603073653,
+        "y": -86.23102524125632,
+        "vy": -0.000059736757748248166,
+        "vx": -0.017076692124644573
+      },
+      "target": {
+        "name": "cn.jimmyshi.beanquery.selectors.KeyValueMapSelector:select",
+        "type": 1,
+        "index": 72,
+        "x": -1114.237547999734,
+        "y": 87.19260379919676,
+        "vy": -0.0013693348868274102,
+        "vx": -0.017970704780087325
+      },
+      "index": 17
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>graph</title>
+    <script src="jquery.js"></script>
+    <script src="d3.v5.js"></script>
+    <script src="index2.js"></script>
+    <link href="index.css" rel="stylesheet" />
+    <link href="loading_style.css" rel="stylesheet" />
+</head>
+<body>
+<div id="fountainG">
+    <div id="fountainG_1" class="fountainG">
+    </div>
+    <div id="fountainG_2" class="fountainG">
+    </div>
+    <div id="fountainG_3" class="fountainG">
+    </div>
+    <div id="fountainG_4" class="fountainG">
+    </div>
+    <div id="fountainG_5" class="fountainG">
+    </div>
+    <div id="fountainG_6" class="fountainG">
+    </div>
+    <div id="fountainG_7" class="fountainG">
+    </div>
+    <div id="fountainG_8" class="fountainG">
+    </div>
+</div>
+<div class="upload_file_div">
+    <form enctype="multipart/form-data" method="post" name="fileinfo" id="form">
+        <div id="select_div">
+            <label>选择数据集文件:&nbsp;&nbsp;</label>
+            <input type="file" name="file" id="file" required /><br /><br />
+            <label>因果搜索前提条件：</label>
+            <select name="algorithm" id="select">
+                <option value="Fci">存在潜变量</option>
+                <option value="Pc">不存在潜变量</option>
+            </select>
+            <label>返回格式：</label>
+            <select name="format" id="format">
+                <option value="json">json</option>
+                <option value="text">text</option>
+            </select>
+        </div>
+        <div id="submit_div">
+        <input type="button" name="btn" id="submit_btn" value="提交" />
+        </div>
+    </form>
+    <!--<div id="legend">-->
+        <!--<svg>-->
+            <!--<circle cx="10" cy="10" r="5" fill="#FFC0CB" /><text x="20" y="13">第一层因节点</text>-->
+            <!--<circle cx="10" cy="25" r="5" fill="#f19c88" /><text x="20" y="28">第二层因节点</text>-->
+            <!--<circle cx="10" cy="40" r="5" fill="#f19188" /><text x="20" y="43">第三层因节点</text>-->
+            <!--<circle cx="10" cy="55" r="5" fill="#f18889" /><text x="20" y="58">第四层因节点</text>-->
+            <!--<circle cx="10" cy="70" r="5" fill="#f1889f" /><text x="20" y="73">第五层因节点</text>-->
+            <!--<circle cx="10" cy="85" r="5" fill="#f188aa" /><text x="20" y="88">第六层因节点</text>-->
+            <!--<circle cx="10" cy="100" r="5" fill="#f188c3" /><text x="20" y="103">第七层因节点</text>-->
+            <!--<circle cx="10" cy="115" r="5" fill="#f188d0" /><text x="20" y="118">第八层因节点</text>-->
+            <!--<circle cx="10" cy="130" r="5" fill="#f188df" /><text x="20" y="133">第九层因节点</text>-->
+
+        <!--</svg>-->
+    <!--</div>-->
+</div>
+</body>
+</html>

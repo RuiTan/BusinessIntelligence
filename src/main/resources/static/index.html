@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script  src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    console.log("begin");
+    $.ajax({
+        method: 'post',
+        url: 'http://download.guitoubing.top:9900/selectByTypeAndName',
+        data: {
+            type: 2,
+            name: 'Alibaba'
+        },
+        success: function(data){
+            console.log(data);
+        }
+    })
+
+</script>
+</body>
+</html>

@@ -5,7 +5,7 @@ import org.neo4j.driver.v1.Driver;
 import org.neo4j.driver.v1.GraphDatabase;
 import org.neo4j.driver.v1.Session;
 
-public class DriverInitialize {
+public class Neo4jDriverInitialize {
 
     // neo4j连接的驱动Driver和会话Session
     private Driver driver;
