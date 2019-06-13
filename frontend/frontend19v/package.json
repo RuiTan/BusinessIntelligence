@@ -7,7 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "d3": "^5.9.2",
     "echarts": "^4.2.0-rc.2",
     "element-ui": "^2.8.2",
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.1",
-    "@vue/cli-service": "^3.5.3",
+    "@vue/cli-service": "^3.8.3",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-cli-plugin-element": "^1.0.0",
