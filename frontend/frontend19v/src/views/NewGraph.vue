@@ -2,10 +2,36 @@
   <div id="new-graph">
     <!-- 搜索和树 在 ../components/SearchTree 下 -->
     <div class="search" style="position:absolute;">
-    <el-input style="width:300px;display:block;margin-bottom:5px;" v-model="searchInput" placeholder="请输入内容"></el-input>
-    <el-input style="width:145px;display:inline-block; margin-right:10px;" v-model="jumpNo" placeholder="请输入跳数"></el-input>
-    <el-input style="width:145px;display:inline-block" v-model="resLimit" placeholder="结果数量"></el-input>
-    <el-tree style="width:300px" :data="treeData" :props="defaultProps" ref="tree" accordion @node-click="searchNode"></el-tree>
+      <el-input
+        style="width:300px;display:block;margin-bottom:5px;"
+        v-model="searchInput"
+        placeholder="请输入内容"
+        @input="clearTreeData"
+      ></el-input>
+      <el-input
+        style="width:145px;display:inline-block; margin-right:10px;"
+        v-model="jumpNo"
+        placeholder="请输入跳数"
+      ></el-input>
+      <el-input style="width:145px;display:inline-block" v-model="resLimit" placeholder="结果数量" ></el-input>
+      <el-tree
+        v-loading="treeLoading"
+        style="width:300px;max-height:600px;overflow:auto"
+        :data="treeData"
+        :props="defaultProps"
+        ref="tree"
+        accordion
+        @node-click="clickTreeNode"
+      >
+      <span slot-scope="{ node, data }">
+            <span class="one-res" style="width: 220px;font-size:14px;padding-top:5px;
+            display: inline-block;
+            overflow: auto;">
+                {{ node.label }} 
+            </span>              
+            <a :href="data.uri" target="_blank"><i v-if="node.level>1" style="position:absolute;padding-top:5px;right:20px" class="el-icon-position"></i></a>
+        </span>
+      </el-tree>
     </div>
     <!-- 是否显示属性节点切换按钮 -->
     <div id="switch-p-node">
@@ -67,7 +93,7 @@
       <el-radio-group v-model="radio">
         <!-- 普通点击 -->
         <el-tooltip class="item" effect="dark" content="查看" placement="top-start">
-          <el-radio-button label="1" >
+          <el-radio-button label="1">
             <i class="el-icon-view"></i>
           </el-radio-button>
         </el-tooltip>
@@ -103,12 +129,22 @@
         <span style="font-weight: bold;font-size:16px;">{{currentNode.name}}</span>
         <el-button style="float: right; padding: 3px 0" type="text" @click="closeDisplayProps">关闭</el-button>
       </div>
-      <el-form ref="propsForm" :model="propsForm" label-position="left" v-if="currentNode.type !== 'environment'">
+      <el-form
+        ref="propsForm"
+        :model="propsForm"
+        label-position="left"
+        v-if="currentNode.type !== 'environment'"
+      >
         <el-form-item v-for="(value, key, index) in currentNode.properties" :key="key" :label="key">
-          <el-input :placeholder="key" v-model="propertyValues[index]" readonly="readonly" v-if="key !=='uri'"></el-input>
+          <el-input
+            :placeholder="key"
+            v-model="propertyValues[index]"
+            readonly="readonly"
+            v-if="key !=='uri'"
+          ></el-input>
           <a :href="propertyValues[index]" v-if="key ==='uri'" target="blank">
-            <el-input :placeholder="key" v-model="propertyValues[index]" readonly="readonly">
-              </el-input></a>
+            <el-input :placeholder="key" v-model="propertyValues[index]" readonly="readonly"></el-input>
+          </a>
         </el-form-item>
       </el-form>
     </el-card>
@@ -161,7 +197,7 @@
         <p>请输入节点标识符 (ID)：</p>
         <el-input v-model="newNodeId" placeholder="请输入内容"></el-input>
         <br>
-        <br>    
+        <br>
         <div>
           <el-button type="primary" @click="addNewNodeByClickBlank">添加节点</el-button>
           <el-button @click="showNewNodeInfoCard = false">取消</el-button>
@@ -170,7 +206,7 @@
     </transition>
     <div id="visual"></div>
     <!-- 时间线 -->
-    <timeline v-if="showTimeline" :allTimeStamps="allTimeStamps" @click="getDatabyTimeStamp"></timeline>
+    <timeline v-if="showTimeline" :allTimeStamps="allTimeStamps" v-on:click="showHistory"></timeline>
   </div>
 </template>
 
@@ -178,14 +214,17 @@
 import D3Network from "../components/vue-d3-network/src/vue-d3-network.vue";
 import SearchTree from "../components/SearchTree.vue";
 import Timeline from "../components/Timeline";
-import Diff from "../components/Diff"
+import Diff from "../components/Diff";
 import axios from "axios";
 import { setTimeout } from "timers";
-import { URLSearchParams, URL } from 'url';
+import { URLSearchParams, URL } from "url";
+// import { console } from 'jsondiffpatch';
+// import { console } from 'jsondiffpatch';
 
 HTMLCollection.prototype.forEach = Array.prototype.forEach;
 
 const reqUrl = "http://10.60.38.173:9990/bbs";
+
 Array.prototype.indexOf = function(val) {
   for (var i = 0; i < this.length; i++) {
     if (this[i] == val) return i;
@@ -227,27 +266,27 @@ var timer = null;
 
 //node的图标svg样式
 const nodeIcons = {
-  ns0_AcademicQualification:'',
-  ns0_AcademicDegree:'',
-  ns0_DirectorRole:'',
-  ns0_DirectorShip:'',
-  ns0_Major:'',
-  ns0_OfficeRole:'',
-  ns0_OfficeShip:'',
-  ns0_Person:'',
-  ns0_TenurelnOrganization:'',
-  ns4_AssetClass:'',
-  ns4_Instrument:'',
-  ns4_Quote:'',
-  ns5_Activity:'',
-  ns5_BusinessClassification:'',
-  ns5_BusinessSector:'',
-  ns5_EconomicSector:'',
-  ns5_Industry:'',
-  ns5_IndustryGroup:'',
-  ns6_Currency:'',
-  ns6_CurrencySubunit:'',
-  ns7_Organization:''
+  ns0_AcademicQualification: "",
+  ns0_AcademicDegree: "",
+  ns0_DirectorRole: "",
+  ns0_DirectorShip: "",
+  ns0_Major: "",
+  ns0_OfficeRole: "",
+  ns0_OfficeShip: "",
+  ns0_Person: "",
+  ns0_TenurelnOrganization: "",
+  ns4_AssetClass: "",
+  ns4_Instrument: "",
+  ns4_Quote: "",
+  ns5_Activity: "",
+  ns5_BusinessClassification: "",
+  ns5_BusinessSector: "",
+  ns5_EconomicSector: "",
+  ns5_Industry: "",
+  ns5_IndustryGroup: "",
+  ns6_Currency: "",
+  ns6_CurrencySubunit: "",
+  ns7_Organization: ""
 };
 
 export default {
@@ -259,74 +298,75 @@ export default {
   },
   data() {
     return {
-      resLimit:'',
-      jumpNo:'',
-      searchInput:'',
+      page:1,
+      resLimit: "",
+      jumpNo: "",
+      treeLoading: false,
+      searchInput: "",
       defaultProps: {
-          children: 'children',
-          label: 'label',
-          
+        children: "children",
+        label: "label"
       },
-      treeData:[{
-          label: 'Quote',
-          children: [],
-          icon:"el-icon-loading"
-        },
+      treeData: [
         {
-          label: 'Organization',
+          label: "Quote",
           children: [],
         },
         {
-          label: 'Instrument',
-          children: [],
+          label: "Organization",
+          children: []
         },
         {
-          label: 'AssetClass',
-          children: [],
+          label: "Instrument",
+          children: []
         },
         {
-          label: 'Currency',
-          children: [],
+          label: "AssetClass",
+          children: []
         },
         {
-          label: 'CurrencySubunit',
-          children: [],
+          label: "Currency",
+          children: []
         },
         {
-          label: 'Activity',
-          children: [],
+          label: "CurrencySubunit",
+          children: []
         },
         {
-          label: 'BusinessSector',
-          children: [],
+          label: "Activity",
+          children: []
         },
         {
-          label: 'EconomicSector',
-          children: [],
+          label: "BusinessSector",
+          children: []
         },
         {
-          label: 'Industry',
-          children: [],
+          label: "EconomicSector",
+          children: []
         },
         {
-          label: 'AcademicQualification',
-          children: [],
+          label: "Industry",
+          children: []
         },
         {
-          label: 'Person',
-          children: [],
+          label: "AcademicQualification",
+          children: []
         },
         {
-          label: 'IndustryGroup',
-          children: [],
+          label: "Person",
+          children: []
         },
         {
-          label: 'Major',
-          children: [],
+          label: "IndustryGroup",
+          children: []
         },
         {
-          label: 'AcademicDegree',
-          children: [],
+          label: "Major",
+          children: []
+        },
+        {
+          label: "AcademicDegree",
+          children: []
         }
       ],
       // Above added by Chengwei Liang
@@ -384,7 +424,7 @@ export default {
         "ns0_Person",
         "ns5_IndustryGroup",
         "ns0_Major",
-        "ns0_AcademicDegree",     
+        "ns0_AcademicDegree"
       ],
       propertyNodes: [], // 属性节点数组
       propertyNodesCopy: [], // 属性节点的深拷贝
@@ -407,30 +447,30 @@ export default {
         "ns0_holdsPosition",
         "ns0_inSubject",
         "ns0_isPositionIn",
-        'ns0_isTenureIn',
-        'ns0_withDegree',
-        'ns1_hasPublicationStatus',
-        'ns2_hasGender',
-        'ns2_hasURL',
-        'ns4_hasAssetClass',
-        'ns4_hasInstrumentStatus',
-        'ns4_hasOrganizationPrimaryQuote',
-        'ns4_hasPrimaryInstrument',
-        'ns4_hasPrimaryQuote',
-        'ns4_isIssuedBy',
-        'ns4_isQuoteOf',
-        'ns4_isQuotedIn',
-        'ns6_isCurrencyOf',
-        'ns6_isCurrencySubunitOf',
-        'ns6_isPrimaryCurrencyOf',
-        'ns7_hasActivityStatus',
-        'ns7_hasHoldingClassification',
-        'ns7_hasPrimaryBusinessSector',
-        'ns7_hasPrimaryEconomicSector',
-        'ns7_hasPrimaryIndustryGroup',
-        'ns7_isIncorporatedIn',
-        'ns9_isDomiciledIn',
-        'skos_broader'
+        "ns0_isTenureIn",
+        "ns0_withDegree",
+        "ns1_hasPublicationStatus",
+        "ns2_hasGender",
+        "ns2_hasURL",
+        "ns4_hasAssetClass",
+        "ns4_hasInstrumentStatus",
+        "ns4_hasOrganizationPrimaryQuote",
+        "ns4_hasPrimaryInstrument",
+        "ns4_hasPrimaryQuote",
+        "ns4_isIssuedBy",
+        "ns4_isQuoteOf",
+        "ns4_isQuotedIn",
+        "ns6_isCurrencyOf",
+        "ns6_isCurrencySubunitOf",
+        "ns6_isPrimaryCurrencyOf",
+        "ns7_hasActivityStatus",
+        "ns7_hasHoldingClassification",
+        "ns7_hasPrimaryBusinessSector",
+        "ns7_hasPrimaryEconomicSector",
+        "ns7_hasPrimaryIndustryGroup",
+        "ns7_isIncorporatedIn",
+        "ns9_isDomiciledIn",
+        "skos_broader"
       ],
       styleList: [
         "nodesmasterServer",
@@ -625,9 +665,8 @@ export default {
       // 添加节点 鼠标变成十字
       if (newVal === "2") {
         this.svgClass.crosshair = true;
-      }
-      else {
-        this.svgClass.crosshair = false
+      } else {
+        this.svgClass.crosshair = false;
       }
     },
     // 显示/隐藏属性节点
@@ -661,29 +700,164 @@ export default {
     // getData();
   },
   methods: {
-    searchNode(data,node){
-      var index = 0
-      var search = ''
-      for(let ele of this.allNodeType){
-        if(ele.substring(4) == data.label){
-          index = this.allNodeType.indexOf(ele) + 1
-          search = ele
+    showHistory(value){
+      this.nodes = []
+      this.links = []
+      var res = JSON.parse(value.result)
+      console.log("res",res)
+      // this.allTimeStamps = response.data.timeList;
+          let allNodes = res.nodes;
+          this.normalNodes = [];
+          this.nodes = res.nodes;
+          this.links = res.relations;
+          属性节点
+          this.propertyNodes = allNodes.filter(node => {
+            if (
+              this.allPropertyNodeTypes.indexOf(node.properties.label) !== -1
+            ) {
+              return true;
+            } else {
+              this.normalNodes.push(node);
+              return false;
+            }
+          });
+
+          console.log("hello",this.propertyNodes)
+
+          this.propertyNodesCopy = JSON.parse(
+            JSON.stringify(this.propertyNodes)
+          );
+
+          this.nodes = this.normalNodes.concat(this.propertyNodes);
+
+          this.showTimeline = true;
+      
+    },
+    clearTreeData(value){
+      this.treeData = [
+        {
+          label: "Quote",
+          children: [],
+        },
+        {
+          label: "Organization",
+          children: []
+        },
+        {
+          label: "Instrument",
+          children: []
+        },
+        {
+          label: "AssetClass",
+          children: []
+        },
+        {
+          label: "Currency",
+          children: []
+        },
+        {
+          label: "CurrencySubunit",
+          children: []
+        },
+        {
+          label: "Activity",
+          children: []
+        },
+        {
+          label: "BusinessSector",
+          children: []
+        },
+        {
+          label: "EconomicSector",
+          children: []
+        },
+        {
+          label: "Industry",
+          children: []
+        },
+        {
+          label: "AcademicQualification",
+          children: []
+        },
+        {
+          label: "Person",
+          children: []
+        },
+        {
+          label: "IndustryGroup",
+          children: []
+        },
+        {
+          label: "Major",
+          children: []
+        },
+        {
+          label: "AcademicDegree",
+          children: []
+        }
+      ]
+    },
+    clickTreeNode(data,node){
+      if(node.level == 1){
+        this.searchNode(data,node)
+      }
+      else{
+        console.log("leaf",data,node)
+      }
+    },
+    searchNode(data, node) {
+      console.log("node",node)
+      if (this.searchInput == "") {
+        this.$message({
+          type: "warning",
+          message: "搜索项不能为空"
+        });
+        return;
+      }
+      this.treeLoading = true;
+      var index = 0;
+      var search = "";
+      for (let ele of this.allNodeType) {
+        if (ele.substring(4) == data.label) {
+          index = this.allNodeType.indexOf(ele) + 1;
+          search = ele;
         }
       }
-      // this.treeData[index-1].children.push({
-      //     label: 'Organization',
-      //     children: [],
-      //   })
-      var data = new FormData()
-      data.append("type",index)
-      data.append("name",this.searchInput)
+      if(this.treeData[index - 1].children.length > 0){
+        this.treeLoading = false
+        return
+      }
+      var data = new FormData();
+      data.append("type", index);
+      data.append("name", this.searchInput);
       axios({
-        method:'POST',
-        url:'http://218.78.28.138:9900/selectByTypeAndName',
-        data:data
-      }).then(response=>{
-        console.log(response.data)
-      })
+        method: "POST",
+        url: "http://218.78.28.138:9900/selectByTypeAndName",
+        data: data
+      }).then(response => {
+        console.log("response",response.data);
+        if (response.data.length == 0) {
+          this.$message({
+            type: "warning",
+            message: search.substring(4)+"标签下无"+this.searchInput+"项"
+          });
+          this.treeLoading = false;
+        } else {
+          for (let item of response.data) {
+            this.treeData[index - 1].children.push({
+              label: item.name,
+              children: [],
+              id: item.id,
+              uri: item.uri
+            });
+          }
+          this.$message({
+              type: "success",
+              message: search.substring(4)+"标签下有"+response.data.length+"个"+this.searchInput+"项"
+          });
+          this.treeLoading = false;
+        }
+      });
     },
     getData() {
       this.nodes = [];
@@ -725,7 +899,9 @@ export default {
           this.links = response.data.relations;
           //属性节点
           this.propertyNodes = allNodes.filter(node => {
-            if (this.allPropertyNodeTypes.indexOf(node.properties.label) !== -1) {
+            if (
+              this.allPropertyNodeTypes.indexOf(node.properties.label) !== -1
+            ) {
               return true;
             } else {
               this.normalNodes.push(node);
@@ -756,59 +932,59 @@ export default {
       // });
       let displayProps = document.getElementsByClassName("display-property")[0];
       displayProps.style.right = "-420px";
-      displayProps.style.display = 'none'
+      displayProps.style.display = "none";
 
-    //   //测试jsondiffpatch结果是否正确
-    //   this.history = {
-    //   "linkList": [{
-    //       "name": "deployed_in",
-    //       "type": "deployed_in",
-    //       "tid": "http://server/10.60.38.181/192.168.199.188",
-    //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
-    //     }, {
-    //       "name": "contains",
-    //       "type": "contains",
-    //       "tid": "http://containers/10.60.38.181/sock-shop/catalogue-db",
-    //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
-    //     }, {
-    //       "name": "provides",
-    //       "type": "provides",
-    //       "tid": "http://services/10.60.38.181/sock-shop/catalogue-db",
-    //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
-    //   }]
-    // }
-    // this.now = {
-    //   "linkList": [
-    //     {
-    //       "name": "provides",
-    //       "type": "provides",
-    //       "tid": "http://server/unset-base/TestService2",
-    //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-6759fc9bf5-q78f7"
-    //     }, {
-    //       "name": "deployed_in",
-    //       "type": "deployed_in",
-    //       "tid": "http://server/10.60.38.181/192.168.199.188",
-    //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
-    //     }, {
-    //       "name": "contains",
-    //       "type": "contains",
-    //       "tid": "http://containers/10.60.38.181/sock-shop/catalogue-db",
-    //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
-    //     }, {
-    //       "name": "provides",
-    //       "type": "provides",
-    //       "tid": "http://services/10.60.38.181/sock-shop/catalogue-db",
-    //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
-    //   }]
-    // }
+      //   //测试jsondiffpatch结果是否正确
+      //   this.history = {
+      //   "linkList": [{
+      //       "name": "deployed_in",
+      //       "type": "deployed_in",
+      //       "tid": "http://server/10.60.38.181/192.168.199.188",
+      //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
+      //     }, {
+      //       "name": "contains",
+      //       "type": "contains",
+      //       "tid": "http://containers/10.60.38.181/sock-shop/catalogue-db",
+      //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
+      //     }, {
+      //       "name": "provides",
+      //       "type": "provides",
+      //       "tid": "http://services/10.60.38.181/sock-shop/catalogue-db",
+      //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
+      //   }]
+      // }
+      // this.now = {
+      //   "linkList": [
+      //     {
+      //       "name": "provides",
+      //       "type": "provides",
+      //       "tid": "http://server/unset-base/TestService2",
+      //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-6759fc9bf5-q78f7"
+      //     }, {
+      //       "name": "deployed_in",
+      //       "type": "deployed_in",
+      //       "tid": "http://server/10.60.38.181/192.168.199.188",
+      //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
+      //     }, {
+      //       "name": "contains",
+      //       "type": "contains",
+      //       "tid": "http://containers/10.60.38.181/sock-shop/catalogue-db",
+      //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
+      //     }, {
+      //       "name": "provides",
+      //       "type": "provides",
+      //       "tid": "http://services/10.60.38.181/sock-shop/catalogue-db",
+      //       "sid": "http://pods/10.60.38.181/sock-shop/catalogue-db-99cbcbb88-ddvvm"
+      //   }]
+      // }
 
-    //         var delta = jsondiffpatch.diff(this.history, this.now)
-    //         const diff = {
-    //           linkList: delta.linkList
-    //         }
-    //         jsondiffpatch.formatters.html.hideUnchanged();
-    //         const visualdiff = document.getElementById('visual');
-    //         visualdiff.innerHTML = jsondiffpatch.formatters.html.format(diff, this.history);
+      //         var delta = jsondiffpatch.diff(this.history, this.now)
+      //         const diff = {
+      //           linkList: delta.linkList
+      //         }
+      //         jsondiffpatch.formatters.html.hideUnchanged();
+      //         const visualdiff = document.getElementById('visual');
+      //         visualdiff.innerHTML = jsondiffpatch.formatters.html.format(diff, this.history);
     },
     getDatabyTimeStamp(currentTimeStamp) {
       console.log(currentTimeStamp);
@@ -856,50 +1032,57 @@ export default {
           });
       } else {
         axios
-          .all([axios.get(reqUrl + "/api/getAllByTime?time=" + currentTimeStamp),
-                axios.get(reqUrl + "/api/getNodesAndLinks")])
-          .then(axios.spread((response, res) => {
-            this.history = response.data
-            this.now = res.data
-            var delta = jsondiffpatch.diff(this.history, this.now)
-            //只展示nodelist和linklist
-            const diff = {
-              linkList: delta.linkList,
-              nodeList: delta.nodeList
-            }
-            //隐藏不变的部分
-            jsondiffpatch.formatters.html.hideUnchanged();
-            //展示diff
-            const visualdiff = document.getElementById('visual');
-            visualdiff.innerHTML = jsondiffpatch.formatters.html.format(diff, response.data);
+          .all([
+            axios.get(reqUrl + "/api/getAllByTime?time=" + currentTimeStamp),
+            axios.get(reqUrl + "/api/getNodesAndLinks")
+          ])
+          .then(
+            axios.spread((response, res) => {
+              this.history = response.data;
+              this.now = res.data;
+              var delta = jsondiffpatch.diff(this.history, this.now);
+              //只展示nodelist和linklist
+              const diff = {
+                linkList: delta.linkList,
+                nodeList: delta.nodeList
+              };
+              //隐藏不变的部分
+              jsondiffpatch.formatters.html.hideUnchanged();
+              //展示diff
+              const visualdiff = document.getElementById("visual");
+              visualdiff.innerHTML = jsondiffpatch.formatters.html.format(
+                diff,
+                response.data
+              );
 
-            response.data.nodeList.forEach(x => {
-              x.svgSym = nodeIcons[x.type];
-            });
+              response.data.nodeList.forEach(x => {
+                x.svgSym = nodeIcons[x.type];
+              });
 
-            let allNodes = response.data.nodeList;
-            this.nodes = [];
-            this.normalNodes = [];
-            // this.nodes = response.data.nodeList;
-            this.links = response.data.linkList;
+              let allNodes = response.data.nodeList;
+              this.nodes = [];
+              this.normalNodes = [];
+              // this.nodes = response.data.nodeList;
+              this.links = response.data.linkList;
 
-            this.propertyNodes = allNodes.filter(node => {
-              if (this.allPropertyNodeTypes.indexOf(node.type) !== -1) {
-                return true;
-              } else {
-                this.normalNodes.push(node);
-                return false;
-              }
-            });
-            this.propertyNodesCopy = JSON.parse(
-              JSON.stringify(this.propertyNodes)
-            );
+              this.propertyNodes = allNodes.filter(node => {
+                if (this.allPropertyNodeTypes.indexOf(node.type) !== -1) {
+                  return true;
+                } else {
+                  this.normalNodes.push(node);
+                  return false;
+                }
+              });
+              this.propertyNodesCopy = JSON.parse(
+                JSON.stringify(this.propertyNodes)
+              );
 
-            this.nodes = this.normalNodes.concat(this.propertyNodes);
+              this.nodes = this.normalNodes.concat(this.propertyNodes);
 
-            console.log("可显示");
-            this.propertyNodeSwitch = true;
-          }))
+              console.log("可显示");
+              this.propertyNodeSwitch = true;
+            })
+          )
           .catch(error => {
             console.error(error);
           });
@@ -1201,7 +1384,7 @@ export default {
     closeDisplayProps() {
       let displayProps = document.getElementsByClassName("display-property")[0];
       displayProps.style.right = "-420px";
-      displayProps.style.display = 'none'
+      displayProps.style.display = "none";
       this.propertyValues = [];
       this.propertyKeys = [];
     },
@@ -1405,13 +1588,37 @@ export default {
     }
   },
   mounted() {
+    var historyData = new FormData()
+    this.showTimeline = true
+
+    historyData.append("type",this.page)
+    axios({
+      method:'POST',
+      url:"http://218.78.28.138:9900/getHistory",
+      data:historyData
+    }).then(response=>{
+      console.log("hi",response.data)
+      for(let res of response.data){
+        var temp = JSON.parse(res.result)
+        if(temp.nodes.length != 0){
+          this.allTimeStamps.push(res)
+        }
+      }
+      this.allTimeStamps = this.allTimeStamps.reverse()
+      
+    })
+
     var el = document.getElementsByClassName("net-svg")[0];
     el.onmousedown = e => {
       this.staCoor = getCoordInDocument(e);
     };
     el.onmouseup = e => {
       // 添加事件节点
-      if (this.radio === "2" && e.target.localName !== 'circle' && e.target.localName !== 'path') {
+      if (
+        this.radio === "2" &&
+        e.target.localName !== "circle" &&
+        e.target.localName !== "path"
+      ) {
         this.showNewNodeInfoCard = true;
       } else {
         // 点击空白处取消高亮
@@ -1433,7 +1640,7 @@ export default {
           let displayProps = document.getElementsByClassName(
             "display-property"
           )[0];
-          displayProps.style.display = 'block'
+          displayProps.style.display = "block";
           displayProps.style.right = "0px";
         }
         this.finCoor = getCoordInDocument(e);
@@ -1507,15 +1714,23 @@ export default {
     addEvent(el, "DOMMouseScroll", onMouseWheel);
 
     //引入jsondiffpatch
-    const jsondiff = document.createElement('script');
-    jsondiff.type = 'text/javascript';
-    jsondiff.src = 'https://cdn.jsdelivr.net/npm/jsondiffpatch/dist/jsondiffpatch.umd.min.js';
+    const jsondiff = document.createElement("script");
+    jsondiff.type = "text/javascript";
+    jsondiff.src =
+      "https://cdn.jsdelivr.net/npm/jsondiffpatch/dist/jsondiffpatch.umd.min.js";
     document.body.appendChild(jsondiff);
   }
 };
 </script>
 
 <style>
+
+a{
+  color:unset
+}
+
+.one-res::-webkit-scrollbar {display:none}
+
 #button-group {
   position: fixed;
   right: 60px;
@@ -1671,16 +1886,16 @@ export default {
 .new-node-info-card {
   position: absolute;
   right: 10px;
-  top: 5px
+  top: 5px;
 }
 
 /* 可以设置不同的进入和离开动画 */
 /* 设置持续时间和动画函数 */
 .infocard-enter-active {
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 .infocard-leave-active {
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 .infocard-enter, .infocard-leave-to
 /* .infocard-leave-active for below version 2.1.8 */ {
@@ -1690,14 +1905,16 @@ export default {
 
 /* jsonpatchdiff */
 .jsondiffpatch-delta {
-  font-family: 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Courier, monospace;
+  font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Courier,
+    monospace;
   font-size: 12px;
   margin: 0;
   padding: 0 0 0 12px;
   display: inline-block;
 }
 .jsondiffpatch-delta pre {
-  font-family: 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Courier, monospace;
+  font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Courier,
+    monospace;
   font-size: 12px;
   margin: 0;
   padding: 0;
@@ -1737,23 +1954,35 @@ ul.jsondiffpatch-delta {
   overflow-y: hidden;
 }
 .jsondiffpatch-unchanged-showing .jsondiffpatch-unchanged,
-.jsondiffpatch-unchanged-showing .jsondiffpatch-movedestination > .jsondiffpatch-value {
+.jsondiffpatch-unchanged-showing
+  .jsondiffpatch-movedestination
+  > .jsondiffpatch-value {
   max-height: 100px;
 }
 .jsondiffpatch-unchanged-hidden .jsondiffpatch-unchanged,
-.jsondiffpatch-unchanged-hidden .jsondiffpatch-movedestination > .jsondiffpatch-value {
+.jsondiffpatch-unchanged-hidden
+  .jsondiffpatch-movedestination
+  > .jsondiffpatch-value {
   max-height: 0;
 }
-.jsondiffpatch-unchanged-hiding .jsondiffpatch-movedestination > .jsondiffpatch-value,
-.jsondiffpatch-unchanged-hidden .jsondiffpatch-movedestination > .jsondiffpatch-value {
+.jsondiffpatch-unchanged-hiding
+  .jsondiffpatch-movedestination
+  > .jsondiffpatch-value,
+.jsondiffpatch-unchanged-hidden
+  .jsondiffpatch-movedestination
+  > .jsondiffpatch-value {
   display: block;
 }
 .jsondiffpatch-unchanged-visible .jsondiffpatch-unchanged,
-.jsondiffpatch-unchanged-visible .jsondiffpatch-movedestination > .jsondiffpatch-value {
+.jsondiffpatch-unchanged-visible
+  .jsondiffpatch-movedestination
+  > .jsondiffpatch-value {
   max-height: 100px;
 }
 .jsondiffpatch-unchanged-hiding .jsondiffpatch-unchanged,
-.jsondiffpatch-unchanged-hiding .jsondiffpatch-movedestination > .jsondiffpatch-value {
+.jsondiffpatch-unchanged-hiding
+  .jsondiffpatch-movedestination
+  > .jsondiffpatch-value {
   max-height: 0;
 }
 .jsondiffpatch-unchanged-showing .jsondiffpatch-arrow,
@@ -1769,38 +1998,38 @@ ul.jsondiffpatch-delta {
   vertical-align: top;
 }
 .jsondiffpatch-property-name:after {
-  content: ': ';
+  content: ": ";
 }
 .jsondiffpatch-child-node-type-array > .jsondiffpatch-property-name:after {
-  content: ': [';
+  content: ": [";
 }
 .jsondiffpatch-child-node-type-array:after {
-  content: '],';
+  content: "],";
 }
 div.jsondiffpatch-child-node-type-array:before {
-  content: '[';
+  content: "[";
 }
 div.jsondiffpatch-child-node-type-array:after {
-  content: ']';
+  content: "]";
 }
 .jsondiffpatch-child-node-type-object > .jsondiffpatch-property-name:after {
-  content: ': {';
+  content: ": {";
 }
 .jsondiffpatch-child-node-type-object:after {
-  content: '},';
+  content: "},";
 }
 div.jsondiffpatch-child-node-type-object:before {
-  content: '{';
+  content: "{";
 }
 div.jsondiffpatch-child-node-type-object:after {
-  content: '}';
+  content: "}";
 }
 .jsondiffpatch-value pre:after {
-  content: ',';
+  content: ",";
 }
 li:last-child > .jsondiffpatch-value pre:after,
 .jsondiffpatch-modified > .jsondiffpatch-left-value pre:after {
-  content: '';
+  content: "";
 }
 .jsondiffpatch-modified .jsondiffpatch-value {
   display: inline-block;
@@ -1817,7 +2046,7 @@ li:last-child > .jsondiffpatch-value pre:after,
   color: #888;
 }
 .jsondiffpatch-moved .jsondiffpatch-moved-destination:before {
-  content: ' => ';
+  content: " => ";
 }
 ul.jsondiffpatch-textdiff {
   padding: 0;
@@ -1831,7 +2060,7 @@ ul.jsondiffpatch-textdiff {
   display: inline-block;
 }
 .jsondiffpatch-textdiff-line-number:after {
-  content: ',';
+  content: ",";
 }
 .jsondiffpatch-error {
   background: red;

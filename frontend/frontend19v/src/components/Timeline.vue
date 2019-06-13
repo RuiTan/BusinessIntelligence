@@ -1,13 +1,13 @@
 <template>
   <!-- 时间线面板 -->
   <div id="timelineContainer">
-    <div class="timeline" v-for="timeStamp in orderedTimeStamps" :key="timeStamp">
+    <div class="timeline" v-for="timeStamp in allTimeStamps" :key="timeStamp.id">
       <div class="time">
         <div class="line">----------------</div>
         <!-- radio 有用 name 来区分多个表单，没有 name 默认是一个 -->
         <input type="radio" :value="timeStamp" v-model="pickedTimeStamp" class="timePoint">
-        <div class="timeText">{{timeStamp.slice(0,10)}}</div>
-        <div class="timeText">{{timeStamp.slice(11)}}</div>
+        <div class="timeText">{{timeStamp.time.substring(5,11)}}</div>
+        <div class="timeText">{{timeStamp.time.substring(11)}}</div>
       </div>
     </div>
     <div class="timeline">
@@ -28,26 +28,24 @@ export default {
   },
   data() {
     return {
+      // pickedTimeStamp: "now"
       pickedTimeStamp: "now"
     };
   },
   computed: {
-    orderedTimeStamps() {
-      return this.allTimeStamps.sort((before, after) => {
-        if (before < after) {
-          return -1;
-        } else if (before > after) {
-          return 1;
-        } else {
-          return 0;
-        }
-      });
-    }
+    // orderedTimeStamps() {
+    //   return this.allTimeStamps.reverse()
+    // }
   },
   watch: {
     pickedTimeStamp(newVal) {
       this.$emit("click", newVal);
     }
+  },
+  mounted(){
+    var tag = this.allTimeStamps[0]
+    // this.pickedTimeStamp = tag
+    // this.allTimeStamps = this.allTimeStamps.reverse()
   }
 };
 </script>
