@@ -410,21 +410,21 @@ export default {
       moveable: false,
       focusedNode: {},
       allNodeType: [
-        "ns4_Quote",
-        "ns7_Organization",
-        "ns4_Instrument",
-        "ns4_AssetClass",
-        "ns6_Currency",
-        "ns6_CurrencySubunit",
-        "ns5_Activity",
-        "ns5_BusinessSector",
-        "ns5_EconomicSector",
-        "ns5_Industry",
-        "ns0_AcademicQualification",
-        "ns0_Person",
-        "ns5_IndustryGroup",
-        "ns0_Major",
-        "ns0_AcademicDegree"
+        "ns4__Quote",
+        "ns7__Organization",
+        "ns4__Instrument",
+        "ns4__AssetClass",
+        "ns6__Currency",
+        "ns6__CurrencySubunit",
+        "ns5__Activity",
+        "ns5__BusinessSector",
+        "ns5__EconomicSector",
+        "ns5__Industry",
+        "ns0__AcademicQualification",
+        "ns0__Person",
+        "ns5__IndustryGroup",
+        "ns0__Major",
+        "ns0__AcademicDegree"
       ],
       propertyNodes: [], // 属性节点数组
       propertyNodesCopy: [], // 属性节点的深拷贝
@@ -479,11 +479,17 @@ export default {
         "nodesContainer",
         "nodesService",
         "nodesNamespace",
+        "nodesmasterServer",
         "nodesEnvironment",
         "nodesServiceServer",
         "nodesServiceDatabase",
         "nodesContainerNetwork",
-        "nodesContainerStorage"
+        "nodesContainerStorage",
+        "nodesContainer",
+        "nodesNamespace",
+        "nodesServer"
+
+
       ],
       linkStyleList: [
         "linkManage",
@@ -703,14 +709,20 @@ export default {
     showHistory(value){
       this.nodes = []
       this.links = []
+      
       var res = JSON.parse(value.result)
+      res.nodes.map(x => {
+            // console.log(x.properties.label)
+            var la = x.properties.label.toString();
+            x.svgSym = nodeIcons[la];
+          });
       console.log("res",res)
       // this.allTimeStamps = response.data.timeList;
           let allNodes = res.nodes;
           this.normalNodes = [];
           this.nodes = res.nodes;
           this.links = res.relations;
-          属性节点
+          //属性节点
           this.propertyNodes = allNodes.filter(node => {
             if (
               this.allPropertyNodeTypes.indexOf(node.properties.label) !== -1
@@ -891,13 +903,14 @@ export default {
             var la = x.properties.label.toString();
             x.svgSym = nodeIcons[la];
           });
-
+          
           // this.allTimeStamps = response.data.timeList;
           let allNodes = response.data.nodes;
           this.nodes = [];
           this.normalNodes = [];
           this.nodes = response.data.nodes;
           this.links = response.data.relations;
+          console.log(this.links);
           //属性节点
           this.propertyNodes = allNodes.filter(node => {
             if (
@@ -1135,6 +1148,18 @@ export default {
               duration: 0
             });
           }
+          _this.closeDisplayProps();
+          console.log(node);
+          let property = node.properties;
+          _this.propertyKeys = Object.keys(property);
+          for (var key in property) {
+            _this.propertyValues.push(property[key].toString());
+          }
+          let displayProps = document.getElementsByClassName(
+            "display-property"
+          )[0];
+          displayProps.style.display = "block";
+          displayProps.style.right = "0px";
         }
         // 增加节点
         if (_this.radio === "2") {
@@ -1235,6 +1260,7 @@ export default {
               });
             });
         }
+        
       }, 0);
     },
     clickLink(e, link) {
@@ -1294,12 +1320,15 @@ export default {
     },
     ncb(node) {
       this.allNodeType.forEach((element, index, array) => {
-        // if (node.type == element) {
-        //   node._cssClass = this.styleList[index];
-        //   // node._linkLabelClass = this.linkStyleList[index];
-        //   // console.log(node)
-        // }
-           node._cssClass = this.styleList[1];
+        
+        if (node.properties.label == element) {
+          console.log(element);
+          console.log("element");
+          node._cssClass = this.styleList[index];
+          // node._linkLabelClass = this.linkStyleList[index];
+          // console.log(node)
+        }
+          //  node._cssClass = this.styleList[1];
       });
 
       // node._cssClass = "nodesInit";
@@ -1311,6 +1340,8 @@ export default {
       this.focusNodePosition(node);
       // 高亮
       this.displayOneNode(node);
+      
+      
     },
     displayNodeRelation(node) {
       this.selection = {
@@ -1621,7 +1652,8 @@ export default {
         e.target.localName !== "circle" &&
         e.target.localName !== "path"
       ) {
-        this.showNewNodeInfoCard = true;
+        this.showNewNodeInfoCard = false;
+        
       } else {
         // 点击空白处取消高亮
         this.selection = {
@@ -1634,6 +1666,7 @@ export default {
           e.detail === 2 &&
           (e.target.localName === "path" || e.target.localName === "circle")
         ) {
+          this.closeDisplayProps();
           let property = this.currentNode.properties;
           this.propertyKeys = Object.keys(property);
           for (var key in property) {
@@ -1656,6 +1689,7 @@ export default {
         this.finCoor = 0;
       }
     };
+    
     el.onmousemove = e => {
       if (this.moveable) {
         if (this.staCoor) {
@@ -1786,8 +1820,8 @@ a{
   fill: dimgray;
 }
 
-#new-graph .nodesContainerNetwork,
-#new-graph .nodesContainerStorage {
+#new-graph .Currency,
+#new-graph .ns6_CurrencySubunit {
   fill: rgb(200, 255, 195);
   r: 12;
 }
@@ -1804,6 +1838,9 @@ a{
 
 #new-graph .nodesNamespace {
   fill: darkgoldenrod;
+}
+#new-graph .nodesmasterServer {
+  fill: rgb(20, 190, 233);
 }
 
 #new-graph .linkManage {
