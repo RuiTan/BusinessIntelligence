@@ -4,6 +4,7 @@ import svgRenderer from './components/svgRenderer.vue'
 import canvasRenderer from './components/canvasRenderer.vue'
 import saveImage from './lib/js/saveImage.js'
 import svgExport from './lib/js/svgExport.js'
+import { switchCase } from 'babel-types';
 const d3 = Object.assign({}, forceSimulation)
 
 export default {
@@ -235,7 +236,76 @@ export default {
     buildNodes (nodes) {
       let vm = this
       this.nodes = nodes.map((node, index) => {
+        if(node.name !=="Environment"){
+console.log(node.id)
+        node.id = node.properties.id
+        switch(node.properties.label){
+          case "ns4__Quote":
+            node.name = node.properties.ns1__hasName
+            break
+          case "ns7__Organization":
+            node.name = node.properties.ns6__organization-name
+            break
+          case "ns4__Instrument":
+            node.name = node.properties.ns1__hasName
+            break
+          case "ns4__AssetClass":
+            node.name = node.properties.rdfs__label
+            break
+          case "ns6__Currency":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns6__CurrencySubunit":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns5__Activity":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns5__BusinessSector":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns5__EconomicSector":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns5__EconomicSector":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns5__Industry":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns0__AcademicQualification":
+            node.name = node.properties.ns8__fromInstitutionName
+            break
+          case "ns0__Officership":
+            node.name = node.properties.ns8__hasReportedTitle
+            break
+          case "ns0__Person":
+            node.name = node.properties.ns6__given-name
+            break
+          case "ns5__IndustryGroup":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns0__Major":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns0__AcademicDegree":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns0__OfficerRole":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns0__DirectorRole":
+            node.name = node.properties.skos__prefLabel
+            break
+          case "ns0__Directorship":
+            node.name = node.properties.ns8__hasReportedTitle
+            break
+          default :
+            node.name = node.properties.label
+        }
+        }
         // node formatter option
+        
         node = this.itemCb(this.nodeCb, node)
         // index as default node id
         if (!node.id && node.id !== 0) vm.$set(node, 'id', index)
@@ -257,6 +327,10 @@ export default {
       // 1. sid 或 tid 不存在的边不应该渲染
       // 2. 初始化 profileLinks
       links = links.filter( link => {
+        link.id = "link-"+link.properties.id
+        link.sid = link.properties.source
+        link.tid = link.properties.target
+        link.name = link.properties.label
         if (link.type === 'profile') {
           this.profileLinks.push(link.id)
         }

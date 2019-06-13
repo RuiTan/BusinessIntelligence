@@ -63,10 +63,11 @@
     </svg>
     <!-- 右下角的对节点进行操作的 button -->
     <div id="button-group">
+      <el-button type="primary" @click="getData">展示</el-button>
       <el-radio-group v-model="radio">
         <!-- 普通点击 -->
         <el-tooltip class="item" effect="dark" content="查看" placement="top-start">
-          <el-radio-button label="1">
+          <el-radio-button label="1" >
             <i class="el-icon-view"></i>
           </el-radio-button>
         </el-tooltip>
@@ -97,25 +98,17 @@
       </el-radio-group>
     </div>
     <!-- 属性卡片 -->
-    <el-card class="display-property">
+    <el-card class="display-property" style="right: -420px; display: none">
       <div slot="header" class="clearfix">
         <span style="font-weight: bold;font-size:16px;">{{currentNode.name}}</span>
-        <span style="color:#555;">（{{currentNode.type}}）</span>
         <el-button style="float: right; padding: 3px 0" type="text" @click="closeDisplayProps">关闭</el-button>
       </div>
-      <el-form ref="propsForm" :model="propsForm" label-position="left">
-        <el-form-item v-for="(value, key, index) in currentNode.property" :key="key" :label="key">
-          <el-input :placeholder="key" v-model="propertyValues[index]"></el-input>
-        </el-form-item>
-        <el-form-item>
-          <el-button
-            @click="getData"
-            style="width:100%"
-            type="primary"
-            plain
-            v-if="currentNode.type === 'environment'"
-          >导入</el-button>
-          <el-button @click="updatePropsHandler" style="width:100%" type="primary" plain v-else>确定</el-button>
+      <el-form ref="propsForm" :model="propsForm" label-position="left" v-if="currentNode.type !== 'environment'">
+        <el-form-item v-for="(value, key, index) in currentNode.properties" :key="key" :label="key">
+          <el-input :placeholder="key" v-model="propertyValues[index]" readonly="readonly" v-if="key !=='uri'"></el-input>
+          <a :href="propertyValues[index]" v-if="key ==='uri'" target="blank">
+            <el-input :placeholder="key" v-model="propertyValues[index]" readonly="readonly">
+              </el-input></a>
         </el-form-item>
       </el-form>
     </el-card>
@@ -340,19 +333,19 @@ export default {
       history: {},
       now: {},
       radio: "1",
-      initialNode: {
-        name: "Environment",
-        id: "http://environment/10.60.38.181/environment",
-        type: "environment",
-        property: {
-          masterName: "192.168.199.191", // 192.168.199.191
-          podName: "sock-shop", // sock-shop
-          serviceName: "sock-shop", // sock-shop
-          address: "10.60.38.181", // 10.60.38.181
-          namespace: "sock-shop" // sock-shop
-        },
-        svgSym: nodeIcons["environment"]
-      },
+      // initialNode: {
+      //   name: "Environment",
+      //   id: "http://environment/10.60.38.181/environment",
+      //   type: "environment",
+      //   property: {
+      //     masterName: "192.168.199.191", // 192.168.199.191
+      //     podName: "sock-shop", // sock-shop
+      //     serviceName: "sock-shop", // sock-shop
+      //     address: "10.60.38.181", // 10.60.38.181
+      //     namespace: "sock-shop" // sock-shop
+      //   },
+      //   svgSym: nodeIcons["environment"]
+      // },
       nodes: [],
       links: [],
       selection: {
@@ -665,7 +658,7 @@ export default {
     }
   },
   created() {
-    this.nodes.push(this.initialNode);
+    // getData();
   },
   methods: {
     searchNode(data,node){
@@ -696,12 +689,12 @@ export default {
       this.nodes = [];
       // this.nodes.push(this.initialNode) // 等后端有 env 和其他节点的关系
       this.links = [];
-      var envPropertyValues = new FormData();
-      envPropertyValues.append("masterName", this.propertyValues[0]); // 192.168.199.191
-      envPropertyValues.append("podName", this.propertyValues[1]); // sock-shop
-      envPropertyValues.append("serviceName", this.propertyValues[2]); // sock-shop
-      envPropertyValues.append("address", this.propertyValues[3]); // 10.60.38.181
-      envPropertyValues.append("namespace", this.propertyValues[4]); // sock-shop
+      // var envPropertyValues = new FormData();
+      // envPropertyValues.append("masterName", this.propertyValues[0]); // 192.168.199.191
+      // envPropertyValues.append("podName", this.propertyValues[1]); // sock-shop
+      // envPropertyValues.append("serviceName", this.propertyValues[2]); // sock-shop
+      // envPropertyValues.append("address", this.propertyValues[3]); // 10.60.38.181
+      // envPropertyValues.append("namespace", this.propertyValues[4]); // sock-shop
 
       // console.log(envPropertyValues);
 
@@ -731,22 +724,22 @@ export default {
           this.nodes = response.data.nodes;
           this.links = response.data.relations;
           //属性节点
-          // this.propertyNodes = allNodes.filter(node => {
-          //   if (this.allPropertyNodeTypes.indexOf(node.properties.label) !== -1) {
-          //     return true;
-          //   } else {
-          //     this.normalNodes.push(node);
-          //     return false;
-          //   }
-          // });
+          this.propertyNodes = allNodes.filter(node => {
+            if (this.allPropertyNodeTypes.indexOf(node.properties.label) !== -1) {
+              return true;
+            } else {
+              this.normalNodes.push(node);
+              return false;
+            }
+          });
 
           // console.log("hello",this.propertyNodes)
 
-          // this.propertyNodesCopy = JSON.parse(
-          //   JSON.stringify(this.propertyNodes)
-          // );
+          this.propertyNodesCopy = JSON.parse(
+            JSON.stringify(this.propertyNodes)
+          );
 
-          // this.nodes = this.normalNodes.concat(this.propertyNodes);
+          this.nodes = this.normalNodes.concat(this.propertyNodes);
 
           this.showTimeline = true;
 
@@ -763,7 +756,7 @@ export default {
       // });
       let displayProps = document.getElementsByClassName("display-property")[0];
       displayProps.style.right = "-420px";
-      // displayProps.style.display = 'none'
+      displayProps.style.display = 'none'
 
     //   //测试jsondiffpatch结果是否正确
     //   this.history = {
@@ -1208,7 +1201,7 @@ export default {
     closeDisplayProps() {
       let displayProps = document.getElementsByClassName("display-property")[0];
       displayProps.style.right = "-420px";
-      // displayProps.style.display = 'none'
+      displayProps.style.display = 'none'
       this.propertyValues = [];
       this.propertyKeys = [];
     },
@@ -1379,7 +1372,7 @@ export default {
             // console.log(linkid)
             // console.log(label.innerHTML)
             // label.attr('font-size', '20px');
-            label.setAttribute("style", "font-size:15px;");
+            label.setAttribute("style", "font-size:10px;");
             setTimeout(() => {
               label.setAttribute("style", "font-size:0px;");
             }, 1000);
@@ -1432,15 +1425,15 @@ export default {
           e.detail === 2 &&
           (e.target.localName === "path" || e.target.localName === "circle")
         ) {
-          let property = this.currentNode.property;
+          let property = this.currentNode.properties;
           this.propertyKeys = Object.keys(property);
           for (var key in property) {
-            this.propertyValues.push(property[key]);
+            this.propertyValues.push(property[key].toString());
           }
           let displayProps = document.getElementsByClassName(
             "display-property"
           )[0];
-          // displayProps.style.display = 'block'
+          displayProps.style.display = 'block'
           displayProps.style.right = "0px";
         }
         this.finCoor = getCoordInDocument(e);
