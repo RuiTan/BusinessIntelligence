@@ -1,19 +1,21 @@
 <template>
   <div id="new-graph">
     <!-- 搜索和树 在 ../components/SearchTree 下 -->
-    <div class="search" style="position:absolute;">
+    <div v-if="type==='one-node'" class="search" style="position:absolute;">
+      <el-card class="card">
       <el-input
-        style="width:300px;display:block;margin-bottom:5px;"
+        style="width:260px;display:block;margin-bottom:5px;"
         v-model="searchInput"
         placeholder="请输入内容"
         @input="clearTreeData"
       ></el-input>
       <el-input
-        style="width:145px;display:inline-block; margin-right:10px;"
+        style="width:120px;display:inline-block; margin-right:20px;"
         v-model="jumpNo"
         placeholder="请输入跳数"
       ></el-input>
-      <el-input style="width:145px;display:inline-block" v-model="resLimit" placeholder="结果数量" ></el-input>
+      <el-input style="width:120px;display:inline-block" v-model="resLimit" placeholder="结果数量" ></el-input>
+      </el-card>
       <el-tree
         v-loading="treeLoading"
         style="width:300px;max-height:600px;overflow:auto"
@@ -33,7 +35,42 @@
         </span>
       </el-tree>
     </div>
+
+    <div v-if="type==='duo-node-mul'" style="position:absolute;">
+      <el-card style="width:300px">
+        <div style="overflow:auto;max-width:100%">
+        <el-tag v-for="tag in tags" @close="handleClose(tag)" :key="tag.id" style="margin-bottom:5px;max-width:275px:overflow:auto;display:inline-block" closable>{{tag.label}}</el-tag>
+        </div>
+        <el-popover
+        placement="right"
+        width="200"
+        v-model="popVisible">
+        <el-input placeholder="请输入内容" @input="clearTreeData" v-model="searchInput"></el-input>
+        <el-button slot="reference" style="margin-top:10px" size="small" @click="addSearchNode">+ New Node</el-button>
+        </el-popover>
+      </el-card>
+      <el-tree
+        v-loading="treeLoading"
+        style="width:300px;max-height:600px;overflow:auto"
+        :data="treeData"
+        :props="defaultProps"
+        ref="tree"
+        accordion
+        disable
+        @node-click="clickTreeNode2"
+      >
+      <span slot-scope="{ node, data }">
+            <span class="one-res" style="width: 220px;font-size:14px;padding-top:5px;
+            display: inline-block;
+            overflow: auto;">
+                {{ node.label }} 
+            </span>              
+            <a :href="data.uri" target="_blank"><i v-if="node.level>1" style="position:absolute;padding-top:5px;right:20px" class="el-icon-position"></i></a>
+        </span>
+      </el-tree>
+    </div>
     <!-- 是否显示属性节点切换按钮 -->
+
     <div id="switch-p-node">
       <el-switch
         v-model="propertyNodeSwitch"
@@ -213,6 +250,7 @@
 <script>
 import D3Network from "../components/vue-d3-network/src/vue-d3-network.vue";
 import SearchTree from "../components/SearchTree.vue";
+import Menu from "./MainPage.vue";
 import Timeline from "../components/Timeline";
 import Diff from "../components/Diff";
 import axios from "axios";
@@ -290,14 +328,20 @@ const nodeIcons = {
 };
 
 export default {
+  props:{
+    type:String,
+  },
   components: {
     D3Network,
     SearchTree,
     Timeline,
-    Diff
+    Diff,
+    Menu
   },
   data() {
     return {
+      tags:[],
+      popVisible:false,
       page:1,
       resLimit: "",
       jumpNo: "",
@@ -700,12 +744,30 @@ export default {
           x.style.visibility = "visible";
         });
       }
-    }
+    },
   },
   created() {
     // getData();
   },
   methods: {
+    addSearchNode(){
+      console.log(this.tags.length)
+      if(this.tags.length >= 2){
+        this.$message({
+          type:"warning",
+          message:"最多搜索两项"
+        })
+        console.log("out")
+        this.popVisible = false
+      }
+      else{
+        console.log("show")
+        this.popVisible = true
+      }
+    },
+    handleClose(tag){
+      this.tags.splice(this.tags.indexOf(tag), 1);
+    },
     showHistory(value){
       this.nodes = []
       this.links = []
@@ -814,7 +876,7 @@ export default {
         this.searchNode(data,node)
       }
       else{
-        console.log("leaf",data,node)
+        
       }
     },
     searchNode(data, node) {
@@ -869,6 +931,89 @@ export default {
           });
           this.treeLoading = false;
         }
+      }).catch(err=>{
+        this.$message({
+            type: "warning",
+            message: "网络错误"
+          });
+        this.treeLoading = false;
+      })
+    },
+    clickTreeNode2(data,node){
+      if(node.level == 1){
+        this.searchNode2(data,node)
+      }
+      else{
+        if(this.tags.length >= 2){
+        this.$message({
+          type:"warning",
+          message:"最多搜索两项"
+        })
+        }
+        else{
+          this.tags.push(data)
+        }
+      }
+    },
+    searchNode2(data, node) {
+      console.log("node",node)
+      if (this.searchInput == "") {
+        this.$message({
+          type: "warning",
+          message: "搜索项不能为空"
+        });
+        return;
+      }
+      this.treeLoading = true;
+      var index = 0;
+      var search = "";
+      for (let ele of this.allNodeType) {
+        if (ele.substring(4) == data.label) {
+          index = this.allNodeType.indexOf(ele) + 1;
+          search = ele;
+        }
+      }
+      if(this.treeData[index - 1].children.length > 0){
+        this.treeLoading = false
+        return
+      }
+      var data = new FormData();
+      data.append("type", index);
+      data.append("name", this.searchInput);
+      axios({
+        method: "POST",
+        url: "http://218.78.28.138:9900/selectByTypeAndName",
+        data: data
+      }).then(response => {
+        console.log("response",response.data);
+        if (response.data.length == 0) {
+          this.$message({
+            type: "warning",
+            message: search.substring(4)+"标签下无"+this.searchInput+"项"
+          });
+          this.treeLoading = false;
+        } else {
+          for (let item of response.data) {
+            this.treeData[index - 1].children.push({
+              label: item.name,
+              children: [],
+              id: item.id,
+              uri: item.uri
+            });
+          }
+          this.$message({
+              type: "success",
+              message: search.substring(4)+"标签下有"+response.data.length+"个"+this.searchInput+"项"
+          });
+          this.treeLoading = false;
+          this.popVisible = false
+        }
+      }).catch(err=>{
+        this.$message({
+            type: "warning",
+            message: "网络错误"
+          })
+        this.treeLoading = false;
       });
     },
     getData() {
@@ -1760,6 +1905,18 @@ export default {
 </script>
 
 <style>
+
+.card{
+  background:transparent;
+  
+}
+
+.card input{
+  border:none;
+  border-bottom: #d3d3d3 solid 1px;
+  background:transparent;
+  border-radius:0px;
+}
 
 a{
   color:unset
