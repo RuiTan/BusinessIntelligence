@@ -1115,6 +1115,11 @@ export default {
       var res = JSON.parse(value.result);
       console.log("res", res);
       // this.allTimeStamps = response.data.timeList;
+      res.nodes.map(x => {
+        // console.log(x.properties.label)
+        var la = x.properties.label.toString();
+        x.svgSym = nodeIcons[la];
+      });
       let allNodes = res.nodes;
       this.normalNodes = [];
       this.nodes = res.nodes;
