@@ -354,7 +354,7 @@
     </transition>
     <div id="visual"></div>
     <!-- 时间线 -->
-    <timeline v-if="showTimeline" :allTimeStamps="allTimeStamps" v-on:click="showHistory"></timeline>
+    <timeline v-if="showTimeline" :allTimeStamps="allTimeStamps" :pickedTimeStamps="pickedTimeStamps" v-on:click="showHistory"></timeline>
   </div>
 </template>
 
@@ -556,6 +556,7 @@ export default {
         nodes: {}
       },
       allTimeStamps: [], // 不太确定是什么数据格式的 这涉及到排序
+      pickedTimeStamps: 'now',
       nodeSize: 40,
       fontSize: 14,
       linkWidth: 1,
@@ -902,6 +903,7 @@ export default {
         this.page = 3;
       }
       var historyData = new FormData();
+      this.allTimeStamps = []
       this.showTimeline = true;
       historyData.append("type", this.page);
       axios({
@@ -916,6 +918,10 @@ export default {
             this.allTimeStamps.push(res);
           }
         }
+        this.pickedTimeStamps = this.allTimeStamps[0]
+        var result = this.allTimeStamps[0].result;
+        result = JSON.parse(result)
+        this.showNodeAndLink(result.nodes,result.relations)
         this.allTimeStamps = this.allTimeStamps.reverse();
       });
     },
@@ -1016,7 +1022,7 @@ export default {
           data: data
         }).then(response => {
           console.log("all", response.data);
-          //TO-DO:展示
+          this.showNodeAndLink(response.data.nodes,response.data.relations)
         });
       }
     },
@@ -1041,7 +1047,7 @@ export default {
         data: data
       }).then(response => {
         console.log(response.data);
-        //TO-DO:展示
+        this.showNodeAndLink(response.data.nodes,response.data.relations)
       });
     },
     addSearchNode() {
@@ -1080,8 +1086,13 @@ export default {
       this.tags3.splice(this.tags.indexOf(tag), 1);
     },
     showHistory(value) {
+      
       this.nodes = [];
       this.links = [];
+      if(value == 'now'){
+        return
+      }
+      console.log(value)
       var res = JSON.parse(value.result);
       console.log("res", res);
       // this.allTimeStamps = response.data.timeList;
@@ -1195,6 +1206,7 @@ export default {
           data: fdata
         }).then(response => {
           console.log(response.data);
+          this.showNodeAndLink(response.data.nodes,response.data.relations)
         });
       }
     },
@@ -1211,10 +1223,11 @@ export default {
       var index = 0;
       var search = "";
       for (let ele of this.allNodeType) {
-        if (ele.substring(4) == data.label) {
+        if (ele.substring(5) == data.label) {
           this.index = this.allNodeType.indexOf(ele) + 1;
           index = this.index;
           search = ele;
+          console.log("index",index)
         }
       }
       if (this.treeData[index - 1].children.length > 0) {
@@ -1301,10 +1314,11 @@ export default {
       var index = 0;
       var search = "";
       for (let ele of this.allNodeType) {
-        if (ele.substring(4) == data.label) {
+        if (ele.substring(5) == data.label) {
           this.index = this.allNodeType.indexOf(ele) + 1;
           index = this.index;
           search = ele;
+          console.log("index",index)
         }
       }
       if (this.treeData[index - 1].children.length > 0) {
@@ -1391,7 +1405,7 @@ export default {
       var index = 0;
       var search = "";
       for (let ele of this.allNodeType) {
-        if (ele.substring(4) == data.label) {
+        if (ele.substring(5) == data.label) {
           this.index = this.allNodeType.indexOf(ele) + 1;
           index = this.index;
           search = ele;
@@ -2200,24 +2214,8 @@ export default {
   },
   mounted() {
     this.type = "one-node";
-    var historyData = new FormData();
-    this.showTimeline = true;
-    historyData.append("type", this.page);
-    axios({
-      method: "POST",
-      url: "http://10.60.42.201:8080/getHistory",
-      data: historyData
-    }).then(response => {
-      console.log("hi", response.data);
-      for (let res of response.data) {
-        var temp = JSON.parse(res.result);
-        if (temp.nodes.length != 0) {
-          this.allTimeStamps.push(res);
-        }
-      }
-      this.allTimeStamps = this.allTimeStamps.reverse();
-    });
-
+      
+    
     var el = document.getElementsByClassName("net-svg")[0];
     el.onmousedown = e => {
       this.staCoor = getCoordInDocument(e);

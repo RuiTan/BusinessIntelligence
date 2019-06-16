@@ -45,7 +45,7 @@ export default {
   mounted(){
     var tag = this.allTimeStamps[0]
     // this.pickedTimeStamp = tag
-    // this.allTimeStamps = this.allTimeStamps.reverse()
+    this.allTimeStamps = this.allTimeStamps.reverse()
   }
 };
 </script>
