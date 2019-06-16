@@ -24,11 +24,10 @@
 <script>
 export default {
   props: {
-    allTimeStamps: Array
+    allTimeStamps: Array,
   },
   data() {
     return {
-      // pickedTimeStamp: "now"
       pickedTimeStamp: "now"
     };
   },
@@ -40,12 +39,15 @@ export default {
   watch: {
     pickedTimeStamp(newVal) {
       this.$emit("click", newVal);
+    },
+    allTimeStamps(newVal){
+      this.pickedTimeStamp = newVal[newVal.length-1]
     }
   },
   mounted(){
     var tag = this.allTimeStamps[0]
     // this.pickedTimeStamp = tag
-    // this.allTimeStamps = this.allTimeStamps.reverse()
+    this.allTimeStamps = this.allTimeStamps.reverse()
   }
 };
 </script>

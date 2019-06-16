@@ -244,7 +244,7 @@ console.log(node.id)
             node.name = node.properties.ns1__hasName
             break
           case "ns7__Organization":
-            node.name = node.properties.ns6__organization-name
+            node.name = node.properties["ns6__organization-name"]
             break
           case "ns4__Instrument":
             node.name = node.properties.ns1__hasName
