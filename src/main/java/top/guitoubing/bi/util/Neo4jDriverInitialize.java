@@ -25,7 +25,7 @@ public class Neo4jDriverInitialize {
 
     // 获取会话session
     public Session getSession(){
-        if (session == null)
+        if (session == null || !session.isOpen())
             session = getDriver().session();
         return session;
     }

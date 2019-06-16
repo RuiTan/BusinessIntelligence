@@ -9,7 +9,7 @@ public class MysqlDriverInitialize {
     private static Connection connection;
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
-        if (connection == null){
+        if (connection == null || connection.isClosed()){
             Class.forName(ConstantDefinition.mysqlDriver);
             connection = DriverManager.getConnection(ConstantDefinition.mysqlUrl, ConstantDefinition.mysqlUser, ConstantDefinition.mysqlPassword);
         }
@@ -30,6 +30,8 @@ public class MysqlDriverInitialize {
         }
         preparedStatement.close();
         System.out.println("结束从Mysql中查[type:" + type + ",name:" + name + "]");
+        if (!connection.isClosed())
+            connection.close();
         return cacheEntities;
     }
 }

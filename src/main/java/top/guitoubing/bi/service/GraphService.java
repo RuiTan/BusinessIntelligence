@@ -20,7 +20,14 @@ import java.util.Map;
 public class GraphService {
 
     private Neo4jDriverInitialize neo4jDriverInitialize = new Neo4jDriverInitialize();
-    private Session session = neo4jDriverInitialize.getSession();
+    private Session session;
+
+    private Session getSession(){
+        if (session == null || !session.isOpen()){
+            session = neo4jDriverInitialize.getSession();
+        }
+        return session;
+    }
 
     /**
      * 通过一个实体查询其关联的所有关系和实体(限定跳数和结果数量)
@@ -34,7 +41,7 @@ public class GraphService {
         // 获取节点种类及其已定的查询字段
         Pair<String, String> nodeType = NodeUtils.getTypeFromKey(type);
         // 查询语句(使用parameters拼接字段会执行失败，原因待查)
-        String query = "MATCH p=((n:"+nodeType.getKey()+")-[*.."+step+"]-()) where id(n)="+id+" return p limit " + limit;
+        String query = "MATCH p=((n:"+nodeType.getKey()+")-[*"+step+"]-()) where id(n)="+id+" return p limit " + limit;
         return query(query);
     }
 
@@ -45,7 +52,7 @@ public class GraphService {
      */
     public HashMap<String, ArrayList<NodeEntity>> query(String query){
         // 获取结果
-        StatementResult result = session.run(query);
+        StatementResult result = getSession().run(query);
         System.out.println(query);
         HashMap<String,ArrayList<NodeEntity>> hashMap = new HashMap<>();
         // 节点集合
@@ -73,6 +80,8 @@ public class GraphService {
         }
         hashMap.put(ConstantDefinition.NODES, nodeList);
         hashMap.put(ConstantDefinition.RELATIONS, relationList);
+        if (session.isOpen())
+            session.close();
 //        System.err.println(hashMap);
         return hashMap;
     }
@@ -173,7 +182,7 @@ public class GraphService {
         String sourceLabel = NodeUtils.getTypeFromKey(sourceType).getKey();
         String query = "match p=((n:"+sourceLabel+")-[*"+step+"]-()) where id(n)="+sourceId+" return p limit "+limit;
         System.out.println(query);
-        StatementResult statementResult = session.run(query);
+        StatementResult statementResult = getSession().run(query);
         HashMap<String, ArrayList<NodeEntity>> hashMap = new HashMap<>();
         ArrayList<NodeEntity> nodeList = new ArrayList<>();
         ArrayList<NodeEntity> relationList = new ArrayList<>();
@@ -192,6 +201,8 @@ public class GraphService {
         System.out.println("有效路径数量：" + validCount);
         hashMap.put(ConstantDefinition.NODES, nodeList);
         hashMap.put(ConstantDefinition.RELATIONS, deWeightRelation(relationList));
+        if (session.isOpen())
+            session.close();
         return hashMap;
     }
 
