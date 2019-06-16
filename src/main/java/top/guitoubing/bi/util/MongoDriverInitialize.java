@@ -29,6 +29,8 @@ public class MongoDriverInitialize {
                 return getMongoClient().getDatabase(ConstantDefinition.mongoDatabase).getCollection(ConstantDefinition.mongoSingleCollection);
             case ConstantDefinition.mongoDoubleCollectionType:
                 return getMongoClient().getDatabase(ConstantDefinition.mongoDatabase).getCollection(ConstantDefinition.mongoDoubleCollection);
+            case ConstantDefinition.mongoAllMinPathsCollectionType:
+                return getMongoClient().getDatabase(ConstantDefinition.mongoDatabase).getCollection(ConstantDefinition.mongoAllMinPathCollection);
             default:
                 return getMongoClient().getDatabase(ConstantDefinition.mongoDatabase).getCollection(ConstantDefinition.mongoMinPathCollection);
         }
