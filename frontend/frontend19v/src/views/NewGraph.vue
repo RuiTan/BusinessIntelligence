@@ -354,7 +354,7 @@
     </transition>
     <div id="visual"></div>
     <!-- 时间线 -->
-    <timeline v-if="showTimeline" :allTimeStamps="allTimeStamps" :pickedTimeStamps="pickedTimeStamps" v-on:click="showHistory"></timeline>
+    <timeline v-if="showTimeline" :allTimeStamps="allTimeStamps" v-on:click="showHistory"></timeline>
   </div>
 </template>
 
@@ -556,7 +556,6 @@ export default {
         nodes: {}
       },
       allTimeStamps: [], // 不太确定是什么数据格式的 这涉及到排序
-      pickedTimeStamps: 'now',
       nodeSize: 40,
       fontSize: 14,
       linkWidth: 1,
@@ -918,11 +917,12 @@ export default {
             this.allTimeStamps.push(res);
           }
         }
-        this.pickedTimeStamps = this.allTimeStamps[0]
-        var result = this.allTimeStamps[0].result;
-        result = JSON.parse(result)
-        this.showNodeAndLink(result.nodes,result.relations)
+
         this.allTimeStamps = this.allTimeStamps.reverse();
+
+        // var result = this.allTimeStamps[0].result;
+        // result = JSON.parse(result)
+        // this.showNodeAndLink(result.nodes,result.relations)
       });
     },
     // 监听被选择的 radio
