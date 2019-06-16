@@ -30,7 +30,7 @@
               <span slot="title">双节点多跳查询</span>
             </el-menu-item>
             <el-menu-item index="duo-node-short">
-              <i class="el-icon-share" style="color:#303133"></i>
+              <i class="el-icon-sort" style="color:#303133"></i>
               <span slot="title">双节点最短路径查询</span>
             </el-menu-item>
           </el-menu>
