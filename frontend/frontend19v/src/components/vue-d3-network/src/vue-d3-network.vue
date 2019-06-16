@@ -327,7 +327,7 @@ console.log(node.id)
       // 1. sid 或 tid 不存在的边不应该渲染
       // 2. 初始化 profileLinks
       links = links.filter( link => {
-        link.id = "link-"+link.properties.id
+        link.id = "link-"+link.properties.id.toString()
         link.sid = link.properties.source
         link.tid = link.properties.target
         link.name = link.properties.label

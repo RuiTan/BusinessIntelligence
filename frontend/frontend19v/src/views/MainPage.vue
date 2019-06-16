@@ -20,26 +20,27 @@
             @select="handleSelect"
             :collapse="isCollapse"
           >
-            <el-menu-item>
-              <i class="el-icon-location-outline" index="one-node"></i>
-              <span slot="title" style="color:unset">单节点多跳查询</span>
+            <el-menu-item index="one-node">
+              <i class="el-icon-location-outline" style="color:#303133"></i>
+              <span style="color:#303133">单节点多跳查询</span>
             </el-menu-item>
-            <el-menu-item>
-              <i class="el-icon-share" index="duo-node-mul"></i>
-              <span slot="title" style="color:unset">双节点多跳查询</span>
+            <el-menu-item index="duo-node-mul">
+              <i class="el-icon-share" style="color:#303133"></i>
+              <span style="color:#303133">双节点多跳查询</span>
             </el-menu-item>
-            <el-menu-item >
-              <i class="el-icon-share" index="duo-node-short"></i>
-              <span slot="title" style="color:unset">双节点最短路径查询</span>
+            <el-menu-item index="duo-node-short">
+              <i class="el-icon-share" style="color:#303133"></i>
+              <span style="color:#303133">双节点最短路径查询</span>
             </el-menu-item>
           </el-menu>
         </el-col>
 
         <el-col style="width:100%;height:100%">
           <!-- <el-button>test</el-button> -->
-          <keep-alive>
+          <!-- <keep-alive>
             <router-view></router-view>
-          </keep-alive>
+          </keep-alive> -->
+          <NewGraph :type="type"></NewGraph>
         </el-col>
       </el-row>
     </el-main>
@@ -85,12 +86,17 @@ svg {
 </style>
 
 <script>
+import NewGraph from './NewGraph.vue'
 export default {
   name: "mainpage",
+  components:{
+    NewGraph,
+  },
   data() {
     return {
       sidebar: 5,
-      isCollapse: true
+      isCollapse: true,
+      type:''
     };
   },
   methods: {
@@ -101,11 +107,8 @@ export default {
         return "75px";
       }
     },
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-      this.$router.push({
-        name: key
-      });
+    handleSelect(index, indexPath) {
+      this.type = index
     },
     handleOpen(key, keyPath) {
       console.log(key, keyPath);

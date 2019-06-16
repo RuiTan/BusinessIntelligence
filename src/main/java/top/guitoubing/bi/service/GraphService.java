@@ -34,7 +34,7 @@ public class GraphService {
         // 获取节点种类及其已定的查询字段
         Pair<String, String> nodeType = NodeUtils.getTypeFromKey(type);
         // 查询语句(使用parameters拼接字段会执行失败，原因待查)
-        String query = "MATCH p=((n:"+nodeType.getKey()+")-[*.."+step+"]-()) where id(n)="+id+" return p limit " + (limit >= ConstantDefinition.NODESLIMIT ? ConstantDefinition.NODESLIMIT:limit);
+        String query = "MATCH p=((n:"+nodeType.getKey()+")-[*.."+step+"]-()) where id(n)="+id+" return p limit " + limit;
         return query(query);
     }
 
@@ -84,6 +84,15 @@ public class GraphService {
                 " MATCH p = shortestPath((source)-[*]-(target)) return p";
         return query(query);
     }
+
+    public HashMap<String, ArrayList<NodeEntity>> searchAllMinPaths(int source, int target, int sourceType, int targetType){
+        String query = "MATCH (source:"+NodeUtils.getTypeFromKey(sourceType).getKey()+"),(target:"+NodeUtils.getTypeFromKey(targetType).getKey()+") WHERE id(source) = "
+                + source +" AND id(target) = " + target +
+                " MATCH p = allShortestPaths((source)-[*]-(target)) return p";
+        return query(query);
+    }
+
+
 
     /**
      * 将数据库中Node节点转换为NodeEntity实体类型
