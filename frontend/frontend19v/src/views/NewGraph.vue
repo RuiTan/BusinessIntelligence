@@ -3,18 +3,22 @@
     <!-- 搜索和树 在 ../components/SearchTree 下 -->
     <div v-if="type==='one-node'" class="search" style="position:absolute;">
       <el-card class="card">
-      <el-input
-        style="width:260px;display:block;margin-bottom:5px;"
-        v-model="searchInput"
-        placeholder="请输入内容"
-        @input="clearTreeData"
-      ></el-input>
-      <el-input
-        style="width:120px;display:inline-block; margin-right:20px;"
-        v-model="jumpNo"
-        placeholder="请输入跳数"
-      ></el-input>
-      <el-input style="width:120px;display:inline-block" v-model="resLimit" placeholder="结果数量" ></el-input>
+        <h4 style="margin:0">单节点多跳查询</h4>
+        <el-input
+          style="width:260px;display:block;margin-bottom:5px;"
+          v-model="searchInput"
+          placeholder="请输入内容"
+          @input="clearTreeData"
+        ></el-input>
+        <span style="position:absolute;color:grey;font-size:11px">跳数</span>
+
+        <el-input
+          style="width:120px;margin-right:20px;margin-top:10px"
+          v-model="jumpNo"
+          type="number"
+        ></el-input>
+        <span style="position:absolute;color:grey;font-size:11px">结果限制</span>
+        <el-input style="width:120px;" v-model="resLimit" type="number"></el-input>
       </el-card>
       <el-tree
         v-loading="treeLoading"
@@ -25,29 +29,63 @@
         accordion
         @node-click="clickTreeNode"
       >
-      <span slot-scope="{ node, data }">
-            <span class="one-res" style="width: 220px;font-size:14px;padding-top:5px;
+        <span slot-scope="{ node, data }">
+          <span
+            class="one-res"
+            style="width: 220px;font-size:14px;padding-top:5px;
             display: inline-block;
-            overflow: auto;">
-                {{ node.label }} 
-            </span>              
-            <a :href="data.uri" target="_blank"><i v-if="node.level>1" style="position:absolute;padding-top:5px;right:20px" class="el-icon-position"></i></a>
+            overflow: auto;"
+          >{{ node.label }}</span>
+          <a :href="data.uri" target="_blank">
+            <i
+              v-if="node.level>1"
+              style="position:absolute;padding-top:5px;right:20px"
+              class="el-icon-position"
+            ></i>
+          </a>
         </span>
       </el-tree>
     </div>
 
     <div v-if="type==='duo-node-mul'" style="position:absolute;">
-      <el-card style="width:300px">
+      <el-card class="card" style="width:300px">
+        <h4 style="margin-top:0">双节点多跳查询</h4>
         <div style="overflow:auto;max-width:100%">
-        <el-tag v-for="tag in tags" @close="handleClose(tag)" :key="tag.id" style="margin-bottom:5px;max-width:275px:overflow:auto;display:inline-block" closable>{{tag.label}}</el-tag>
+          <el-tag
+            v-for="tag in tags"
+            @close="handleClose(tag)"
+            :key="tag.id"
+            style="margin-bottom:5px;max-width:275px:overflow:auto;display:inline-block"
+            closable
+          >{{tag.label}}</el-tag>
         </div>
-        <el-popover
-        placement="right"
-        width="200"
-        v-model="popVisible">
-        <el-input placeholder="请输入内容" @input="clearTreeData" v-model="searchInput"></el-input>
-        <el-button slot="reference" style="margin-top:10px" size="small" @click="addSearchNode">+ New Node</el-button>
+        <el-popover placement="right" width="200" trigger="manual" v-model="popVisible">
+          <el-input placeholder="请输入内容" @input="clearTreeData" v-model="searchInput2"></el-input>
+          <el-button
+            slot="reference"
+            style="margin-top:10px;margin-bottom:10px;"
+            size="small"
+            @click="addSearchNode"
+          >+ New Node</el-button>
+          <el-button
+            slot="reference"
+            size="mini"
+            icon="el-icon-search"
+            type="primary"
+            @click="getRoutes"
+            circle
+          ></el-button>
         </el-popover>
+        <br>
+        <span style="position:absolute;color:grey;font-size:11px">跳数</span>
+
+        <el-input
+          style="width:120px;margin-right:20px;margin-top:10px"
+          v-model="jumpNo2"
+          type="number"
+        ></el-input>
+        <span style="position:absolute;color:grey;font-size:11px">结果限制</span>
+        <el-input style="width:120px;" v-model="resLimit2" type="number"></el-input>
       </el-card>
       <el-tree
         v-loading="treeLoading"
@@ -59,13 +97,86 @@
         disable
         @node-click="clickTreeNode2"
       >
-      <span slot-scope="{ node, data }">
-            <span class="one-res" style="width: 220px;font-size:14px;padding-top:5px;
+        <span slot-scope="{ node, data }">
+          <span
+            class="one-res"
+            style="width: 220px;font-size:14px;padding-top:5px;
             display: inline-block;
-            overflow: auto;">
-                {{ node.label }} 
-            </span>              
-            <a :href="data.uri" target="_blank"><i v-if="node.level>1" style="position:absolute;padding-top:5px;right:20px" class="el-icon-position"></i></a>
+            overflow: auto;"
+          >{{ node.label }}</span>
+          <a :href="data.uri" target="_blank">
+            <i
+              v-if="node.level>1"
+              style="position:absolute;padding-top:5px;right:20px"
+              class="el-icon-position"
+            ></i>
+          </a>
+        </span>
+      </el-tree>
+    </div>
+
+    <div v-if="type==='duo-node-short'" style="position:absolute;">
+      <el-card class="card" style="width:300px">
+        <h4 style="margin-top:0">双节点最短路径查询</h4>
+        <div style="overflow:auto;max-width:100%">
+          <el-tag
+            v-for="tag in tags3"
+            @close="handleClose3(tag)"
+            :key="tag.id"
+            style="margin-bottom:5px;max-width:275px:overflow:auto;display:inline-block"
+            closable
+          >{{tag.label}}</el-tag>
+        </div>
+        <el-popover placement="right" width="200" trigger="manual" v-model="popVisible3">
+          <el-input placeholder="请输入内容" @input="clearTreeData" v-model="searchInput3"></el-input>
+          <el-button
+            slot="reference"
+            style="margin-top:10px;margin-bottom:10px;"
+            size="small"
+            @click="addSearchNode3"
+          >+ New Node</el-button>
+          <el-button
+            slot="reference"
+            size="mini"
+            icon="el-icon-search"
+            type="primary"
+            @click="getShortestRoute"
+            circle
+          ></el-button>
+        </el-popover>
+        <br>
+        <h4
+          style="margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: grey;"
+        >最短路径数量</h4>
+        <el-switch v-model="shortType" active-text="所有" inactive-color="#13ce66" inactive-text="单条"></el-switch>
+      </el-card>
+      <el-tree
+        v-loading="treeLoading"
+        style="width:300px;max-height:600px;overflow:auto"
+        :data="treeData"
+        :props="defaultProps"
+        ref="tree"
+        accordion
+        disable
+        @node-click="clickTreeNode3"
+      >
+        <span slot-scope="{ node, data }">
+          <span
+            class="one-res"
+            style="width: 220px;font-size:14px;padding-top:5px;
+            display: inline-block;
+            overflow: auto;"
+          >{{ node.label }}</span>
+          <a :href="data.uri" target="_blank">
+            <i
+              v-if="node.level>1"
+              style="position:absolute;padding-top:5px;right:20px"
+              class="el-icon-position"
+            ></i>
+          </a>
         </span>
       </el-tree>
     </div>
@@ -328,8 +439,8 @@ const nodeIcons = {
 };
 
 export default {
-  props:{
-    type:String,
+  props: {
+    type: String
   },
   components: {
     D3Network,
@@ -340,13 +451,21 @@ export default {
   },
   data() {
     return {
-      tags:[],
-      popVisible:false,
-      page:1,
-      resLimit: "",
-      jumpNo: "",
+      shortType: 0,
+      index: 0,
+      tags: [],
+      tags3: [],
+      popVisible: false,
+      popVisible3: false,
+      page: 1,
+      resLimit: 50,
+      jumpNo: 5,
+      resLimit2: 50,
+      jumpNo2: 5,
       treeLoading: false,
       searchInput: "",
+      searchInput2: "",
+      searchInput3: "",
       defaultProps: {
         children: "children",
         label: "label"
@@ -354,7 +473,7 @@ export default {
       treeData: [
         {
           label: "Quote",
-          children: [],
+          children: []
         },
         {
           label: "Organization",
@@ -710,108 +829,13 @@ export default {
     }
   },
   watch: {
-    // 监听被选择的 radio
-    radio(newVal) {
-      // 添加节点 鼠标变成十字
-      if (newVal === "2") {
-        this.svgClass.crosshair = true;
-      } else {
-        this.svgClass.crosshair = false;
-      }
-    },
-    // 显示/隐藏属性节点
-    // 别写成 key-value 的形式
-    propertyNodeSwitch(newVal) {
-      // 当不显示属性时
-      if (newVal === false) {
-        // 不渲染 node 和 label
-        this.propertyNodes.forEach(propertNode => {
-          this.nodes.remove(propertNode);
-        });
-        // this.nodes = JSON.parse(JSON.stringify(this.normalNodes))
-        // 隐藏 link
-        document.getElementsByClassName("profile").forEach(x => {
-          x.style.visibility = "hidden";
-        });
-        // 当显示属性时
-      } else {
-        // 重新渲染节点和 label
-        // this.nodes = this.nodes.concat(this.propertyNodes);
-        // this.propertyNodes = JSON.parse(JSON.stringify(this.propertyNodesCopy))
-        this.nodes = this.normalNodes.concat(this.propertyNodes);
-        // 显示边
-        document.getElementsByClassName("profile").forEach(x => {
-          x.style.visibility = "visible";
-        });
-      }
-    },
-  },
-  created() {
-    // getData();
-  },
-  methods: {
-    addSearchNode(){
-      console.log(this.tags.length)
-      if(this.tags.length >= 2){
-        this.$message({
-          type:"warning",
-          message:"最多搜索两项"
-        })
-        console.log("out")
-        this.popVisible = false
-      }
-      else{
-        console.log("show")
-        this.popVisible = true
-      }
-    },
-    handleClose(tag){
-      this.tags.splice(this.tags.indexOf(tag), 1);
-    },
-    showHistory(value){
-      this.nodes = []
-      this.links = []
-      
-      var res = JSON.parse(value.result)
-      res.nodes.map(x => {
-            // console.log(x.properties.label)
-            var la = x.properties.label.toString();
-            x.svgSym = nodeIcons[la];
-          });
-      console.log("res",res)
-      // this.allTimeStamps = response.data.timeList;
-          let allNodes = res.nodes;
-          this.normalNodes = [];
-          this.nodes = res.nodes;
-          this.links = res.relations;
-          //属性节点
-          this.propertyNodes = allNodes.filter(node => {
-            if (
-              this.allPropertyNodeTypes.indexOf(node.properties.label) !== -1
-            ) {
-              return true;
-            } else {
-              this.normalNodes.push(node);
-              return false;
-            }
-          });
-
-          console.log("hello",this.propertyNodes)
-
-          this.propertyNodesCopy = JSON.parse(
-            JSON.stringify(this.propertyNodes)
-          );
-
-          this.nodes = this.normalNodes.concat(this.propertyNodes);
-
-          this.showTimeline = true;
-      
-    },
-    clearTreeData(value){
+    type(newVal) {
+      this.popVisible = false;
+      this.popVisible = false;
       this.treeData = [
         {
           label: "Quote",
-          children: [],
+          children: []
         },
         {
           label: "Organization",
@@ -869,18 +893,313 @@ export default {
           label: "AcademicDegree",
           children: []
         }
-      ]
-    },
-    clickTreeNode(data,node){
-      if(node.level == 1){
-        this.searchNode(data,node)
+      ];
+      if (newVal == "one-node") {
+        this.page = 1;
+      } else if (newVal == "duo-node-mul") {
+        this.page = 2;
+      } else {
+        this.page = 3;
       }
-      else{
-        
+      var historyData = new FormData();
+      this.showTimeline = true;
+      historyData.append("type", this.page);
+      axios({
+        method: "POST",
+        url: "http://10.60.42.201:8080/getHistory",
+        data: historyData
+      }).then(response => {
+        console.log("hi", response.data);
+        for (let res of response.data) {
+          var temp = JSON.parse(res.result);
+          if (temp.nodes.length != 0) {
+            this.allTimeStamps.push(res);
+          }
+        }
+        this.allTimeStamps = this.allTimeStamps.reverse();
+      });
+    },
+    // 监听被选择的 radio
+    radio(newVal) {
+      // 添加节点 鼠标变成十字
+      if (newVal === "2") {
+        this.svgClass.crosshair = true;
+      } else {
+        this.svgClass.crosshair = false;
+      }
+    },
+    // 显示/隐藏属性节点
+    // 别写成 key-value 的形式
+    propertyNodeSwitch(newVal) {
+      // 当不显示属性时
+      if (newVal === false) {
+        // 不渲染 node 和 label
+        this.propertyNodes.forEach(propertNode => {
+          this.nodes.remove(propertNode);
+        });
+        // this.nodes = JSON.parse(JSON.stringify(this.normalNodes))
+        // 隐藏 link
+        document.getElementsByClassName("profile").forEach(x => {
+          x.style.visibility = "hidden";
+        });
+        // 当显示属性时
+      } else {
+        // 重新渲染节点和 label
+        // this.nodes = this.nodes.concat(this.propertyNodes);
+        // this.propertyNodes = JSON.parse(JSON.stringify(this.propertyNodesCopy))
+        this.nodes = this.normalNodes.concat(this.propertyNodes);
+        // 显示边
+        document.getElementsByClassName("profile").forEach(x => {
+          x.style.visibility = "visible";
+        });
+      }
+    }
+  },
+  created() {
+    // getData();
+  },
+  methods: {
+    showNodeAndLink(nodes, relations) {
+      this.nodes = [];
+      this.links = [];
+      // API GET
+      // .get(reqUrl + "/api/getNodesAndLinks")
+
+      // API GET LOC
+      nodes.map(x => {
+        // console.log(x.properties.label)
+        var la = x.properties.label.toString();
+        x.svgSym = nodeIcons[la];
+      });
+      // this.allTimeStamps = response.data.timeList;
+      let allNodes = nodes;
+      this.normalNodes = [];
+      this.nodes = nodes;
+      this.links = relations;
+      console.log(this.links);
+      //属性节点
+      this.propertyNodes = allNodes.filter(node => {
+        if (this.allPropertyNodeTypes.indexOf(node.properties.label) !== -1) {
+          return true;
+        } else {
+          this.normalNodes.push(node);
+          return false;
+        }
+      });
+      // console.log("hello",this.propertyNodes
+      this.propertyNodesCopy = JSON.parse(JSON.stringify(this.propertyNodes));
+      this.nodes = this.normalNodes.concat(this.propertyNodes);
+      this.showTimeline = true;
+      let displayProps = document.getElementsByClassName("display-property")[0];
+      displayProps.style.right = "-420px";
+      displayProps.style.display = "none";
+    },
+    getShortestRoute() {
+      var data = new FormData();
+      data.append("sourceType", this.tags3[0].type);
+      data.append("targetType", this.tags3[1].type);
+      data.append("source", this.tags3[0].id);
+      data.append("target", this.tags3[1].id);
+      if (this.shortType == false) {
+        axios({
+          method: "POST",
+          url: "http://10.60.42.201:8080/searchMinPath",
+          data: data
+        }).then(response => {
+          console.log("one", response.data);
+          this.showNodeAndLink(response.data.nodes,response.data.relations)
+        });
+      } else {
+        axios({
+          method: "POST",
+          url: "http://10.60.42.201:8080/searchAllMinPaths",
+          data: data
+        }).then(response => {
+          console.log("all", response.data);
+          //TO-DO:展示
+        });
+      }
+    },
+    getRoutes() {
+      if (this.tags.length < 2) {
+        this.$message({
+          type: "warning",
+          message: "节点数为2时才能进行搜索"
+        });
+        return;
+      }
+      var data = new FormData();
+      data.append("sourceType", this.tags[0].type);
+      data.append("targetType", this.tags[1].type);
+      data.append("step", this.jumpNo2);
+      data.append("limit", this.resLimit2);
+      data.append("sourceId", this.tags[0].id);
+      data.append("targetId", this.tags[1].id);
+      axios({
+        method: "POST",
+        url: "http://10.60.42.201:8080/searchByTwoNodes",
+        data: data
+      }).then(response => {
+        console.log(response.data);
+        //TO-DO:展示
+      });
+    },
+    addSearchNode() {
+      if (this.popVisible == true) {
+        this.popVisible = false;
+        return;
+      }
+      if (this.tags.length >= 2) {
+        this.$message({
+          type: "warning",
+          message: "最多搜索两项"
+        });
+      } else {
+        this.popVisible = true;
+      }
+    },
+    addSearchNode3() {
+      if (this.popVisible3 == true) {
+        this.popVisible3 = false;
+        return;
+      }
+      if (this.tags3.length >= 2) {
+        this.$message({
+          type: "warning",
+          message: "最多搜索两项"
+        });
+      } else {
+        this.popVisible3 = true;
+      }
+    },
+    handleClose(tag) {
+      this.tags.splice(this.tags.indexOf(tag), 1);
+    },
+
+    handleClose3(tag) {
+      this.tags3.splice(this.tags.indexOf(tag), 1);
+    },
+    showHistory(value) {
+      this.nodes = [];
+      this.links = [];
+      var res = JSON.parse(value.result);
+      console.log("res", res);
+      // this.allTimeStamps = response.data.timeList;
+      let allNodes = res.nodes;
+      this.normalNodes = [];
+      this.nodes = res.nodes;
+      this.links = res.relations;
+      // 属性节点;
+      this.propertyNodes = allNodes.filter(node => {
+        if (this.allPropertyNodeTypes.indexOf(node.properties.label) !== -1) {
+          return true;
+        } else {
+          this.normalNodes.push(node);
+          return false;
+        }
+      });
+      
+      console.log("hello", this.propertyNodes);
+
+      this.propertyNodesCopy = JSON.parse(JSON.stringify(this.propertyNodes));
+
+      this.nodes = this.normalNodes.concat(this.propertyNodes);
+
+      this.showTimeline = true;
+    },
+    clearTreeData(value) {
+      this.treeData = [
+        {
+          label: "Quote",
+          children: []
+        },
+        {
+          label: "Organization",
+          children: []
+        },
+        {
+          label: "Instrument",
+          children: []
+        },
+        {
+          label: "AssetClass",
+          children: []
+        },
+        {
+          label: "Currency",
+          children: []
+        },
+        {
+          label: "CurrencySubunit",
+          children: []
+        },
+        {
+          label: "Activity",
+          children: []
+        },
+        {
+          label: "BusinessSector",
+          children: []
+        },
+        {
+          label: "EconomicSector",
+          children: []
+        },
+        {
+          label: "Industry",
+          children: []
+        },
+        {
+          label: "AcademicQualification",
+          children: []
+        },
+        {
+          label: "Person",
+          children: []
+        },
+        {
+          label: "IndustryGroup",
+          children: []
+        },
+        {
+          label: "Major",
+          children: []
+        },
+        {
+          label: "AcademicDegree",
+          children: []
+        }
+      ];
+    },
+    clickTreeNode(data, node) {
+      if (node.level == 1) {
+        this.searchNode(data, node);
+      } else {
+        console.log(data);
+        var fdata = new FormData();
+        fdata.append("type", this.index);
+        fdata.append("id", data.id);
+        if (this.jumpNo == "") {
+          fdata.append("step", -1);
+        } else {
+          fdata.append("step", this.jumpNo);
+        }
+        if (this.resLimit == "") {
+          fdata.append("limit", -1);
+        } else {
+          fdata.append("limit", this.resLimit);
+        }
+        axios({
+          method: "POST",
+          url: "http://10.60.42.201:8080/searchANode",
+          data: fdata
+        }).then(response => {
+          console.log(response.data);
+        });
       }
     },
     searchNode(data, node) {
-      console.log("node",node)
+      console.log("node", node);
       if (this.searchInput == "") {
         this.$message({
           type: "warning",
@@ -893,71 +1212,85 @@ export default {
       var search = "";
       for (let ele of this.allNodeType) {
         if (ele.substring(4) == data.label) {
-          index = this.allNodeType.indexOf(ele) + 1;
+          this.index = this.allNodeType.indexOf(ele) + 1;
+          index = this.index;
           search = ele;
         }
       }
-      if(this.treeData[index - 1].children.length > 0){
-        this.treeLoading = false
-        return
+      if (this.treeData[index - 1].children.length > 0) {
+        this.treeLoading = false;
+        return;
       }
       var data = new FormData();
-      data.append("type", index);
+      data.append("type", this.index);
       data.append("name", this.searchInput);
       axios({
         method: "POST",
-        url: "http://218.78.28.138:9900/selectByTypeAndName",
+        url: "http://10.60.42.201:8080/selectByTypeAndName",
         data: data
-      }).then(response => {
-        console.log("response",response.data);
-        if (response.data.length == 0) {
-          this.$message({
-            type: "warning",
-            message: search.substring(4)+"标签下无"+this.searchInput+"项"
-          });
-          this.treeLoading = false;
-        } else {
-          for (let item of response.data) {
-            this.treeData[index - 1].children.push({
-              label: item.name,
-              children: [],
-              id: item.id,
-              uri: item.uri
+      })
+        .then(response => {
+          console.log("response", response.data);
+          if (response.data.length == 0) {
+            this.$message({
+              type: "warning",
+              message:
+                search.substring(4) + "标签下无" + this.searchInput + "项"
             });
-          }
-          this.$message({
+            this.treeLoading = false;
+          } else {
+            for (let item of response.data) {
+              this.treeData[index - 1].children.push({
+                label: item.name,
+                children: [],
+                id: item.id,
+                uri: item.uri
+              });
+            }
+            this.$message({
               type: "success",
-              message: search.substring(4)+"标签下有"+response.data.length+"个"+this.searchInput+"项"
-          });
-          this.treeLoading = false;
-        }
-      }).catch(err=>{
-        this.$message({
+              message:
+                search.substring(4) +
+                "标签下有" +
+                response.data.length +
+                "个" +
+                this.searchInput +
+                "项"
+            });
+            this.treeLoading = false;
+          }
+        })
+        .catch(err => {
+          console.log(err);
+          this.$message({
             type: "warning",
             message: "网络错误"
           });
-        this.treeLoading = false;
-      })
+          this.treeLoading = false;
+        });
     },
-    clickTreeNode2(data,node){
-      if(node.level == 1){
-        this.searchNode2(data,node)
-      }
-      else{
-        if(this.tags.length >= 2){
-        this.$message({
-          type:"warning",
-          message:"最多搜索两项"
-        })
-        }
-        else{
-          this.tags.push(data)
+    clickTreeNode2(data, node) {
+      if (node.level == 1) {
+        this.searchNode2(data, node);
+      } else {
+        if (this.tags.length >= 2) {
+          this.$message({
+            type: "warning",
+            message: "最多搜索两项"
+          });
+        } else {
+          var tag = {};
+          tag["label"] = data.label;
+          tag["id"] = data.id;
+          tag["type"] = this.index;
+          this.tags.push(tag);
+          this.popVisible = false;
         }
       }
     },
     searchNode2(data, node) {
-      console.log("node",node)
-      if (this.searchInput == "") {
+      console.log("node", node);
+      if (this.searchInput2 == "") {
         this.$message({
           type: "warning",
           message: "搜索项不能为空"
@@ -969,52 +1302,152 @@ export default {
       var search = "";
       for (let ele of this.allNodeType) {
         if (ele.substring(4) == data.label) {
-          index = this.allNodeType.indexOf(ele) + 1;
+          this.index = this.allNodeType.indexOf(ele) + 1;
+          index = this.index;
           search = ele;
         }
       }
-      if(this.treeData[index - 1].children.length > 0){
-        this.treeLoading = false
-        return
+      if (this.treeData[index - 1].children.length > 0) {
+        this.treeLoading = false;
+        return;
       }
       var data = new FormData();
       data.append("type", index);
-      data.append("name", this.searchInput);
+      data.append("name", this.searchInput2);
       axios({
         method: "POST",
-        url: "http://218.78.28.138:9900/selectByTypeAndName",
+        url: "http://10.60.42.201:8080/selectByTypeAndName",
         data: data
-      }).then(response => {
-        console.log("response",response.data);
-        if (response.data.length == 0) {
-          this.$message({
-            type: "warning",
-            message: search.substring(4)+"标签下无"+this.searchInput+"项"
-          });
-          this.treeLoading = false;
-        } else {
-          for (let item of response.data) {
-            this.treeData[index - 1].children.push({
-              label: item.name,
-              children: [],
-              id: item.id,
-              uri: item.uri
+      })
+        .then(response => {
+          console.log("response", response.data);
+          if (response.data.length == 0) {
+            this.$message({
+              type: "warning",
+              message:
+                search.substring(4) + "标签下无" + this.searchInput2 + "项"
             });
-          }
-          this.$message({
+            this.treeLoading = false;
+          } else {
+            for (let item of response.data) {
+              this.treeData[index - 1].children.push({
+                label: item.name,
+                children: [],
+                id: item.id,
+                uri: item.uri
+              });
+            }
+            this.$message({
               type: "success",
-              message: search.substring(4)+"标签下有"+response.data.length+"个"+this.searchInput+"项"
-          });
-          this.treeLoading = false;
-          this.popVisible = false
-        }
-      }).catch(err=>{
-        this.$message({
+              message:
+                search.substring(4) +
+                "标签下有" +
+                response.data.length +
+                "个" +
+                this.searchInput2 +
+                "项"
+            });
+            this.treeLoading = false;
+            this.popVisible = false;
+          }
+        })
+        .catch(err => {
+          this.$message({
             type: "warning",
             message: "网络错误"
-          })
+          });
+          this.treeLoading = false;
+        });
+    },
+    clickTreeNode3(data, node) {
+      if (node.level == 1) {
+        this.searchNode3(data, node);
+      } else {
+        if (this.tags.length >= 2) {
+          this.$message({
+            type: "warning",
+            message: "最多搜索两项"
+          });
+        } else {
+          var tag = {};
+          tag["label"] = data.label;
+          tag["id"] = data.id;
+          tag["type"] = this.index;
+          this.tags3.push(tag);
+          this.popVisible3 = false;
+        }
+      }
+    },
+    searchNode3(data, node) {
+      console.log("node", node);
+      if (this.searchInput3 == "") {
+        this.$message({
+          type: "warning",
+          message: "搜索项不能为空"
+        });
+        return;
+      }
+      this.treeLoading = true;
+      var index = 0;
+      var search = "";
+      for (let ele of this.allNodeType) {
+        if (ele.substring(4) == data.label) {
+          this.index = this.allNodeType.indexOf(ele) + 1;
+          index = this.index;
+          search = ele;
+        }
+      }
+      if (this.treeData[index - 1].children.length > 0) {
         this.treeLoading = false;
-      });
+        return;
+      }
+      var data = new FormData();
+      data.append("type", index);
+      data.append("name", this.searchInput3);
+      axios({
+        method: "POST",
+        url: "http://10.60.42.201:8080/selectByTypeAndName",
+        data: data
+      })
+        .then(response => {
+          console.log("response", response.data);
+          if (response.data.length == 0) {
+            this.$message({
+              type: "warning",
+              message:
+                search.substring(4) + "标签下无" + this.searchInput3 + "项"
+            });
+            this.treeLoading = false;
+          } else {
+            for (let item of response.data) {
+              this.treeData[index - 1].children.push({
+                label: item.name,
+                children: [],
+                id: item.id,
+                uri: item.uri
+              });
+            }
+            this.$message({
+              type: "success",
+              message:
+                search.substring(4) +
+                "标签下有" +
+                response.data.length +
+                "个" +
+                this.searchInput2 +
+                "项"
+            });
+            this.treeLoading = false;
+            this.popVisible3 = false;
+          }
+        })
+        .catch(err => {
+          this.$message({
+            type: "warning",
+            message: "网络错误"
+          });
+          this.treeLoading = false;
+        });
     },
     getData() {
       this.nodes = [];
@@ -1766,25 +2199,24 @@ export default {
     }
   },
   mounted() {
-    var historyData = new FormData()
-    this.showTimeline = true
-
-    historyData.append("type",this.page)
+    this.type = "one-node";
+    var historyData = new FormData();
+    this.showTimeline = true;
+    historyData.append("type", this.page);
     axios({
-      method:'POST',
-      url:"http://218.78.28.138:9900/getHistory",
-      data:historyData
-    }).then(response=>{
-      console.log("hi",response.data)
-      for(let res of response.data){
-        var temp = JSON.parse(res.result)
-        if(temp.nodes.length != 0){
-          this.allTimeStamps.push(res)
+      method: "POST",
+      url: "http://10.60.42.201:8080/getHistory",
+      data: historyData
+    }).then(response => {
+      console.log("hi", response.data);
+      for (let res of response.data) {
+        var temp = JSON.parse(res.result);
+        if (temp.nodes.length != 0) {
+          this.allTimeStamps.push(res);
         }
       }
-      this.allTimeStamps = this.allTimeStamps.reverse()
-      
-    })
+      this.allTimeStamps = this.allTimeStamps.reverse();
+    });
 
     var el = document.getElementsByClassName("net-svg")[0];
     el.onmousedown = e => {
@@ -1905,24 +2337,24 @@ export default {
 </script>
 
 <style>
-
-.card{
-  background:transparent;
-  
+.card {
+  background: transparent;
 }
 
-.card input{
-  border:none;
+.card input {
+  border: none;
   border-bottom: #d3d3d3 solid 1px;
-  background:transparent;
-  border-radius:0px;
+  background: transparent;
+  border-radius: 0px;
 }
 
-a{
-  color:unset
+a {
+  color: unset;
 }
 
-.one-res::-webkit-scrollbar {display:none}
+.one-res::-webkit-scrollbar {
+  display: none;
+}
 
 #button-group {
   position: fixed;
