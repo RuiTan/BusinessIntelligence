@@ -182,7 +182,7 @@
     </div>
     <!-- 是否显示属性节点切换按钮 -->
 
-    <div id="switch-p-node">
+    <!-- <div id="switch-p-node">
       <el-switch
         v-model="propertyNodeSwitch"
         active-color="#409EFF"
@@ -190,9 +190,9 @@
         active-text="显示属性节点"
         inactive-text="隐藏属性节点"
       ></el-switch>
-    </div>
+    </div> -->
     <!-- 节点和关系图 -->
-    <div @mouseover="showLinkLabel">
+    <div v-loading="pageLoading" @mouseover="showLinkLabel">
       <d3-network
         ref="net"
         :net-nodes="nodes"
@@ -236,41 +236,36 @@
       </defs>
     </svg>
     <!-- 右下角的对节点进行操作的 button -->
-    <div id="button-group">
+    <!-- <div id="button-group">
       <el-button type="primary" @click="getData">展示</el-button>
       <el-radio-group v-model="radio">
-        <!-- 普通点击 -->
         <el-tooltip class="item" effect="dark" content="查看" placement="top-start">
           <el-radio-button label="1">
             <i class="el-icon-view"></i>
           </el-radio-button>
         </el-tooltip>
-        <!-- 添加节点 -->
         <el-tooltip class="item" effect="dark" content="添加节点" placement="top-start">
           <el-radio-button label="2">
             <i class="el-icon-plus"></i>
           </el-radio-button>
         </el-tooltip>
-        <!-- 添加关系 -->
         <el-tooltip class="item" effect="dark" content="添加关系" placement="top-start">
           <el-radio-button label="3">
             <i class="el-icon-share"></i>
           </el-radio-button>
         </el-tooltip>
-        <!-- 删除 -->
         <el-tooltip class="item" effect="dark" content="删除" placement="top-start">
           <el-radio-button label="4">
             <i class="el-icon-delete"></i>
           </el-radio-button>
         </el-tooltip>
-        <!-- 修改 -->
         <el-tooltip class="item" effect="dark" content="修改" placement="top-start">
           <el-radio-button label="5">
             <i class="el-icon-edit"></i>
           </el-radio-button>
         </el-tooltip>
       </el-radio-group>
-    </div>
+    </div> -->
     <!-- 属性卡片 -->
     <el-card class="display-property" style="right: -420px; display: none">
       <div slot="header" class="clearfix">
@@ -451,6 +446,7 @@ export default {
   },
   data() {
     return {
+      pageLoading:false,
       shortType: 0,
       index: 0,
       tags: [],
@@ -1006,6 +1002,7 @@ export default {
       data.append("targetType", this.tags3[1].type);
       data.append("source", this.tags3[0].id);
       data.append("target", this.tags3[1].id);
+      this.pageLoading = true
       if (this.shortType == false) {
         axios({
           method: "POST",
@@ -1013,6 +1010,13 @@ export default {
           data: data
         }).then(response => {
           console.log("one", response.data);
+          this.pageLoading = false
+          if(response.data.nodes.length == 0){
+          this.$message({
+            type:"warning",
+            message:"当前条件下两节点间无路径"
+          })
+        }
           this.showNodeAndLink(response.data.nodes,response.data.relations)
         });
       } else {
@@ -1022,6 +1026,13 @@ export default {
           data: data
         }).then(response => {
           console.log("all", response.data);
+          this.pageLoading = false
+          if(response.data.nodes.length == 0){
+          this.$message({
+            type:"warning",
+            message:"当前条件下两节点间无路径"
+          })
+        }
           this.showNodeAndLink(response.data.nodes,response.data.relations)
         });
       }
@@ -1034,6 +1045,7 @@ export default {
         });
         return;
       }
+      this.pageLoading = true
       var data = new FormData();
       data.append("sourceType", this.tags[0].type);
       data.append("targetType", this.tags[1].type);
@@ -1047,6 +1059,13 @@ export default {
         data: data
       }).then(response => {
         console.log(response.data);
+        this.pageLoading = false
+        if(response.data.nodes.length == 0){
+          this.$message({
+            type:"warning",
+            message:"当前条件下两节点间无路径"
+          })
+        }
         this.showNodeAndLink(response.data.nodes,response.data.relations)
       });
     },
