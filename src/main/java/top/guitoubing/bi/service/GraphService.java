@@ -16,6 +16,7 @@ import top.guitoubing.bi.util.NodeUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class GraphService {
 
@@ -131,7 +132,8 @@ public class GraphService {
         RelationEntity relationEntity = null;
         if (relationship != null){
             relationEntity = new RelationEntity();
-            relationEntity.put("id", relationship.id());
+//            relationEntity.put("id", relationship.id());
+            relationEntity.put("id", new Random().nextInt());
             relationEntity.put("source", relationship.startNodeId());
             relationEntity.put("target", relationship.endNodeId());
             relationEntity.put("label", relationship.type());
@@ -307,21 +309,22 @@ public class GraphService {
         if (source == null){
             relationEntity = (RelationEntity) relationEntities.get(relationEntities.size() - 1);
             relationEntity.put("target", target.id());
-            Map<String, Object> nodeMap = new HashMap<>(node.asMap());
-            nodeMap.put("id", node.id());
-            nodeMap.put("label", labelFilter(node.labels()));
-            Map<String, Object> relationMap = new HashMap<>(relationship.asMap());
-            relationMap.put("id", relationship.id());
-            relationMap.put("start", relationship.startNodeId());
-            relationMap.put("end", relationship.endNodeId());
-            relationMap.put("type", relationship.type());
-            nodeMap.put("relation", relationMap);
-            relationEntity.put(String.valueOf(node.id()), nodeMap);
+//            Map<String, Object> nodeMap = new HashMap<>(node.asMap());
+//            nodeMap.put("id", node.id());
+//            nodeMap.put("label", labelFilter(node.labels()));
+//            Map<String, Object> relationMap = new HashMap<>(relationship.asMap());
+//            relationMap.put("id", relationship.id());
+//            relationMap.put("start", relationship.startNodeId());
+//            relationMap.put("end", relationship.endNodeId());
+//            relationMap.put("type", relationship.type());
+//            nodeMap.put("relation", relationMap);
+//            relationEntity.put(String.valueOf(node.id()), nodeMap);
         }else {
             relationEntity = new RelationEntity();
+            relationEntity.getProperties().put("id", new Random().nextInt());
             relationEntity.getProperties().put("source", source.id());
             relationEntity.getProperties().put("target", target.id());
-            relationEntity.getProperties().put(String.valueOf(node.id()), node.asMap());
+//            relationEntity.getProperties().put(String.valueOf(node.id()), node.asMap());
             relationEntities.add(relationEntity);
         }
     }

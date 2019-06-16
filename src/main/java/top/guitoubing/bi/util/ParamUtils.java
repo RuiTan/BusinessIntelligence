@@ -6,6 +6,7 @@ public class ParamUtils {
         for (Object param : params){
             stringBuilder.append(String.valueOf(param)).append("-");
         }
+        System.out.println();
         return stringBuilder.toString().substring(0, stringBuilder.length()-1);
     }
 
