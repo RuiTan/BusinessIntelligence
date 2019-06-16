@@ -16,6 +16,108 @@
 
 ![](assets/类图.png)
 
+### 前端
+
+#### 介绍
+
+在我们的项目中主要使用D3组件来对数据进行展示。D3是一款强大的用于数据可视化的JavaScript库，能够展示多种类型的数据，同时对数据进行操控。
+
+![image-20190617011655024](assets/image-20190617011655024.png)
+
+#### 导入
+
+我们使用d3-network来展示网络状的图数据。
+
+```
+<d3-network :net-nodes="nodes" :net-links="links" :options="options" />
+```
+
+```
+import D3Network from 'vue-d3-network'
+  components: {
+    D3Network
+  }
+```
+
+```
+<style src="vue-d3-network/dist/vue-d3-network.css"></style>
+```
+
+#### 事件
+
+- **node-click**: 单击爱节点时触发事件——**(event,node-object)**
+- **link-click**:单击链接时触发 ——**(event, link-object)**
+
+#### 节点对象
+
+- **id**：节点ID。*如果没有提供使用数组索引*
+- **name**：节点名称。*如果未提供使用：'node [node_id]'*
+- **_color**：节点颜色，例如*红色*，*＃aa00bb*，
+- **_cssClass**：node css类名
+- **_labelClass**：节点标签css类名
+- **svgSym**：节点图标，svg文档（仅适用于svg渲染器）
+- **_size**：节点大小*（仅限svg渲染器）*
+- **_width**：节点宽度*（仅限svg渲染器）*
+- **_height**：节点高度*（仅限svg渲染器）*
+- **_svgAttrs**：Object，svg节点属性
+
+由于项目节点属性与该component节点对象属性不太相符，所以需要修改component，
+
+buildNode函数中将项目节点属性提取并填入节点对象属性。
+
+#### 链接对象
+
+- **id**：链接ID。*如果没有提供使用数组索引*
+- **name**：节点名称。*如果未提供使用：'link [link_id]'*
+- **tid**：目标节点的id
+- **sid**：源节点的id
+- **_color**：链接颜色，例如*红色*，*＃aa00bb*，
+- **_svgAttrs**：Object，svg行属性
+
+同节点对象一样，由于项目链接属性与该component链接对象属性不太相符，所以修改component中buildLink函数，将项目节点属性提取并填入节点对象属性。
+
+#### props
+
+该component为我们提供了丰富的属性，以自定义我们的需求：
+
+**net-nodes**: 节点对象的数组
+
+**net-links**: [链接对象的](https://github.com/emiliorizzo/vue-d3-network#link-object)数组
+
+**selection** : **选择**对象，链接和节点
+
+- **links**: 将node.ids作为键，将节点对象作为值的对象
+- **nodes**: 将link.ids作为键的对象，将对象链接为值
+
+**nodeSym**: String，可设置svg doc 为node绘制图标
+
+**nodeCb**: Function(node) -> node,  节点格式化
+
+**linkCb**: Function(link) -> link, 链接格式化
+
+**options**:
+
+- **canvas**：Boolean，*render as canvas*，false = svg
+- **size**：对象，*图形大小*。**默认值：**容器大小
+  - **w**：数字
+  - **h**：数字
+- **offset**：对象，*图形中心偏移量*
+  - **x**：数字
+  - **y**：数字
+- **force**：数量
+- **force**对象：
+  - **中心**：*布尔值*，使用d3.forceCenter
+  - **X**：*强度*，使用d3.forceX
+  - **Y**：*力量*，使用d3.forceY
+  - **ManyBody**：*Boolean*，使用d3.forceManyBody，*取'force'选项的负值*
+  - **链接**：*布尔值*，使用d3.forceLink
+- **nodeSize**: Number, node radius | 以px为单位
+- **linkWidth**: Number, 链接厚度以px为单位
+- **nodeLabels**: Boolean, 显示节点名称
+- **linkLabels**: Boolean, 显示链接名称
+- **fontSize**: Number,节点标签大小 px
+- **strLinks**: Boolean, 是否将链接绘制成矩形线
+
 ## 各数据库介绍
 
 ### Neo4j
@@ -88,7 +190,35 @@ MongoDB中主要用于存储用户检索的历史记录，数据的增加由用�
 
 ## ETL
 
+### 数据导入
 
+在做数据清理的时候，我们有两种方案：
+
+1. 原来使用数据清理 导出成csv
+
+   优点：清理完数据比较小，可以通过neo4j import直接导入
+
+   缺点：在清洗数据的过程中，会有一定的数据缺失
+
+2. 使用neosemantics直接导入
+
+   优点：数据比较完整
+
+   缺点：数据较大，比较难导入
+
+我们对于源数据进行了一定的分析，发现源数据采用rdf数据框架，其中URI作为语义知识图谱的唯一标示，不仅可以存储数据，还可以存储该数据含义的明确描述，例如：
+
+\- [http://permid.org/ontology/common/hasPermId](http://permid.org/ontology/common/hasPermId)     语义知识图谱本体节点 代表了规则
+
+\- [http://www.w3.org/1999/02/22-rdf-syntax-ns#type](http://www.w3.org/1999/02/22-rdf-syntax-ns#type) 存储了相关时间信息
+
+因此我们决定使用第二种方法进行数据导入，保证数据信息最大程度的完整性，为了加快读写速度，增加增删改查的速率，我们选择使用固态盘进行数据存储
+
+### 知识图谱构建
+
+我们选择的是自下而上的方式搭建知识图谱。本体节点的存在代表了源数据的置信度相对比较高，通过数据直接构建知识图谱的方式是可行的。
+
+在导入数据之后，我们对于本体节点进行规则抽取，本体规则的构建可以帮助我们在新的数据导入时自动判断数据的正确性。当未来数据更新的时候，我们可以通过这个规则来去除一些错误的信息。
 
 ## 查询功能实现
 
@@ -122,9 +252,21 @@ MATCH p=((n:$label)-[*$step]-()) where id(n)=$id return p limit $limit
 
 这会返回`起始节点`和`终止节点` `step`跳数之内所有路径(路径数量限制为`limit`)，即两个节点的`结果子图`。据此，我们对两个子图做相交判定，期间需要两次路径过滤。第一次，我们需要一次二层嵌套循环来判断是否存在相交路径，取出所有相交路径；第二次路径过滤要解决两个问题：**合并路径**和**去关系节点**。
 
-合并路径时要注意到可能出现的多关系情况，即头尾节点相同但关系不同的情况。
+**合并路径**时要注意到可能出现的多关系情况，即头尾节点相同但关系不同的情况。
 
-去关系节点是指数据库中可能存在很多诸如`tenureInOrganization`的节点，这些节点本身是一个关系的提取，可以认为是为了减少数据冗余，但是若存在`p:Person`—[]—`t:tenureInOrganization`—[]—>`o:Organization`这样的关系理解为`p`是`o`的主席(或其他职位)，其任期时间为`t`。这样的关系理解为`p`与`o`的直接关系应该更为恰当，意即`t`可以转化为关系。
+**去关系节点**是指数据库中可能存在很多诸如`tenureInOrganization`的节点，这些节点本身是一个关系的提取，可以认为是为了减少数据冗余，但是若存在`p:Person`—[]—`t:tenureInOrganization`—[]—>`o:Organization`这样的关系理解为`p`是`o`的主席(或其他职位)，其任期时间为`t`。这样的关系理解为`p`与`o`的直接关系应该更为恰当，意即`t`可以转化为关系。
+
+在去关系节点操作上我们一开始进行了多个备选方案的选择：
+
+- 数据清洗
+
+  即把数据库中所有的`关系节点`全部连同其连接的`关系`转化为`一条关系`，但是由于我们的数据量是在太庞大，因此我们舍弃了这个做法。
+
+- 虚拟关系
+
+  APOC库中有一个称作VRelationship的关系，是一种类似于关系型数据库中的视图的存在，但是由于这种虚拟关系在检索是不会作为关系返回，它的生命周期只在其被创建的那一次查询中有效，因此这种方法也被舍弃了。
+
+于是我们便考虑在后期处理。
 
 至此我们就找到了`起始节点`和`终止节点`以及二者间的`可达路径集合`。
 
