@@ -19,18 +19,19 @@
             @close="handleClose"
             @select="handleSelect"
             :collapse="isCollapse"
+            text-color="#303133"
           >
-            <el-menu-item index="one-node">
+            <el-menu-item style="margin-top:10px" index="one-node">
               <i class="el-icon-location-outline" style="color:#303133"></i>
-              <span style="color:#303133">单节点多跳查询</span>
+              <span slot="title">单节点多跳查询</span>
             </el-menu-item>
             <el-menu-item index="duo-node-mul">
               <i class="el-icon-share" style="color:#303133"></i>
-              <span style="color:#303133">双节点多跳查询</span>
+              <span slot="title">双节点多跳查询</span>
             </el-menu-item>
             <el-menu-item index="duo-node-short">
               <i class="el-icon-share" style="color:#303133"></i>
-              <span style="color:#303133">双节点最短路径查询</span>
+              <span slot="title">双节点最短路径查询</span>
             </el-menu-item>
           </el-menu>
         </el-col>
